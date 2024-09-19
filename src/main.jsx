@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import Home from './routes/Home/Home.jsx'
-import Contact from './routes/Contact.jsx'
+import Stream from './routes/Stream/Stream.jsx'
 import ErrorPage from './routes/ErrorPage.jsx'
 import { GlobalStyle } from './GlobalStyle.jsx'
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       path: "/", element: <Home/>,
     },
     {
-      path: "/contact", element: <Contact/>,
+      path: "/Stream", element: <Stream/>,
     },
     ],
   },

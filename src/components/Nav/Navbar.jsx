@@ -7,7 +7,7 @@ const Navbar = () => {
             <a className="logo" href="#">Synthica<br /></a>
             <ul className="nav-list1">
                 <li><Link to='/' className="linkNavbar">Banana</Link></li>
-                <li><Link to='/contact' className="linkNavbar">Ajuda</Link></li>
+                <li><Link to='/Stream' className="linkNavbar">Ajuda</Link></li>
             </ul>
             <ul className="nav-list2">
                 <li>
