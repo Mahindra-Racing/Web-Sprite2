@@ -11,6 +11,12 @@ main {
     gap: 10px;
 }
 
+.team-bar {
+  flex: 1;
+  max-width: 1050px;
+  margin: 0;
+  border-radius: 10px;
+}
 
 .carousel {
   flex: 1;
@@ -77,7 +83,7 @@ main {
 
 .side-content {
   width: 19%;
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid #E2E8F0;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -124,6 +130,7 @@ main {
   
   
 
+
 .hero-premium{
   display: flex;
   justify-content: center;
@@ -131,7 +138,8 @@ main {
   margin-top: 6vh;
   width: 800px;
   height: 40px;
-  border: 2px solid rgb(200, 200, 200);
+  border: 1px solid #E2E8F0;
+  box-shadow: -1px 1px 5px rgb(167, 167, 167);
   border-radius: 5px;
   gap: 10%;
 }
@@ -164,6 +172,10 @@ main {
 /*- stories -*/
 .containerProduto {
   margin-top: 12vh;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  padding: 20px;
+  margin-left: 3%;
 }
 
 .product-header {
@@ -171,7 +183,6 @@ main {
   justify-content: space-between;
   align-items: center; 
   padding: 10px;
-  border-radius: 5px;
 }
 
 .product-titulo {
@@ -198,7 +209,7 @@ main {
 display: flex;
 justify-content: space-between;
 flex-wrap: wrap;
-gap: 10px;
+gap: 20px;
 padding: 20px;
 }
 
@@ -259,9 +270,9 @@ opacity: 0.3;
 
 /*- Trending now -*/
 .containerProduto2 {
-  margin-top: 12vh;
+  margin-top: 7vh;
   border-radius: 10px;
-  background-color: #121f2c;
+  border: 1px solid #E2E8F0;
   padding: 20px;
   margin-left: 3%;
 }
@@ -274,14 +285,14 @@ opacity: 0.3;
 }
 
 .product-titulo2 {
-  color: white;
+  color: #5e63ff;
   font-size: 1.6rem;
   font-weight: 300;
   margin: 0;
 }
 
 .ver-mais2 {
-  color: rgb(184, 184, 184);
+  color: #5e63ff;
   text-decoration: none;
   font-size: 0.7rem;
   font-weight: 700;
@@ -289,7 +300,7 @@ opacity: 0.3;
 }
 
 .ver-mais2:hover {
-  color: #ffffff;
+  opacity: 0.7;
   cursor: pointer;
 }
 
@@ -297,17 +308,17 @@ opacity: 0.3;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   padding: 20px;
 }
 
 .product2 {
   border-radius: 5px;
   width: 260px;
-  border: 1px solid #21303F;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: #e7e7e7;
 }
 
 .product-image2 {
@@ -325,12 +336,12 @@ opacity: 0.3;
   transition: opacity 0.3s ease, transform 0.6s ease-out;
 }
 .product2 p {
-  color: #ffffff;
+  color: #000;
   margin: 10px 0 0;
   padding: 10px;
   font-weight: 600;
   font-size: 14px;
-  background-color: #1a2936;
+  
 }
 
 .product2:hover {
@@ -354,11 +365,11 @@ opacity: 0.3;
   align-items: flex-start;
   padding: 35px;
   margin: 0 auto;
-  margin-top: 12vh;
-  max-width: 1400px;
+  margin-top: 7vh;
+  max-width: 1370px;
   border-radius: 10px;
-  background-color: #121f2c;
-  margin-right: 6%;
+  border: 1px solid #E2E8F0;
+  margin-right: 7%;
   
 }
 
@@ -396,7 +407,7 @@ opacity: 0.3;
   justify-content: center;
   width: 900px;
   height: 500px;
-  background-color: #666666;
+  background-color: #dbdbdb;
   margin-bottom: 10px;
   
 }
@@ -414,8 +425,7 @@ opacity: 0.3;
   align-items: center;
   gap: 8px; 
   border: none;
-  box-shadow: -2px 2px 5px black;
-  border-radius: 18px;
+  border-radius: 7px;
   background-color: #4274ff;
   color: #121f2c;
   font-weight: 600;
@@ -443,7 +453,7 @@ opacity: 0.3;
 .containerStep {
     display: flex;
     flex-direction: column; 
-    margin-top: 12vh;
+    margin-top: 7vh;
     
 }
 
@@ -481,7 +491,7 @@ opacity: 0.3;
     align-items: center;
     width: 185px; 
     height: 40px; 
-    background-color: #252525;
+    background-color: #E2E8F0;
     border-radius: 10px; 
     padding: 12px;
    
@@ -515,7 +525,7 @@ opacity: 0.3;
 }
 
 .step {
-    border-left: 3px solid var(--third-clr);
+    border-left: 4px solid #E2E8F0;
     border-radius: 30px;
     padding: 15px;
     width: 210px;

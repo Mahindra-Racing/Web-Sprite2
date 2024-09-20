@@ -3,8 +3,8 @@
     height: 100vh;
     width: 250px;
     padding: 5px 1em;
-    background-color: #f6f6f6;
-    box-shadow: 0px 3px 5px rgb(195, 195, 195);
+    background-color: #ffffff;
+    box-shadow: 4px 10px 15px rgb(214, 214, 214);
     position: fixed; 
     top: 0;
     align-self: start;
@@ -21,6 +21,10 @@
 
 #sidebar ul{
     list-style: none;
+}
+
+#sidebar li{
+    margin-top: 2px;
 }
 
 #sidebar > ul > li:first-child{
@@ -70,7 +74,8 @@
 }
 
 #sidebar a:hover, #sidebar .dropdown-btn:hover{
-    background-color: var(--hover-clr);
+    background-color: #ebebeb;
+    color: #000000;
 }
 
 #sidebar .sub-menu {
