@@ -115,9 +115,9 @@ const Home = () => {
                     <div className="product-container2">
                         <div className="product2">
                             <div className="product-image2">
-                                <img src={banner1} alt="" />
+                                <img src={story3} alt="" />
                             </div>
-                            <p>Fórmula E quebra recordes: Piloto mulher</p>
+                            <p>Campeão da Fórmula E - 2024</p>
                         </div>
                         <div className="product2">
                             <div className="product-image2">

@@ -1,0 +1,100 @@
+.containerProdutoPE {
+    margin-top: 7vh;
+    border-radius: 10px;
+    background-color: #f0f4f8;
+    padding: 20px;
+    margin-left: auto; /* Mover automaticamente para a direita */
+    margin-right: 3%; /* Define o espaço para a margem direita */
+    max-width: 85%; /* Limita a largura do container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-headerPE {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px;
+}
+
+.product-tituloPE {
+    color: #5e63ff;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+/* Configurando o grid para 3 colunas */
+.product-containerPE {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Estilo dos cards */
+.productPE {
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 15px;
+}
+
+/* Layout da parte de cima: Imagem maior à esquerda e texto à direita */
+.product-topPE {
+    display: flex;
+    align-items: flex-start; /* Alinha o texto no topo da imagem */
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.product-image-large {
+    flex: 1; /* Define a imagem maior */
+    height: auto;
+    overflow: hidden;
+}
+
+.product-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 3px solid #f0f4f8 ;
+    border-radius: 10px;
+}
+
+.product-textPE {
+    flex: 2; /* O texto ocupa mais espaço */
+    padding-left: 10px;
+}
+
+.product-textPE p {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Imagem menor abaixo */
+.product-image-small {
+    width: 100%;
+    height: 110px;
+    margin-top: 10px;
+}
+
+.product-image-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+/* Efeito hover para imagens */
+.productPE:hover {
+    cursor: pointer;
+}
+
+.productPE:hover img {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease-in;
+}

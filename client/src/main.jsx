@@ -5,6 +5,8 @@ import Home from './routes/Home/Home.jsx'
 import News from './routes/News/News.jsx'
 import News1 from './routes/News/NewsComplete/MulherNews.jsx'
 import ChatPage from './routes/ChatPage/ChatPage.jsx'
+import Classifica from './routes/Classificacao/Classificacao.jsx'
+import PilotoEquipe from './routes/PilotoEquipe/PilotoEquipe.jsx'
 import ErrorPage from './routes/ErrorPage.jsx'
 import { GlobalStyle } from './GlobalStyle.jsx'
 
@@ -21,6 +23,8 @@ const router = createBrowserRouter([
       { path: "/Stream", element: <ChatPage/>  },
       { path: "/News", element: <News/>  },
       { path: "/News/0001", element: <News1/>  },
+      { path: "/Classifica", element: <Classifica/>  },
+      { path: "/PilotoEquipe", element: <PilotoEquipe/> },
     ],
   },
 ]);

@@ -4,11 +4,9 @@ import banner1 from "../../../assets/img/banner1.png"
 import banner2 from "../../../assets/img/banner3.png"
 import img1 from "../../../assets/img/carro1.png"
 import img2 from "../../../assets/img/img2.png"
-import img3 from "../../../assets/img/img3.png"
-import story1 from "../../../assets/img/story1.png"
-import story2 from "../../../assets/img/story2.png"
-import story3 from "../../../assets/img/story3.png"
-import story6 from "../../../assets/img/story6.png"
+import img4 from "../../../assets/img/img5.png"
+import new1 from "../../../assets/img/new1.png" 
+import new3 from "../../../assets/img/new3.png" 
 import "./MulherNews.css";
 
 const Home = () => {
@@ -106,17 +104,11 @@ const Home = () => {
                     </div>
                     <hr className="hr2" />
                     <div className="product-container2">
-                        <div className="product2">
+                    <div className="product2">
                             <div className="product-image2">
-                                <img src={img3} alt="" />
+                                <img src={banner1} alt="" />
                             </div>
-                            <p>Fórmula E 2025: estreia em São Paulo</p>
-                        </div>
-                        <div className="produc2">
-                            <div className="product-image">
-                                <img src={banner2} alt="" />
-                                <p>Top 10 best drivers of season 10</p>
-                            </div>
+                            <p>Fórmula E quebra recordes: Piloto mulher</p>
                         </div>
                         <div className="product2">
                             <div className="product-image2">
@@ -138,7 +130,7 @@ const Home = () => {
                         </div>
                         <div className="product2">
                             <div className="product-image2">
-                                <img src={img1} alt="Product 5" />
+                                <img src={img4} alt="Product 5" />
                             </div>
                             <p>Ingressos para E-Prix São Paulo da Fórmula E já estão à venda</p>
                         </div>

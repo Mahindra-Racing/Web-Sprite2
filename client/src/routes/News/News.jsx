@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img2 from "../../assets/img/carro1.png";
+import new2 from "../../assets/img/new2.png" 
+import new4 from "../../assets/img/new4.png"
+import new1 from "../../assets/img/new1.png"
+  
+import new3 from "../../assets/img/new3.png" 
+import img1 from "../../assets/img/img5.png"
 import banner1 from "../../assets/img/banner1.png";
 import banner2 from "../../assets/img/banner3.png";
-import img2 from "../../assets/img/carro1.png";
-import new1 from "../../assets/img/new1.png" 
-import new2 from "../../assets/img/new2.png" 
-import new3 from "../../assets/img/new3.png" 
-import new4 from "../../assets/img/new4.png" 
-import img1 from "../../assets/img/img5.png"
 import "./News.css";
 
 const Home = () => {
     return (
-        <main>
+        <main className="    background-color: #f0f4f8;">
             <div id="section2">
                 <div className="main-container2">
                     <div className="carousel2">
@@ -110,10 +111,9 @@ const Home = () => {
                     <button className="hero-btn">Saiba mais ❯</button>
                 </div>
 
-                <div className="containerProduto2">
+                <div className="containerProduto3">
                     <div className="product-header2">
                         <h1 className="product-titulo2">TRENDING NOW</h1>
-                        <a href="#" className="ver-mais2">Ver Mais ❯</a>
                     </div>
                     <hr className="hr2" />
                     <div className="product-container2">

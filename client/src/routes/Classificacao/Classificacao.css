@@ -1,0 +1,193 @@
+
+.main1 {
+  background-color: #f0f4f8;
+  height: 333vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container6 {
+  display: flex;
+  flex-direction: column; /* Coloca os containers um abaixo do outro */
+  align-items: flex-start; /* Alinha à esquerda */
+  margin: 17vh auto;
+  padding: 20px;
+  gap: 40px;
+  width: 100%; /* Aumenta a largura geral do container */
+  max-width: 1400px; /* Limite máximo de largura */
+  margin-left: 15%; /* Adiciona margem à esquerda */
+}
+
+.standings-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.standings-container:hover {
+  transform: translateY(-5px);
+}
+
+.titulo-classi {
+  text-align: center; /* Alinha o título com o conteúdo da tabela */
+  font-size: 24px; /* Aumenta o tamanho da fonte do título */
+  margin-bottom: 10px; /* Adiciona espaço entre o título e a tabela */
+  margin-left: 0; /* Certifica que o título começa alinhado à esquerda */
+}
+
+table {
+  width: 100%; /* Faz a tabela ocupar toda a largura do container */
+  border-collapse: collapse; /* Remove espaçamento entre bordas das células */
+  margin-bottom: 40px; /* Adiciona espaçamento entre as tabelas */
+}
+
+th, td {
+  padding: 12px; /* Adiciona espaçamento interno para as células */
+  text-align: center; /* Alinha o texto das células à esquerda */
+}
+
+th {
+  color: #f0f4f8;
+  background-color: #5e63ff; /* Cor de fundo para os cabeçalhos */
+  font-size: 18px; /* Tamanho da fonte para os títulos das colunas */
+}
+
+table tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tr:hover {
+  background-color: #f1f5f9;
+}
+
+td {
+  font-size: 16px; /* Tamanho da fonte para o conteúdo das células */
+}
+
+td.points {
+  font-size: 1.6em; /* Aumenta o tamanho da fonte das pontuações */
+  font-weight: bold; /* Torna a fonte em negrito */
+}
+
+.table-team-name {
+  font-size: 1.4rem; /* Aumenta o tamanho da fonte para o nome da equipe */
+  font-weight: bold; /* Torna a fonte em negrito */
+}
+
+table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Imagens e layout */
+.driver-image {
+  width: 125px; /* Permite que a imagem mantenha seu tamanho original */
+  height: auto; /* Permite que a imagem mantenha seu tamanho original */
+  max-width: none; /* Remove o limite de largura */
+  max-height: none; /* Remove o limite de altura */
+  border-left: 3px solid #5e63ff;
+  border-radius: 15px;
+  margin-left: 100px;
+  margin-right: 10px; /* Espaçamento à direita */
+  vertical-align: middle; /* Alinha verticalmente */
+}
+
+.team-logo {
+  width: 70px; /* Permite que a imagem mantenha seu tamanho original */
+  height: auto; /* Permite que a imagem mantenha seu tamanho original */
+  max-width: none; /* Remove o limite de largura */
+  max-height: none; /* Remove o limite de altura */
+  margin-right: 15px; /* Espaçamento à direita */
+  vertical-align: middle; /* Alinha verticalmente */
+}
+
+.team-team{
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Poppins';
+}
+
+/* Para alinhar piloto e equipe na mesma linha */
+.piloto-equipe-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente o conteúdo com a imagem */
+  justify-content: left;
+}
+
+/* Para estilizar as células da tabela */
+table td:first-child {
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+table td:nth-child(2), table td:nth-child(3) {
+  font-weight: 500;
+}
+
+/* Estilização para o nome e sobrenome */
+.driver-name {
+  text-align: left; /* Alinha o texto ao centro */
+}
+
+.first-name {
+  font-size: 1em; /* Aumenta o tamanho do primeiro nome */
+}
+
+.last-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.pontucao-driver {
+  font-size: 2em;
+  font-family: 'Poppins';
+  width: 25%;
+}
+
+
+.additional-team-image {
+  width: 175px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Permite que a imagem mantenha seu tamanho original */
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  margin-left: 10px; /* Espaçamento à esquerda da nova imagem */
+  margin-right: 30px;
+  vertical-align: middle; /* Alinha verticalmente */
+}
+
+
+.classi-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start; /* Alinhamento no início da barra */
+  position: fixed; /* Torna a barra fixa na tela */
+  width: 77%;
+  top: 86px; /* Distância do topo da tela (ajuste conforme a altura do nav) */
+  left: 303px; /* Distância da borda esquerda da tela */
+  z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+  background-color: white; /* Cor de fundo para melhor visibilidade */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 15px;
+}
+
+.classi-bar button {
+  background-color: transparent; /* Cor de fundo dos botões */
+  border: 2px solid #5e63ff;
+  color: #5e63ff; /* Cor do texto */
+  padding: 10px 20px;
+  margin: 5px 0; /* Margem entre os botões */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
+.classi-bar button:hover {
+  background-color: #e6ebfc; /* Cor de fundo ao passar o mouse */
+}
+
