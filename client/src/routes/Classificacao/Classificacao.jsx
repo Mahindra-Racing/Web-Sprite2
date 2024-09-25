@@ -179,8 +179,11 @@ const Classificacao = () => {
             <div id="section2">
                 <div className="main-container6">
                     <div className='classi-bar'>
-                        <a href="#stranding-piloto"><button>Piloto</button></a>
-                        <a href="#stranding-equipe"><button>Equipe</button></a>
+                        <h1 className='classi-bar-titulo'>2024 Tabela de Classificação</h1>
+                        <div>
+                            <a href="#stranding-piloto"><button>Piloto</button></a>
+                            <a href="#stranding-equipe"><button>Equipe</button></a>
+                        </div>
                     </div>
                     {/* Tabela de Classificação dos Pilotos */}
                     <div className="standings-container" id='stranding-piloto'>

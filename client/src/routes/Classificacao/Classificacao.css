@@ -162,15 +162,17 @@ table td:nth-child(2), table td:nth-child(3) {
 .classi-bar {
   display: flex;
   gap: 10px;
-  justify-content: flex-start; /* Alinhamento no início da barra */
-  position: fixed; /* Torna a barra fixa na tela */
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem;
+  position: fixed; 
   width: 77%;
-  top: 86px; /* Distância do topo da tela (ajuste conforme a altura do nav) */
-  left: 303px; /* Distância da borda esquerda da tela */
-  z-index: 1000; /* Garante que a barra fique acima de outros elementos */
-  background-color: white; /* Cor de fundo para melhor visibilidade */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
-  padding: 10px; /* Espaçamento interno */
+  top: 86px; 
+  left: 303px; 
+  z-index: 1000; 
+  background-color: white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
   border-radius: 15px;
 }
 
@@ -179,7 +181,7 @@ table td:nth-child(2), table td:nth-child(3) {
   border: 2px solid #5e63ff;
   color: #5e63ff; /* Cor do texto */
   padding: 10px 20px;
-  margin: 5px 0; /* Margem entre os botões */
+  margin: 5px 5px; /* Margem entre os botões */
   border-radius: 5px; /* Bordas arredondadas */
   cursor: pointer;
   transition: background-color 0.3s;
@@ -189,5 +191,10 @@ table td:nth-child(2), table td:nth-child(3) {
 
 .classi-bar button:hover {
   background-color: #e6ebfc; /* Cor de fundo ao passar o mouse */
+}
+
+.classi-bar-titulo{
+  color: #202020;
+  margin: 5px;
 }
 

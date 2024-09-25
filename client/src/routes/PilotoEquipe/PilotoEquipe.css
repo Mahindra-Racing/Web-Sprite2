@@ -1,11 +1,16 @@
-.containerProdutoPE {
-    margin-top: 7vh;
-    border-radius: 10px;
+.mainPE {
     background-color: #f0f4f8;
+    font-family: 'Roboto', sans-serif;
+}
+
+.containerProdutoPE {
+    margin-top: 10vh;
+    border-radius: 10px;
+    background-color: #fff;
     padding: 20px;
-    margin-left: auto; /* Mover automaticamente para a direita */
-    margin-right: 3%; /* Define o espaço para a margem direita */
-    max-width: 85%; /* Limita a largura do container */
+    margin-left: auto;
+    margin-right: 3%;
+    max-width: 85%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -17,84 +22,102 @@
 }
 
 .product-tituloPE {
-    color: #5e63ff;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-family: 'Poppins';
     font-weight: 300;
-    margin: 0;
+    margin-left: 2%;
+    text-align: center;
 }
 
+.hr2 {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
 
-/* Configurando o grid para 3 colunas */
 .product-containerPE {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 20px;
 }
 
-/* Estilo dos cards */
 .productPE {
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 15px;
-}
-
-/* Layout da parte de cima: Imagem maior à esquerda e texto à direita */
-.product-topPE {
-    display: flex;
-    align-items: flex-start; /* Alinha o texto no topo da imagem */
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.product-image-large {
-    flex: 1; /* Define a imagem maior */
-    height: auto;
-    overflow: hidden;
-}
-
-.product-image-large img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-bottom: 3px solid #f0f4f8 ;
     border-radius: 10px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+.productPE:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para diminuir a imagem do piloto */
+.product-image-large img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    border-bottom:  2px solid #ddd;
+    margin-bottom: 15px;
+}
+
+/* Nome, sobrenome e pequena imagem do piloto */
 .product-textPE {
-    flex: 2; /* O texto ocupa mais espaço */
-    padding-left: 10px;
+    margin-top: 10px;
 }
 
-.product-textPE p {
-    font-weight: 600;
-    font-size: 14px;
+.piloto-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.piloto-nome, .piloto-sobrenome {
     margin: 0;
 }
 
-/* Imagem menor abaixo */
+.piloto-img-small {
+    width: 70px;  
+    height: auto;
+
+}
+
+.piloto-nome {
+    font-size: 18px;
+    font-weight: 400;
+    color: #0F233B;
+    font-family: 'Poppins';
+}
+
+.piloto-sobrenome {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0F233B;
+    font-family: 'Poppins';
+}
+
+/* Imagem do carro */
 .product-image-small {
     width: 100%;
-    height: 110px;
-    margin-top: 10px;
+    height: auto;
+    margin-top: 15px;
 }
 
 .product-image-small img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
-}
-
-/* Efeito hover para imagens */
-.productPE:hover {
-    cursor: pointer;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    border-top: 2px solid #ddd;
 }
 
 .productPE:hover img {
-    opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease-in;
+    opacity: 0.9;
+    transform: scale(1.05);
 }
