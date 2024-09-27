@@ -179,12 +179,16 @@ const Classificacao = () => {
             <div id="section2">
                 <div className="main-container6">
                     <div className='classi-bar'>
-                        <h1 className='classi-bar-titulo'>2024 Tabela de Classificação</h1>
+                        <div className='classi-bar-titulo-container'>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#4274ff"><path d="M480-400 40-640l440-240 440 240-440 240Zm0 160L63-467l84-46 333 182 333-182 84 46-417 227Zm0 160L63-307l84-46 333 182 333-182 84 46L480-80Zm0-411 273-149-273-149-273 149 273 149Zm0-149Z" /></svg>
+                            <h1 className='classi-bar-titulo'>2024 - Tabela de Classificação</h1>
+                        </div>
                         <div>
                             <a href="#stranding-piloto"><button>Piloto</button></a>
                             <a href="#stranding-equipe"><button>Equipe</button></a>
                         </div>
                     </div>
+
                     {/* Tabela de Classificação dos Pilotos */}
                     <div className="standings-container" id='stranding-piloto'>
                         <h1 className='titulo-classi'>Classificação de Pilotos - Fórmula E 2024</h1>
@@ -272,7 +276,7 @@ const Classificacao = () => {
                             </tbody>
                         </table>
                     </div>
-                    
+
                 </div>
             </div>
         </main>
