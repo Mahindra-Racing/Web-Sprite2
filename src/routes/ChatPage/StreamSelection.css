@@ -1,0 +1,137 @@
+.mainStreamSelect {
+    padding-top: 10vh;
+    padding-left: 15%;
+    padding-right: 5%;
+    background-color: #f0f0f0;
+}
+
+.streaming-pageStreamSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Container Principal do Destaque */
+.highlight-containerStreamSelect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Estilo da Hero Image */
+.hero-containerStreamSelect {
+    width: 70%;
+    height: 500px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero-imageStreamSelect {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Informação Adicional à Direita da Hero Image */
+.highlight-infoStreamSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-profile-imageStreamSelect {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.highlight-titleStreamSelect {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight-subtitleStreamSelect {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+/* Estilo da Grid de Transmissões */
+.streaming-gridStreamSelect {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Caixa de Streaming */
+.streaming-boxStreamSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.streaming-boxStreamSelect:hover {
+    transform: translateY(-5px);
+}
+
+.streaming-imageStreamSelect {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.streaming-infoStreamSelect {
+    display: flex;
+    align-items: center;
+}
+
+.info-imageStreamSelect {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.streaming-info-textStreamSelect {
+    text-align: left;
+}
+
+.streaming-info-textStreamSelect h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.streaming-info-textStreamSelect p {
+    font-size: 14px;
+    color: #666;
+}
+
+.linkStream {
+    text-decoration: none;
+}

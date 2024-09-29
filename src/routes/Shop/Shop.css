@@ -1,0 +1,205 @@
+/* Shop.css */
+.mainSHOP {
+    margin-top: 12vh;
+    padding-left: 10%;
+  }
+  
+  .shop-containerSHOP {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .headerSHOP {
+    position: relative;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-image: url('https://resources.formula-e.pulselive.com/photo-resources/2022/11/08/efd8300e-0708-4449-939c-d56dc79e93e7/9WKvpjhJ.jpg?width=1440&height=810');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .shop-titleSHOP {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    max-width: 30%;
+    margin-bottom: 15px;
+  }
+  
+  .buy-now-buttonSHOP {
+    background-color: #02183ba2;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 100px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-now-buttonSHOP:hover {
+    opacity: 0.7;
+  }
+  
+  .shop-subtitleSHOP {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .product-section-titleSHOP {
+    font-size: 24px;
+    margin-top: 7vh;
+    text-align: center;
+  }
+  
+  .carousel-wrapperSHOP {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  .carousel-containerSHOP {
+    display: flex;
+    overflow: hidden;
+    max-width: 82%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .products-containerSHOP {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .product-cardSHOP {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    flex: 0 0 auto;
+    width: 200px;
+    transition: transform 0.2s;
+  }
+  
+  .product-cardSHOP:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-imageSHOP {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-nameSHOP {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .product-priceSHOP {
+    font-size: 16px;
+    color: #0062ff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel-buttonSHOP {
+    background-color: #0062ff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .carousel-buttonSHOP.left {
+    left: -20px;
+  }
+  
+  .carousel-buttonSHOP.right {
+    right: -20px;
+  }
+  
+  .carousel-buttonSHOP:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for team buttons */
+  .team-buttons-containerSHOP {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 5vh;
+    background: #0062;
+  }
+  
+  .team-buttonSHOP {
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .team-buttonSHOP:hover, .team-buttonSHOP.selectedSHOP {
+    transform: scale(1.1);
+  }
+  
+  .team-logoSHOP {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .mainSHOP {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  
+    .headerSHOP {
+      height: 200px; /* Adjust for smaller screens */
+    }
+  
+    .shop-titleSHOP {
+      font-size: 24px;
+      max-width: 80%; /* Allow more space for text on smaller screens */
+    }
+  
+    .carousel-containerSHOP {
+      max-width: 100%;
+    }
+  
+    .product-cardSHOP {
+      width: 150px;
+    }
+  
+    .team-buttons-containerSHOP {
+      flex-wrap: wrap;
+    }
+  }

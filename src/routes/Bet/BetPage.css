@@ -1,0 +1,408 @@
+/* Main container styles */
+.mainBET {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  margin-top: 12vh;
+}
+
+.main-containerBET {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.left-containerBET {
+  padding: 30px;
+}
+
+/* Navigation styles */
+.navegacao-containerBET {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.nav-btnBET {
+  padding: 12px 25px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.nav-btnBET:hover {
+  background-color: #e9ecef;
+}
+
+.nav-btnBET.ativo {
+  background-color: #5e63ff;
+  color: #ffffff;
+}
+
+/* Section styles */
+.wallet-containerBET,
+.bet-containerBET,
+.double-containerBET {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.section-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.category-titleBET {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.section-titleBET {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #343a40;
+}
+
+/* Wallet styles */
+.saldo-valorBET {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #495057;
+}
+
+.saldo-grandeBET {
+  font-size: 48px;
+  font-weight: 500;
+  color: #0062ff;
+}
+
+.adicionar-dinheiro-containerBET {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.value-inputBET {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ced4da;
+  border-radius: 10px 0 0 10px;
+  transition: border-color 0.3s ease;
+}
+
+.value-inputBET:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.adicionar-dinheiro-btnBET,
+.aposta-btnBET {
+  padding: 12px 25px;
+  background-color: #0062ff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0 10px 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.aposta-btnBET {
+  border: 2px solid #0062ff;
+}
+
+.adicionar-dinheiro-btnBET:hover,
+.aposta-btnBET:hover {
+  background-color: #0062ff;
+  opacity: 0.7;
+}
+
+/* How to bet styles */
+.how-to-bet-containerBET {
+  background-color: #e9ecef;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.how-to-bet-titleBET {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #495057;
+}
+
+.how-to-bet-stepsBET {
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+
+.how-to-bet-stepsBET li {
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.how-to-bet-noteBET {
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* Bet styles */
+.opcoes-containerBET {
+  margin-bottom: 30px;
+}
+
+.opcao-btnBET {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #495057;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.opcao-btnBET:hover {
+  background-color: #e9ecef;
+}
+
+.opcao-btnBET.selecionado {
+  background-color: #5e63ff;
+  color: #ffffff;
+}
+
+.opcao-odds {
+  font-weight: 600;
+}
+
+.resumo-containerBET {
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.resumo-containerBET .section-titleBET {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #495057;
+}
+
+.aposta-itemBET {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #495057;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.aposta-itemBET:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aposta-itemBET:last-child {
+  margin-bottom: 0;
+}
+
+.aposta-itemBET span:first-child {
+  font-weight: 600;
+}
+
+.aposta-itemBET span:last-child {
+  font-weight: 700;
+  color: #495057;
+}
+
+.empty-messageBET {
+  font-style: italic;
+  color: #6c757d;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Double section styles */
+.double-containerBET {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.double-containerBET .section-header {
+  margin-bottom: 25px;
+}
+
+.double-containerBET .section-titleBET {
+  font-size: 24px;
+  color: #343a40;
+}
+
+.saldo-valorBET.saldo-pequenoBET {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0062ff;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.cores-containerBET {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cor-btnBET {
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.cor-btnBET.selecionado {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cor-btnBET.preto {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.cor-btnBET.branco {
+  background-color: #ffffff;
+  color: #343a40;
+  border: 2px solid #343a40;
+}
+
+.cor-btnBET.azul {
+  background-color: #5e63ff;
+  color: #ffffff;
+}
+
+.aposta-inputBET {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.value-inputBET {
+  width: 60%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ced4da;
+  border-radius: 10px 0 0 10px;
+  transition: border-color 0.3s ease;
+}
+
+.value-inputBET:focus {
+  outline: none;
+  border-color: #5e63ff;
+}
+
+.aposta-btnBET {
+  padding: 12px 25px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0 10px 10px 0;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.aposta-btnBET:hover {
+  background-color: #218838;
+}
+
+.resultado-doubleBET {
+  margin-top: 25px;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  color: #343a40;
+  text-transform: uppercase;
+}
+
+.mensagem-resultadoBET {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.mensagem-resultadoBET.ganhou {
+  color: #ffffff;
+  background-color: #28a745;
+}
+
+.mensagem-resultadoBET.perdeu {
+  color: #ffffff;
+  background-color: #dc3545;
+}
+
+.erro-messageBET {
+  color: #dc3545;
+  margin-top: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  background-color: #f8d7da;
+  border-radius: 10px;
+  font-size: 16px;
+}

@@ -1,0 +1,111 @@
+/* src/Chat.css */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 470px; /* Diminuindo a altura do chat */
+    width: 299px; /* Largura fixa para o chat */
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas no container */
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar o container */
+}
+
+.chat-header {
+    padding: 15px; /* Ajustando o padding do cabeçalho */
+    background-color: #5e63ff;
+    color: white;
+    text-align: center;
+    font-size: 1.2em; /* Diminuindo o tamanho da fonte */
+    font-weight: bold; /* Deixando o texto em negrito */
+    border-bottom: 2px solid #4a54e1; /* Linha na parte inferior do cabeçalho */
+}
+
+.chat-body {
+    flex: 1;
+    padding: 10px; /* Ajustando o padding do corpo do chat */
+    overflow-y: auto; /* Permite rolagem automática */
+    background-color: #f9f9f9;
+}
+
+.chat-message {
+    display: flex;
+    margin-bottom: 10px; /* Diminuindo o espaço entre mensagens */
+}
+
+.chat-user-image {
+    width: 40px; /* Diminuindo o tamanho da imagem do usuário */
+    height: 40px; /* Diminuindo o tamanho da imagem do usuário */
+    border-radius: 50%;
+    margin-right: 10px; /* Diminuindo o espaço entre a imagem e a mensagem */
+    border: 2px solid #5e63ff; /* Borda na imagem do usuário */
+}
+
+.chat-message-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-user-name {
+    font-weight: bold;
+    margin-right: 5px; /* Diminuindo o espaço */
+    color: #333; /* Cor da fonte mais escura */
+}
+
+.chat-message-date {
+    font-size: 0.8em; /* Diminuindo o tamanho da data */
+    color: #777;
+}
+
+.chat-message-text {
+    background-color: #e8e8e8; /* Alterando a cor para um tom mais suave */
+    padding: 8px; /* Diminuindo o padding da mensagem */
+    border-radius: 5px; /* Mantendo o arredondamento */
+    max-width: 75%; /* Limitando a largura da mensagem */
+    word-wrap: break-word; /* Permite quebra de linha */
+    overflow-wrap: break-word; /* Permite quebra de linha se necessário */
+}
+
+.chat-footer {
+    display: flex;
+    padding: 5px; /* Mantendo o padding da barra de mensagens */
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd; /* Linha separadora no topo */
+    height: 50px; /* Diminuindo a altura da barra de mensagens */
+}
+
+.chat-input {
+    flex: 1;
+    padding: 5px; /* Diminuindo o padding da barra de entrada */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease; /* Efeito de transição na borda */
+    font-size: 0.8em; /* Diminuindo o tamanho da fonte */
+    margin-right: 5px; /* Diminuindo a margem direita da barra de entrada */
+}
+
+.chat-input:focus {
+    border-color: #007bff; /* Cor da borda ao focar no input */
+}
+
+.chat-send-button {
+    padding: 5px 10px;
+    background-color: #5e63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
+    font-size: 0.8em; /* Diminuindo o tamanho da fonte */
+}
+
+.chat-send-button:hover {
+    opacity: 1;
+    background-color: #4a54e1; /* Alterando a cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom no botão */
+}
