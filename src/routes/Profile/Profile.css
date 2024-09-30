@@ -1,151 +1,148 @@
-/* Profile.css */
-
-.mainProfile{
-    margin-top: 7vh;
+.mainProfileProf {
+  margin-top: 7vh;
 }
 
-.profile-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .profile-banner {
-    height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    position: relative;
-  }
-  
-  .profile-image-container {
-    position: absolute;
-    bottom: -50px;
-    left: 20px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid #ffffff;
-    overflow: hidden;
-    background-color: #ffffff;
-  }
-  
-  .profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .profile-placeholder-image {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e0e0e0;
-    color: #757575;
-    font-size: 14px;
-  }
-  
-  .profile-info {
-    padding: 60px 20px 20px;
-  }
-  
-  .profile-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333333;
-    margin-bottom: 5px;
-  }
-  
-  .profile-username {
-    font-size: 16px;
-    color: #666666;
-    margin-bottom: 15px;
-  }
-  
-  .profile-level,
-  .profile-points,
-  .profile-rank {
-    font-size: 16px;
-    color: #333333;
-    margin-bottom: 10px;
-  }
-  
-  .edit-profile-button {
-    background-color: #5e63ffc0;
-    color: #25283B;
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .edit-profile-button:hover {
-    background-color: #5E63FF;
-  }
-  
-  .missions-container {
-    padding: 20px;
-    background-color: #f9fafc;
-    border-top: 1px solid #e0e0e0;
-  }
-  
-  .missions-title {
-    font-size: 20px;
-    color: #333333;
-    margin-bottom: 15px;
-  }
-  
-  .missions-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .mission-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .mission-info h3 {
-    font-size: 16px;
-    color: #333333;
-    margin-bottom: 5px;
-  }
-  
-  .mission-info p {
-    font-size: 14px;
-    color: #666666;
-  }
-  
-  .mission-completed {
-    font-size: 14px;
-    color: #4caf50;
-    font-weight: bold;
-  }
-  
-  .complete-mission-button {
-    background-color: #5e63ff;
-    color: #ffffff;
-    border: none;
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .complete-mission-button:hover {
-    background-color: #5e63ff93;
-  }
-  
+.profile-containerProf {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-bannerProf {
+  height: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+.profile-image-containerProf {
+  position: absolute;
+  bottom: -40px; /* Ajustado para posicionar melhor a imagem */
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.profile-imageProf {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-placeholder-imageProf {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  color: #757575;
+  font-size: 14px;
+}
+
+.profile-infoProf {
+  padding: 60px 20px 20px;
+}
+
+.profile-nameProf {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.profile-usernameProf {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.profile-levelProf,
+.profile-pointsProf,
+.profile-rankProf {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.edit-profile-buttonProf {
+  background-color: #5e63ffc0;
+  color: #25283B;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-profile-buttonProf:hover {
+  background-color: #5E63FF;
+}
+
+.missions-containerProf {
+  padding: 20px;
+  background-color: #f9fafc;
+  border-top: 1px solid #e0e0e0;
+}
+
+.missions-titleProf {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.missions-listProf {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mission-itemProf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mission-infoProf h3 {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.mission-infoProf p {
+  font-size: 14px;
+  color: #666666;
+}
+
+.mission-completedProf {
+  font-size: 14px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.complete-mission-buttonProf {
+  background-color: #5e63ff;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.complete-mission-buttonProf:hover {
+  background-color: #5e63ff93;
+}

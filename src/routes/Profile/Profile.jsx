@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Profile.css';
 
 const Profile = () => {
@@ -10,6 +11,7 @@ const Profile = () => {
     { id: 2, title: 'Share your profile with 5 friends', points: 100, completed: false },
     { id: 3, title: 'Log in for 5 consecutive days', points: 150, completed: false },
   ]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const calculatedLevel = Math.floor(points / 100) + 1;
@@ -31,45 +33,45 @@ const Profile = () => {
   };
 
   return (
-    <main className='mainProfile'>
-      <div className="profile-container">
-        <div className="profile-banner">
-          <div className="profile-image-container">
+    <main className='mainProfileProf'>
+      <div className="profile-containerProf">
+        <div className="profile-bannerProf">
+          <div className="profile-image-containerProf">
             {profileData.profileImage ? (
-              <img src={profileData.profileImage} alt="Profile" className="profile-image" />
+              <img src={profileData.profileImage} alt="Profile" className="profile-imageProf" />
             ) : (
-              <div className="profile-placeholder-image">No Image</div>
+              <div className="profile-placeholder-imageProf">No Image</div>
             )}
           </div>
         </div>
 
-        <div className="profile-info">
-          <h2 className="profile-name">{profileData.name}</h2>
-          <p className="profile-username">{username}</p>
-          <p className="profile-level">Level: {level}</p>
-          <p className="profile-points">Points: {points}</p>
-          <p className="profile-rank">
+        <div className="profile-infoProf">
+          <h2 className="profile-nameProf">{profileData.name}</h2>
+          <p className="profile-usernameProf">{username}</p>
+          <p className="profile-levelProf">Level: {level}</p>
+          <p className="profile-pointsProf">Points: {points}</p>
+          <p className="profile-rankProf">
             Rank: {level < 5 ? 'Beginner' : level < 10 ? 'Intermediate' : 'Expert'}
           </p>
-          <button className="edit-profile-button" onClick={() => { /* Navigate to Edit Profile */ }}>
+          <button className="edit-profile-buttonProf" onClick={() => navigate('/settings')}>
             Edit Profile
           </button>
         </div>
 
-        <div className="missions-container">
-          <h2 className="missions-title">Your Missions</h2>
-          <div className="missions-list">
+        <div className="missions-containerProf">
+          <h2 className="missions-titleProf">Your Missions</h2>
+          <div className="missions-listProf">
             {missions.map((mission) => (
-              <div key={mission.id} className="mission-item">
-                <div className="mission-info">
+              <div key={mission.id} className="mission-itemProf">
+                <div className="mission-infoProf">
                   <h3>{mission.title}</h3>
                   <p>{mission.points} points</p>
                 </div>
                 {mission.completed ? (
-                  <span className="mission-completed">Completed</span>
+                  <span className="mission-completedProf">Completed</span>
                 ) : (
                   <button
-                    className="complete-mission-button"
+                    className="complete-mission-buttonProf"
                     onClick={() => completeMission(mission.id)}
                   >
                     Complete

@@ -37,7 +37,7 @@ const BetPage = () => {
         { nome: 'Envision Racing', odds: 5.0 },
       ];
 
-    const cores = ['preto', 'branco', 'azul'];
+    const cores = ['black', 'white', 'blue'];
 
     const adicionarDinheiro = () => {
         const valor = parseFloat(valorAdicionar);
@@ -46,7 +46,7 @@ const BetPage = () => {
             setValorAdicionar('');
             setErro('');
         } else {
-            setErro('Por favor, insira um valor válido maior que zero.');
+            setErro('Please enter a valid value greater than zero.');
         }
     };
 
@@ -76,7 +76,7 @@ const BetPage = () => {
             setSelecaoConstrutor(null);
             setErro('');
         } else {
-            setErro('Valor da aposta não pode exceder o saldo disponível.');
+            setErro('Bet amount cannot exceed the available balance.');
         }
     };
 
@@ -93,14 +93,14 @@ const BetPage = () => {
             if (resultado === corSelecionada) {
                 const ganho = saldo - valor + valor * 2 - saldo;
                 setSaldo(saldo + ganho);
-                setMensagemResultado(`Você ganhou R$ ${ganho.toFixed(2)}!`);
-                setResultadoClass('ganhou');
+                setMensagemResultado(`You won $ ${ganho.toFixed(2)}!`);
+                setResultadoClass('won');
             } else {
-                setMensagemResultado(`Você perdeu R$ ${valor.toFixed(2)}.`);
-                setResultadoClass('perdeu');
+                setMensagemResultado(`you lost R$ ${valor.toFixed(2)}.`);
+                setResultadoClass('lost');
             }
         } else {
-            setErro('Valor da aposta não pode exceder o saldo disponível.');
+            setErro('Bet amount cannot exceed the available balance.');
         }
     };
 
@@ -120,7 +120,7 @@ const BetPage = () => {
                                 className={`nav-btnBET ${pagina === 'bet' ? 'ativo' : ''}`}
                                 onClick={() => setPagina('bet')}
                             >
-                                Apostas FE
+                                FE Bets
                             </button>
                             <button
                                 className={`nav-btnBET ${pagina === 'double' ? 'ativo' : ''}`}
@@ -134,7 +134,7 @@ const BetPage = () => {
                             <div className="wallet-containerBET">
                                 <div className="section-header">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40"><path d="M240-160q-66 0-113-47T80-320v-320q0-66 47-113t113-47h480q66 0 113 47t47 113v320q0 66-47 113t-113 47H240Zm0-480h480q22 0 42 5t38 16v-21q0-33-23.5-56.5T720-720H240q-33 0-56.5 23.5T160-640v21q18-11 38-16t42-5Zm-74 130 445 108q9 2 18 0t17-8l139-116q-11-15-28-24.5t-37-9.5H240q-26 0-45.5 13.5T166-510Z" /></svg>
-                                    <h2 className="section-titleBET">Sua Carteira</h2>
+                                    <h2 className="section-titleBET">Wallet</h2>
                                 </div>
                                 <div className="saldo-valorBET saldo-grandeBET">$ {saldo.toFixed(2)}</div>
                                 <div className="adicionar-dinheiro-containerBET">
@@ -142,17 +142,17 @@ const BetPage = () => {
                                         className="value-inputBET"
                                         type="number"
                                         value={valorAdicionar}
-                                        placeholder="Valor a adicionar"
+                                        placeholder="Value to add"
                                         onChange={(e) => setValorAdicionar(e.target.value)}
                                     />
-                                    <button className="adicionar-dinheiro-btnBET" onClick={adicionarDinheiro}>Adicionar Dinheiro</button>
+                                    <button className="adicionar-dinheiro-btnBET" onClick={adicionarDinheiro}>Value to add</button>
                                 </div>
                                 <div className="how-to-bet-containerBET">
-                                    <h3 className="how-to-bet-titleBET">Como Fazer uma Aposta</h3>
+                                    <h3 className="how-to-bet-titleBET">How to Place a Bet</h3>
                                     <ol className="how-to-bet-stepsBET">
-                                        <li>Selecione seu piloto ou construtor no menu de opções.</li>
-                                        <li>Digite o valor que deseja apostar.</li>
-                                        <li>Clique em 'Apostar' para confirmar sua aposta.</li>
+                                        <li>Select your pilot or builder from the options menu.</li>
+                                        <li>Enter the amount you wish to bet.</li>
+                                        <li>Click 'Bet' to confirm your bet.</li>
                                     </ol>
                                     <p className="how-to-bet-noteBET">Lembre-se de jogar com responsabilidade!</p>
                                 </div>
@@ -163,9 +163,9 @@ const BetPage = () => {
                             <div className="bet-containerBET">
                                 <div className="section-header">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40"><path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z" /></svg>
-                                    <h2 className="section-titleBET">Apostar em FE</h2>
+                                    <h2 className="section-titleBET">FE Bets</h2>
                                 </div>
-                                <div className="saldo-valorBET saldo-pequenoBET">Saldo: $ {saldo.toFixed(2)}</div>
+                                <div className="saldo-valorBET saldo-pequenoBET">Balance: $ {saldo.toFixed(2)}</div>
 
                                 <div className="opcoes-containerBET">
                                     <div className="section-header">
@@ -208,16 +208,16 @@ const BetPage = () => {
                                         className="value-inputBET"
                                         type="number"
                                         value={valorAposta}
-                                        placeholder="Valor da aposta"
+                                        placeholder="Bet value"
                                         onChange={(e) => setValorAposta(e.target.value)}
                                     />
-                                    <button className="aposta-btnBET" onClick={() => fazerAposta(selecaoPiloto ? 'Piloto' : 'Construtor')}>Apostar</button>
+                                    <button className="aposta-btnBET" onClick={() => fazerAposta(selecaoPiloto ? 'Pilot' : 'Constructor')}>Bet</button>
                                 </div>
 
                                 <div className="resumo-containerBET">
-                                    <h2 className="section-titleBET">Resumo das Apostas</h2>
+                                    <h2 className="section-titleBET">Bet Summary</h2>
                                     {apostas.length === 0 ? (
-                                        <p className="empty-messageBET">Você ainda não fez nenhuma aposta.</p>
+                                        <p className="empty-messageBET">You haven't placed any bets yet.</p>
                                     ) : (
                                         apostas.map((aposta, index) => (
                                             <div key={index} className="aposta-itemBET">
@@ -236,12 +236,12 @@ const BetPage = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40  "><path d="M600-160q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 134-93 227t-227 93Zm-320-10q-106-28-173-114T40-480q0-110 67-196t173-114v84q-72 25-116 87t-44 139q0 77 44 139t116 87v84Zm320-310Zm0 240q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Z" /></svg>
                                     <h2 className="section-titleBET">Double</h2>
                                 </div>
-                                <div className="saldo-valorBET saldo-pequenoBET">Saldo: $ {saldo.toFixed(2)}</div>
+                                <div className="saldo-valorBET saldo-pequenoBET">Balance: $ {saldo.toFixed(2)}</div>
                                 <div className="cores-containerBET">
                                     {cores.map((cor, index) => (
                                         <button
                                             key={index}
-                                            className={`cor-btnBET ${cor} ${corSelecionada === cor ? 'selecionado' : ''}`}
+                                            className={`cor-btnBET ${cor} ${corSelecionada === cor ? 'select' : ''}`}
                                             onClick={() => setCorSelecionada(cor)}
                                         >
                                             {cor}
@@ -253,14 +253,14 @@ const BetPage = () => {
                                         className="value-inputBET"
                                         type="number"
                                         value={valorAposta}
-                                        placeholder="Valor da aposta"
+                                        placeholder="Bet value"
                                         onChange={(e) => setValorAposta(e.target.value)}
                                     />
-                                    <button className="aposta-btnBET" onClick={jogarDouble}>Jogar Double</button>
+                                    <button className="aposta-btnBET" onClick={jogarDouble}>Play Double</button>
                                 </div>
                                 {resultadoDouble && (
                                     <div className={`resultado-doubleBET ${resultadoDouble}`}>
-                                        Resultado: {resultadoDouble}
+                                        Result: {resultadoDouble}
                                     </div>
                                 )}
                                 {mensagemResultado && (

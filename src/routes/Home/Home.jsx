@@ -20,15 +20,15 @@ const Home = () => {
                     <div className="carousel">
                         <div className="carousel-container">
                             <div className="carousel-item">
-                                <img src={img1} alt="Imagem1" title="Imagem1" />
+                                <img src={img1} alt="Image1" title="Image1" />
                                 <div className="carousel-content">
-                                    <h1>Next Race: <span class="corrida">São Paulo E-Prix</span></h1>
-                                    <h4>A emoção está a um clique de distância!</h4>
+                                    <h1>Next Race: <span className="corrida">São Paulo E-Prix</span></h1>
+                                    <h4>The excitement is just a click away!</h4>
                                     <button className="carousel-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0a1c4c">
                                             <path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
                                         </svg>
-                                        <a href="#">Assista agora</a>
+                                        <a href="#">Watch now</a>
                                     </button>
                                 </div>
                             </div>
@@ -38,29 +38,30 @@ const Home = () => {
                     <div className="side-content">
                         <div className="side-titulo">
                             <h3>Headlines</h3>
-                            <a href="#" className="ver-mais3">Ver Mais ❯</a>
+                            <a href="#" className="ver-mais3">See More ❯</a>
                         </div>
 
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Gen3 Evo estreia ainda esse ano</a>
+                        <a href="#" className="noticia">Gen3 Evo debuts this year</a>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Guenther é anunciado na Penske</a>
+                        <a href="#" className="noticia">Guenther announced at Penske</a>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Pascal Wehrlein, é campeão da Fórmula E</a>
+                        <a href="#" className="noticia">Pascal Wehrlein is Formula E champion</a>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Abertura da nova temporada em São Paulo</a>
+                        <a href="#" className="noticia">New season opens in São Paulo</a>
                         <hr className="hr3" />
                         <a href="#" className="noticia">Top 10 best drivers of season 10</a>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Fórmula E quebra recordes: Piloto mulher</a>
+                        <a href="#" className="noticia">Formula E breaks records: Female driver</a>
                     </div>
                 </div>
 
                 <div className="hero-premium">
                     <img src={img2} alt="" />
-                    <h1>Assine nosso plano premium</h1>
-                    <button className="hero-btn">Saiba mais ❯</button>
+                    <h1>Subscribe to our premium plan</h1>
+                    <button className="hero-btn">Learn more ❯</button>
                 </div>
+
 
                 <div className="containerProduto">
                     <div className="product-header">
@@ -71,7 +72,7 @@ const Home = () => {
                         <div className="product">
                             <div className="product-image">
                                 <img src={banner1} alt="" />
-                                <p>Fórmula E quebra recordes: Piloto mulher</p>
+                                <p>Formula E breaks records: Female driver</p>
                             </div>
                         </div>
                         <div className="product">
@@ -83,7 +84,7 @@ const Home = () => {
                         <div className="product">
                             <div className="product-image">
                                 <img src={story1} alt="Product 3" />
-                                <p>Meninas na pista</p>
+                                <p>Girls on the track</p>
                             </div>
                         </div>
                         <div className="product">
@@ -94,22 +95,23 @@ const Home = () => {
                         <div className="product">
                             <div className="product-image">
                                 <img src={story3} alt="Product 5" />
-                                <p>Campeão da Fórmula E</p>
+                                <p>Champion of Formula E</p>
                             </div>
                         </div>
                         <div className="product">
                             <div className="product-image">
                                 <img src={story6} alt="Product 6" />
-                                <p>Maior piloto brasileiro</p>
+                                <p>Greatest Brazilian driver</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+
                 <div className="containerProduto2">
                     <div className="product-header2">
                         <h1 className="product-titulo2">TRENDING NOW</h1>
-                        <a href="#" className="ver-mais2">Ver Mais ❯</a>
+                        <a href="#" className="ver-mais2">See More ❯</a>
                     </div>
                     <hr className="hr2" />
                     <div className="product-container2">
@@ -117,7 +119,7 @@ const Home = () => {
                             <div className="product-image2">
                                 <img src={story3} alt="" />
                             </div>
-                            <p>Campeão da Fórmula E - 2024</p>
+                            <p>Champion of Formula E - 2024</p>
                         </div>
                         <div className="product2">
                             <div className="product-image2">
@@ -129,27 +131,28 @@ const Home = () => {
                             <div className="product-image2">
                                 <img src={new1} alt="Product 3" />
                             </div>
-                            <p>Guenther é anunciado na Penske</p>
+                            <p>Guenther announced at Penske</p>
                         </div>
                         <div className="product2">
                             <div className="product-image2">
                                 <img src={new3} alt="Product 4" />
                             </div>
-                            <p>Gen3 Evo estreia ainda esse ano</p>
+                            <p>Gen3 Evo debuts later this year</p>
                         </div>
                         <div className="product2">
                             <div className="product-image2">
                                 <img src={img3} alt="Product 5" />
                             </div>
-                            <p>Ingressos para E-Prix São Paulo da Fórmula E já estão à venda</p>
+                            <p>Tickets for the São Paulo E-Prix of Formula E are now on sale</p>
                         </div>
                     </div>
                 </div>
 
+
                 <div className="containerVideo">
                     <div className="Video-header">
-                        <h1 className="Video-titulo">Descubra a Fórmula E: A Revolução das Corridas Elétricas</h1>
-                        <p>Vivencie o futuro do automobilismo com a Fórmula E. Nossa competição 100% elétrica é projetada para transformar o mundo das corridas, combinando tecnologia inovadora com adrenalina pura... Testemunhe a velocidade, a inovação e a sustentabilidade em um só lugar. Este vídeo mostra como a Fórmula E está moldando o futuro das corridas, otimizando o desempenho dos carros elétricos e oferecendo uma experiência única para os fãs em todo o mundo.</p>
+                        <h1 className="Video-titulo">Discover Formula E: The Revolution of Electric Racing</h1>
+                        <p>Experience the future of motorsport with Formula E. Our 100% electric competition is designed to transform the world of racing, combining innovative technology with pure adrenaline... Witness speed, innovation, and sustainability all in one place. This video showcases how Formula E is shaping the future of racing, optimizing the performance of electric cars and providing a unique experience for fans worldwide.</p>
 
                         <button className="video-btn">
                             <svg
@@ -168,26 +171,27 @@ const Home = () => {
                     <div className="Video-container">
                         <div className="Video">
                             <div className="Video-play">
-                                <iframe 
-                                    width="1280" height="500" 
-                                    src="https://www.youtube.com/embed/mP0KmA7QJ74" 
-                                    title="Formula E EXPLAINED!" 
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                    referrerpolicy="strict-origin-when-cross-origin" 
-                                    allowfullscreen>
+                                <iframe
+                                    width="1280" height="500"
+                                    src="https://www.youtube.com/embed/mP0KmA7QJ74"
+                                    title="Formula E EXPLAINED!"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen>
                                 </iframe>
                             </div>
-                            <p>A Fórmula E tem chamado a atenção de muitos entusiastas do automobilismo. Mas o que exatamente a diferencia das outras competições?</p>
+                            <p>Formula E has caught the attention of many motorsport enthusiasts. But what exactly sets it apart from other competitions?</p>
                         </div>
                     </div>
                 </div>
+
 
                 <div className="containerStep">
                     <div className="tituloStep">
                         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#4274ff"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" /></svg>
                         <h1>PROXIMAS CORRIDAS</h1>
-                        <a href="#" className="ver-mais1">Ver Todos ❯</a>
+                        <a href="#" className="ver-mais1">See More ❯</a>
                     </div>
                     <div className="stepMain">
                         <article className="step">

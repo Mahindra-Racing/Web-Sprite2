@@ -181,24 +181,24 @@ const Classificacao = () => {
                     <div className='classi-bar'>
                         <div className='classi-bar-titulo-container'>
                             <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#4274ff"><path d="M480-400 40-640l440-240 440 240-440 240Zm0 160L63-467l84-46 333 182 333-182 84 46-417 227Zm0 160L63-307l84-46 333 182 333-182 84 46L480-80Zm0-411 273-149-273-149-273 149 273 149Zm0-149Z" /></svg>
-                            <h1 className='classi-bar-titulo'>2024 - Tabela de Classificação</h1>
+                            <h1 className='classi-bar-titulo'>2024 - STANDINGS</h1>
                         </div>
                         <div>
-                            <a href="#stranding-piloto"><button>Piloto</button></a>
-                            <a href="#stranding-equipe"><button>Equipe</button></a>
+                            <a href="#stranding-piloto"><button>Drivers</button></a>
+                            <a href="#stranding-equipe"><button>Teams</button></a>
                         </div>
                     </div>
 
                     {/* Tabela de Classificação dos Pilotos */}
                     <div className="standings-container" id='stranding-piloto'>
-                        <h1 className='titulo-classi'>Classificação de Pilotos - Fórmula E 2024</h1>
+                        <h1 className='titulo-classi'>Drivers Standings - Formula E 2024</h1>
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Posição</th>
-                                    <th>Piloto</th>
-                                    <th>Equipe</th>
-                                    <th>Pontos</th>
+                                    <th>Position</th>
+                                    <th>Pilot</th>
+                                    <th>Team</th>
+                                    <th>Points</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -239,13 +239,13 @@ const Classificacao = () => {
 
                     {/* Tabela de Classificação das Equipes */}
                     <div className="standings-container" id='stranding-equipe'>
-                        <h1 className='titulo-classi'>Classificação de Equipes - Fórmula E 2024</h1>
+                        <h1 className='titulo-classi'>Teams Standings - Formula E 2024</h1>
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Posição</th>
-                                    <th>Equipe</th>
-                                    <th>Pontos</th>
+                                    <th>Position</th>
+                                    <th>Team</th>
+                                    <th>Points</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -259,7 +259,6 @@ const Classificacao = () => {
                                                     alt={team.team}
                                                     className="team-logo"
                                                 />
-                                                {/* Imagem adicional dependendo da posição */}
                                                 {additionalImages[team.position] && (
                                                     <img
                                                         src={additionalImages[team.position]}

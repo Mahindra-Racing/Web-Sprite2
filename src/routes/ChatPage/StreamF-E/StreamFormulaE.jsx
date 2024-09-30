@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Chat from '../Chat';
-import './StreamingPage.css';
-
-import streaming1 from '../../../assets/img/streaming1.png'
+import './StreamFormulaE.css';
 import { Link } from 'react-router-dom';
+
 
 const StreamingPage = () => {
     const [userProfile, setUserProfile] = useState({
@@ -92,39 +91,39 @@ const StreamingPage = () => {
         <main className='mainSTREAM'>
             <section className='section2'>
                 <div className="streaming-page">
-              <div className="top-bar">
+                    <div className="top-bar">
                         {containers.map((container, index) => (
                             <Link to={container.LinkTop} className='LinkStream'>
-                                <div key={index} className="top-container">
-                                    <img
-                                        src={container.image}
-                                        alt="Container"
-                                        className="top-container-image"
-                                    />
-                                
-                                    <div class="top-container-info">
-                                        <h3>{container.title}</h3>
-                                        <div class="info-description">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-                                            <p> {container.viewerCountAbrev}</p>
-                                        </div>
+                            <div key={index} className="top-container">
+                                <img
+                                    src={container.image}
+                                    alt="Container"
+                                    className="top-container-image"
+                                />
+                            
+                                <div class="top-container-info">
+                                    <h3>{container.title}</h3>
+                                    <div class="info-description">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                                        <p> {container.viewerCountAbrev}</p>
                                     </div>
-                                </div></Link>
+                                </div>
+                            </div></Link>
                         ))}
                     </div>
 
                     <div className="main-content">
                         <div className="streaming-box">
                             <img
-                                src={streaming1}
+                                src='https://nexo-uploads-beta.s3.amazonaws.com/wp-content/uploads/2023/11/29015402/EPS905_160157_X4I8367-1000x1000_binary_322325.jpg'
                                 alt="Live Streaming"
                                 className="streaming-image"
                             />
                             <div className="streaming-info">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeeko32Id8MJoTf6H2E3ISSD_v96tVr8AOA&s" alt="Streaming Info" className="info-image" />
+                                <img src="https://i.redd.it/ot-new-logo-of-formula-e-with-previous-versions-in-the-last-v0-vqqgra64jn2a1.jpg?width=1023&format=pjpg&auto=webp&s=efac52d4930abe6a5561958a3b8243d6956838a9" alt="Streaming Info" className="info-image" />
                                 <div className="streaming-info-text">
-                                    <h2>Mahindra Racing</h2>
-                                    <p>São Paulo E-Prix </p>
+                                    <h2>Formula-E</h2>
+                                    <p>São Paulo E-Prix | Official Broadcast </p>
                                     <div className='streaming-into-btn'>
                                         <button className='into-btn'>Sports</button>
                                         <button className='into-btn'>English</button>
@@ -136,7 +135,7 @@ const StreamingPage = () => {
                                     <div className="viewer-count">
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-                                        <span style={{ marginRight: '8px' }} className='viewer-text'>{containers[1].viewerCount}</span>
+                                        <span style={{ marginRight: '8px' }} className='viewer-text'>{containers[0].viewerCount}</span>
                         
                                     </div>
                                     <button className="support-button">

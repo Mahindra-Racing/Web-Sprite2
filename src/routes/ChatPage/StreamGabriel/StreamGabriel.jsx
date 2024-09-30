@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Chat from '../Chat';
-import './StreamingPage.css';
+import './StreamGabriel.css';
 
-import streaming1 from '../../../assets/img/streaming1.png'
 import { Link } from 'react-router-dom';
 
 const StreamingPage = () => {
@@ -116,19 +115,20 @@ const StreamingPage = () => {
                     <div className="main-content">
                         <div className="streaming-box">
                             <img
-                                src={streaming1}
+                                src="https://images.unsplash.com/photo-1699138346485-94ade0a398d0?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="Live Streaming"
                                 className="streaming-image"
                             />
                             <div className="streaming-info">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeeko32Id8MJoTf6H2E3ISSD_v96tVr8AOA&s" alt="Streaming Info" className="info-image" />
+                                <img src="https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/431692287_8088804247838985_6679869870596023845_n.jpg?ccb=11-4&oh=01_Q5AaIK596Up9g6oSlriU0iyeE_UjBaESfZ2ZCFsOcNfWhoMw&oe=67058135&_nc_sid=5e03e0&_nc_cat=108" alt="Streaming Info" className="info-image" />
                                 <div className="streaming-info-text">
-                                    <h2>Mahindra Racing</h2>
-                                    <p>São Paulo E-Prix </p>
+                                    <h2>Gabriel Matias</h2>
+                                    <p>Sintonize para discussões aprofundadas sobre a temporada, pilotos e muito mais!</p>
                                     <div className='streaming-into-btn'>
                                         <button className='into-btn'>Sports</button>
                                         <button className='into-btn'>English</button>
                                         <button className='into-btn'>Brazil</button>
+                                        <button className='into-btn'>PodCast</button>
                                     </div>
                                 </div>
                                 <div className="streaming-actions">
@@ -136,7 +136,7 @@ const StreamingPage = () => {
                                     <div className="viewer-count">
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-                                        <span style={{ marginRight: '8px' }} className='viewer-text'>{containers[1].viewerCount}</span>
+                                        <span style={{ marginRight: '8px' }} className='viewer-text'>{containers[5].viewerCount}</span>
                         
                                     </div>
                                     <button className="support-button">

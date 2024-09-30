@@ -65,13 +65,13 @@ const Chat = ({ userProfile }) => {
         <input
           type="text"
           className="chat-input"
-          placeholder="Escreva uma mensagem..."
+          placeholder="Type a message..."
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
           onKeyPress={handleKeyPress} // Envia mensagem ao pressionar Enter
         />
         <button className="chat-send-button" onClick={handleSendMessage}>
-          Enviar
+          Send
         </button>
       </div>
     </div>
