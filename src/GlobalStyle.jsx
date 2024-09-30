@@ -20,6 +20,11 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
 }
 
+main {
+  padding: min(30px, 7%);
+  padding-left: 60px;
+}
+
 html{
     font-family: var(--main-font);
     line-height: 1.5rem;

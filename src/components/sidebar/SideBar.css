@@ -141,3 +141,62 @@
 #sidebar.close .a a {
     padding: 10px;
 }
+
+/* Responsividade para dispositivos menores que 768px */
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+        margin-top: 4vh;
+        padding: 5px 1em;
+    }
+
+    #sidebar.close {
+        width: 45px; /* Ajusta a largura da sidebar quando fechada */
+        padding: 5px;
+    }
+
+    #sidebar ul li {
+        margin-top: 5px; /* Ajusta o espaçamento entre os itens do menu */
+    }
+
+    .dropdown-btn, #sidebar a, #sidebar .sidebarLogo {
+        padding: 10px 5px; /* Ajusta o padding para economizar espaço */
+        font-size: 0.85rem; /* Diminui o tamanho da fonte */
+    }
+
+    #toggle-btn {
+        padding: 0.5em;
+    }
+}
+
+/* Responsividade para dispositivos menores que 480px */
+@media screen and (max-width: 480px) {
+    #sidebar {
+        width: 100%; /* Sidebar ocupa a largura total da tela */
+        height: auto; /* Ajusta a altura */
+        position: relative; /* Remove o posicionamento fixo */
+        box-shadow: none; /* Remove sombra para simplificar */
+    }
+
+    
+    #sidebar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #sidebar ul li {
+        margin: 5px 10px;
+    }
+
+    #sidebar.close {
+        display: none; /* Esconde a sidebar quando está fechada */
+    }
+
+    .a {
+        position: relative;
+        bottom: auto; /* Remove o posicionamento fixo */
+        flex-direction: row; /* Ajusta a orientação */
+        justify-content: center; /* Centraliza o conteúdo */
+    }
+}

@@ -1,4 +1,7 @@
 import React from "react";
+import "./Home.css";
+import { Link } from "react-router-dom";
+
 import banner1 from "../../assets/img/banner1.png";
 import banner2 from "../../assets/img/banner3.png";
 import img2 from "../../assets/img/carro1.png";
@@ -10,7 +13,7 @@ import story3 from "../../assets/img/story3.png"
 import story6 from "../../assets/img/story6.png"
 import new1 from "../../assets/img/new1.png"
 import new3 from "../../assets/img/new3.png"
-import "./Home.css";
+
 
 const Home = () => {
     return (
@@ -28,7 +31,7 @@ const Home = () => {
                                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0a1c4c">
                                             <path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
                                         </svg>
-                                        <a href="#">Watch now</a>
+                                        <Link to='/Stream'><a href="#">Watch now</a></Link>
                                     </button>
                                 </div>
                             </div>
@@ -38,21 +41,21 @@ const Home = () => {
                     <div className="side-content">
                         <div className="side-titulo">
                             <h3>Headlines</h3>
-                            <a href="#" className="ver-mais3">See More ❯</a>
+                            <Link to='/News' className="LinkHome"><a href="#" className="ver-mais3">See More ❯</a></Link>
                         </div>
 
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Gen3 Evo debuts this year</a>
+                        <Link to='/News' className="LinkHome"><a href="#" className="noticia">Gen3 Evo debuts this year</a></Link>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Guenther announced at Penske</a>
+                        <Link to='/News' className="LinkHome"><a href="#" className="noticia">Guenther announced at Penske</a></Link>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Pascal Wehrlein is Formula E champion</a>
+                        <Link to='/News' className="LinkHome"><a href="#" className="noticia">Pascal Wehrlein is Formula E champion</a></Link>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">New season opens in São Paulo</a>
+                        <Link to='/News' className="LinkHome"><a href="#" className="noticia">New season opens in São Paulo</a></Link>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Top 10 best drivers of season 10</a>
+                        <Link to='/News' className="LinkHome"><a href="#" className="noticia">Top 10 best drivers of season 10</a></Link>
                         <hr className="hr3" />
-                        <a href="#" className="noticia">Formula E breaks records: Female driver</a>
+                        <Link to='/News' className="LinkHome"><a href="#" className="noticia">Formula E breaks records: Female driver</a></Link>
                     </div>
                 </div>
 
@@ -111,7 +114,6 @@ const Home = () => {
                 <div className="containerProduto2">
                     <div className="product-header2">
                         <h1 className="product-titulo2">TRENDING NOW</h1>
-                        <a href="#" className="ver-mais2">See More ❯</a>
                     </div>
                     <hr className="hr2" />
                     <div className="product-container2">
@@ -190,7 +192,7 @@ const Home = () => {
                 <div className="containerStep">
                     <div className="tituloStep">
                         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#4274ff"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" /></svg>
-                        <h1>PROXIMAS CORRIDAS</h1>
+                        <h1>CALENDAR</h1>
                         <a href="#" className="ver-mais1">See More ❯</a>
                     </div>
                     <div className="stepMain">

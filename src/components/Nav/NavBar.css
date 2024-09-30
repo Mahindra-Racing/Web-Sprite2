@@ -92,3 +92,37 @@
 .linkRegister{
   text-decoration: none;
 }
+
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 0 3%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 0;
+  }
+
+  .nav-lists {
+    flex-basis: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
