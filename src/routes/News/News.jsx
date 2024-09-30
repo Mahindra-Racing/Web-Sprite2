@@ -26,48 +26,48 @@ const Home = () => {
                     <div className="side-content2">
                         <div className="side-noticias2">
                             <a href="#" className="noticia-link">
-                                <div className="side-text">
+                                <Link to='/News/0002' className="LinkNews"><div className="side-text">
                                     <img src={new1} alt="Image1" title="Image1" />
                                     <div className="texto-container">
                                         <h1 className="noticia-titulo">Guenther is announced at Penske</h1>
                                         <p className="noticia-paragrafo">Maximilian Guenther will race for DS Penske next season...</p>
                                         <p className="noticia-data">Sep 10, 2024</p>
                                     </div>
-                                </div>
+                                </div></Link>
                             </a>
 
-                            <hr className="hr3"/>
+                            <hr className="hr3" />
                             <a href="#" className="noticia-link">
-                                <div className="side-text">
+                                <Link to='/News/0003' className="LinkNews"><div className="side-text">
                                     <img src={new2} alt="Image1" title="Image1" />
                                     <div className="texto-container">
                                         <h1 className="noticia-titulo">“He continues to bring money”</h1>
                                         <p className="noticia-paragrafo">That's what F-E Vice Champion <span><b>Mitch Evans</b></span> says about Pérez's stay at Red Bull...</p>
                                         <p className="noticia-data">Aug 16, 2024</p>
                                     </div>
-                                </div>
+                                </div></Link>
                             </a>
-                            <hr className="hr3"/>
+                            <hr className="hr3" />
                             <a href="#" className="noticia-link">
-                                <div className="side-text">
-                                    <img src={new3} alt="Image1" title="Image1" />
+                                <Link to='/News/0004' className="LinkNews"><div className="side-text">
+                                    <img src='https://cdn-1.motorsport.com/images/amp/6zQ5JPwY/s1000/zane-maloney-abt-lola-formula-.jpg' alt="Image1" title="Image1" />
                                     <div className="texto-container">
-                                        <h1 className="noticia-titulo">Gen3 Evo debuts this year</h1>
-                                        <p className="noticia-paragrafo">The new update of the vehicles can accelerate from 0 to 96 km/h in just 1.82 seconds...</p>
+                                        <h1 className="noticia-titulo">Maloney announced as Di Grassi's teammate</h1>
+                                        <p className="noticia-paragrafo">Maloney fará sua estreia na Fórmula E no final deste...</p>
                                         <p className="noticia-data">Sep 23, 2024</p>
                                     </div>
-                                </div>
+                                </div></Link>
                             </a>
-                            <hr className="hr3"/>
+                            <hr className="hr3" />
                             <a href="#" className="noticia-link">
-                                <div className="side-text">
+                                <Link to='/News/0005' className="LinkNews"><div className="side-text">
                                     <img src={new4} alt="Image1" title="Image1" />
                                     <div className="texto-container">
                                         <h1 className="noticia-titulo">“Bigger and better”</h1>
                                         <p className="noticia-paragrafo">That's what the co-founder of F-E says about the event in São Paulo...</p>
                                         <p className="noticia-data">Sep 10, 2024</p>
                                     </div>
-                                </div>
+                                </div></Link>
                             </a>
                         </div>
                     </div>
@@ -83,25 +83,25 @@ const Home = () => {
                     <div className="caixa-noticias">
                         <h4 className="caixa-titulo">Formula E boss says he is looking forward to debut in São Paulo</h4>
                         <p className="caixa-paragrafo">São Paulo accelerates preparations to host the e-Prix...</p>
-                        <div className="caixa-footer"><p className="caixa-data">Sep 10, 2024</p><a href="#" className="caixa-data-btn">Learn more ❯</a></div>
+                        <div className="caixa-footer"><p className="caixa-data">Sep 10, 2024</p></div>
                     </div>
                     <hr />
                     <div className="caixa-noticias">
                         <h4 className="caixa-titulo">Tickets for the Formula E São Paulo E-Prix are already on sale</h4>
                         <p className="caixa-paragrafo">São Paulo stage, scheduled for December 7, 2024...</p>
-                        <div className="caixa-footer"><p className="caixa-data">Aug 21, 2024</p><a href="#" className="caixa-data-btn">Learn more ❯</a></div>
+                        <div className="caixa-footer"><p className="caixa-data">Aug 21, 2024</p></div>
                     </div>
                     <hr />
                     <div className="caixa-noticias">
                         <h4 className="caixa-titulo">Porsche's Pascal Wehrlein is the Formula E champion in 2024</h4>
                         <p className="caixa-paragrafo">German driver clinches one victory and one second place in the doubleheader...</p>
-                        <div className="caixa-footer"><p className="caixa-data">Jul 22, 2024</p><a href="#" className="caixa-data-btn">Learn more ❯</a></div>
+                        <div className="caixa-footer"><p className="caixa-data">Jul 22, 2024</p></div>
                     </div>
                     <hr />
                     <div className="caixa-noticias">
                         <h4 className="caixa-titulo">Formula E confirms the opening of the new season in São Paulo</h4>
                         <p className="caixa-paragrafo">São Paulo E-Prix will be held on the street circuit...</p>
-                        <div className="caixa-footer"><p className="caixa-data">Sep 10, 2024</p><a href="#" className="caixa-data-btn">Learn more ❯</a></div>
+                        <div className="caixa-footer"><p className="caixa-data">Sep 10, 2024</p></div>
                     </div>
                 </div>
                 <div className="hero-premium">

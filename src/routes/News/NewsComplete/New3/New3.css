@@ -1,0 +1,162 @@
+  
+.main-container3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2vh;
+    gap: 10px;
+}
+
+
+.carousel3 {
+  flex: 1;
+  max-width: 990px;
+  margin: 0;
+}
+
+.carousel-container3 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item3 {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+}
+
+.carousel-item3 img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    border-radius: 5px;
+}
+
+.carousel-content3 {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.side-content1{
+    margin-left: 2%;
+}
+
+.noticia1{
+    text-decoration: none;
+    color: #000000;
+  
+  }
+
+
+.side-text1{
+    max-width: 250px;
+}
+
+.side-titulo3{
+    margin-top: 2vh;
+    font-size: 0.8rem;
+}
+
+.side-paragrafo3{
+    font-size: 0.7rem;
+    
+}
+
+.descricao-news2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 12vh;
+    width: 1250px;  
+}
+
+.link-descricao2{
+    text-decoration: none;
+    color: #222533;
+}
+
+.descricao-titulo2{
+    color: #5e63ff;
+    margin-bottom: 20px;
+}
+
+.descricao-paragrafo2{
+    width: 1200px;
+}
+
+.descricao-data2{
+    font-size: 0.8rem;
+    color: #cecece;
+}
+
+
+.linha-noticias1{
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin-top: 5vh;
+    gap: 10px;
+}
+
+.caixa-noticias1{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 350px;
+}
+
+
+.caixa-paragrafo1{
+    font-size: 0.8rem;
+}
+
+.caixa-data1{
+    font-size: 0.8rem;
+    color: #a5a5a5;
+}
+
+.caixa-data-btn1{
+    font-size: 0.8rem;
+    color: #a5a5a5;
+    text-decoration: none;
+    background-color: #fff; 
+}
+
+.caixa-data-btn1:hover{
+    color: #000000;
+}
+
+.caixa-footer1{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+
+.text-news {
+    display: flex;
+    width: 965px;
+    margin-top: 5vh;
+    margin-right: 16%;
+}
+
+.img-news {
+    margin-top: 5vh;
+    width: 955px;
+    margin-right: 16%;
+}
+
+.img-news img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.video-container {
+    width: 965px;
+    margin-right: 16%;
+    margin-top: 5vh;
+}

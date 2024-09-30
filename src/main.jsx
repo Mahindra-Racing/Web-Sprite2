@@ -2,8 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import Home from './routes/Home/Home.jsx'
+
 import News from './routes/News/News.jsx'
-import News1 from './routes/News/NewsComplete/MulherNews.jsx'
+import News1 from './routes/News/NewsComplete/New1/MulherNews.jsx'
+import News2 from './routes/News/NewsComplete/New2/New2.jsx'
+import News3 from './routes/News/NewsComplete/New3/New3.jsx'
+import News4 from './routes/News/NewsComplete/New4/New4.jsx'
+import News5 from './routes/News/NewsComplete/New5/New5.jsx'
+
 import Classifica from './routes/Classificacao/Classificacao.jsx'
 import PilotoEquipe from './routes/PilotoEquipe/PilotoEquipe.jsx'
 import Corrida from './routes/Corrida/Corrida.jsx'
@@ -60,6 +66,10 @@ const router = createBrowserRouter([
 
       { path: "/News", element: <News/>  },
       { path: "/News/0001", element: <News1/>  },
+      { path: "/News/0002", element: <News2/>  },
+      { path: "/News/0003", element: <News3/>  },
+      { path: "/News/0004", element: <News4/>  },
+      { path: "/News/0005", element: <News5/>  },
 
       { path: "/Classifica", element: <Classifica/>  },
       { path: "/PilotoEquipe", element: <PilotoEquipe/> },
