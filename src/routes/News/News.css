@@ -1,19 +1,17 @@
-
-
-
+/* Estilos gerais */
 .main-container2 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin-top: 12vh;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
-
 .carousel2 {
-  flex: 1;
-  max-width: 900px;
-  margin: 0;
+    flex: 1;
+    max-width: 900px;
+    margin: 0;
 }
 
 .carousel-container2 {
@@ -42,7 +40,6 @@
     transform: translate(-50%, -50%);
     color: white;
 }
-
 
 .side-content2 {
     width: 19%;
@@ -95,85 +92,84 @@
     margin-top: 10px;
 }
 
-.hr3{
+.hr3 {
     margin-top: 10px;
 }
-  
 
-.descricao-news{
+.descricao-news {
     display: flex;
     flex-direction: column;
     justify-content: start;
     margin-top: 2vh;
-    width: 1250px;  
+    width: 1250px;
     margin-left: 2%;
 }
 
-.link-descricao{
+.link-descricao {
     text-decoration: none;
     color: #222533;
 }
 
-.descricao-titulo{
+.descricao-titulo {
     color: #5e63ff;
     margin-bottom: 20px;
 }
 
-.descricao-paragrafo{
+.descricao-paragrafo {
     width: 800px;
 }
 
-.descricao-data{
+.descricao-data {
     font-size: 0.8rem;
     color: #cecece;
 }
 
-
-.linha-noticias{
+.linha-noticias {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1500px;
+    margin-left: 10%;
     margin-top: 5vh;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
-.caixa-noticias{
+.caixa-noticias {
     display: flex;
     flex-direction: column;
     justify-content: start;
     width: 350px;
 }
 
-
-.caixa-paragrafo{
+.caixa-paragrafo {
     font-size: 0.8rem;
 }
 
-.caixa-data{
+.caixa-data {
     font-size: 0.8rem;
     color: #a5a5a5;
 }
 
-.caixa-data-btn{
+.caixa-data-btn {
     font-size: 0.8rem;
     color: #a5a5a5;
     text-decoration: none;
-    background-color: transparent; 
+    background-color: transparent;
 }
 
-.caixa-data-btn:hover{
+.caixa-data-btn:hover {
     color: #000000;
 }
 
-.caixa-footer{
+.caixa-footer {
     display: flex;
     justify-content: space-between;
     padding-right: 5px;
 }
 
-.hr3{
-  opacity: 0.3;
-  margin-bottom: 2%;
+.hr3 {
+    opacity: 0.3;
+    margin-bottom: 2%;
 }
 
 .containerProduto3 {
@@ -183,9 +179,116 @@
     border: 1px solid #E2E8F0;
     padding: 20px;
     margin-left: 3%;
-  }
+}
 
-.LinkNews{
+.LinkNews {
     text-decoration: none;
     color: #222533;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 1200px) {
+    .descricao-news {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .descricao-paragrafo {
+        width: 100%;
+    }
+
+    .linha-noticias {
+        flex-wrap: wrap;
+    }
+
+    .side-content2 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container2 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8vh;
+    }
+
+    .carousel2 {
+        max-width: 600px;
+    }
+
+    .carousel-content2 {
+        left: 50%;
+        top: 90%;
+    }
+
+    .side-content2 {
+        width: 90%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .descricao-news {
+        width: 100%;
+        padding: 0 10px;
+        margin-left: 0;
+    }
+
+    .descricao-paragrafo {
+        width: 100%;
+    }
+
+    .linha-noticias {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .caixa-noticias {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel2 {
+        max-width: 100%;
+    }
+
+    .carousel-content2 {
+        font-size: 0.9rem;
+        top: 85%;
+    }
+
+    .side-text img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .noticia-titulo {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .descricao-titulo {
+        font-size: 1.5rem;
+    }
+
+    .descricao-paragrafo {
+        font-size: 0.8rem;
+    }
+
+    .caixa-paragrafo, .caixa-data, .caixa-data-btn {
+        font-size: 0.7rem;
+    }
+
+    .caixa-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .hr3 {
+        margin: 10px 0;
+    }
 }

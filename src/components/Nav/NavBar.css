@@ -1,128 +1,211 @@
+/* Estilo para os links de navegação */
 .linkNavbar {
-    color: var(--second-color);
-    text-decoration: none;
-  }
-  
-  a.linkNavbar:hover {
-    opacity: 0.7;
-  }
-  
-  .logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-decoration: none;
-    color: var(--second-color);
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: var(--main-font);
-    background-color: #ffffff;
-    box-shadow: 0px 1px 5px rgb(195, 195, 195);
-    height: 8vh;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .nav-list1 {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-list1 li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-  }
-  
-  .nav-list2 {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-list2 li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-  }
-  
-  .btn-entrar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; 
-    width: 120px;
-    height: 40px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: var(--main-font);
-    letter-spacing: 2px;
-    background-color: transparent;
-    border: 2px solid var(--accent-clr);
-    border-radius: 10px;
-    color: var(--accent-clr);
-    cursor: pointer;
-  }
-  
-  .btn-cadastrar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; 
-    width: 120px;
-    height: 40px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: var(--main-font);
-    letter-spacing: 1px;
-    background-color: var(--accent-clr);
-    border: transparent;
-    border-radius: 10px;
-    color: var(--main-color);
-    cursor: pointer;
-  }
-  
-  .btn-entrar:hover, .btn-cadastrar:hover {
-    opacity: 0.7;
-  }
-  
-.linkRegister{
+  color: var(--second-color);
   text-decoration: none;
 }
 
+.linkNavbar:hover {
+  opacity: 0.7;
+}
 
+/* Estilo para o logo */
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+/* Estilo geral da navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--main-font);
+  background-color: #ffffff;
+  box-shadow: 0px 1px 5px rgb(195, 195, 195);
+  height: 8vh;
+  top: 0;
+  position: fixed;
+  width: 96%;
+  padding: 0 2%;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  position: absolute;
+  right: 20px; 
+}
+
+.bar {
+  width: 35px; /* Diminuir a largura */
+  height: 18px; /* Diminuir a altura */
+  background-color: transparent; /* Changed to transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Novo estilo para o ícone SVG do hamburguer */
+.hamburger-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Rotação do ícone SVG no estado ativo */
+.hamburger-icon.active {
+  transform: rotate(180deg);
+}
+
+/* Estilo para as listas de navegação */
+.nav-list1,
+.nav-list2 {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Posicionamento da nav-list1 no centro */
+.nav-list1 {
+  margin: 0 auto;
+}
+
+/* Posicionamento da nav-list2 à esquerda */
+.nav-list2 {
+  margin-left: 32px;
+  
+}
+
+/* Ajustes de espaçamento */
+.nav-list1 li,
+.nav-list2 li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+/* Estilo para os botões */
+.btn-entrar,
+.btn-cadastrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  width: 120px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--main-font);
+  letter-spacing: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
+/* Estilo individual dos botões */
+.btn-entrar {
+  background-color: transparent;
+  border: 2px solid var(--accent-clr);
+  color: var(--accent-clr);
+}
+
+.btn-cadastrar {
+  background-color: var(--accent-clr);
+  border: transparent;
+  color: var(--main-color);
+}
+
+/* Efeito hover para os botões */
+.btn-entrar:hover,
+.btn-cadastrar:hover {
+  opacity: 0.7;
+}
+
+.linkRegister {
+  text-decoration: none;
+}
+
+.linkCadastrar {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Responsividade para dispositivos tablets */
 @media screen and (max-width: 1024px) {
   .navbar {
-    padding: 0 3%;
+      padding: 0 3%;
+  }
+
+  .nav-list2 {
+      margin-left: 0;
   }
 }
 
+/* Responsividade para dispositivos móveis */
 @media screen and (max-width: 768px) {
   .navbar {
-    height: auto;
-    padding: 0;
+      height: 40px;
+      padding: 0 3%;
   }
 
-  .nav-lists {
-    flex-basis: 100%;
+  /* Mostrar o hamburguer no modo mobile */
+  .hamburger {
+      display: flex;
   }
 
-  .btn {
-    width: 100%;
-    margin-top: 0.5rem;
+  /* Ajuste para centralizar o logo */
+  .logo {
+      margin-left: 0;
+  }
+
+  /* Ocultar as listas de navegação no modo mobile */
+  .nav-list1,
+  .nav-list2 {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 4.1vh; /* Ajuste a partir da altura da navbar */
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #ffffff;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+  }
+
+  /* Mostrar as listas de navegação quando o menu estiver ativo */
+  .nav-list1.show,
+  .nav-list2.show {
+      display: flex;
   }
 }
 
+/* Responsividade para dispositivos menores */
 @media screen and (max-width: 480px) {
-  .logo {
-    font-size: 1.2rem;
+  .navbar {
+      padding: 0 2%;
   }
 
-  .btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+  .nav-list1,
+  .nav-list2 {
+      height: auto;
+      padding: 0;
+  }
+
+  .nav-list1 li,
+  .nav-list2 li {
+      margin: 0;
+  }
+
+  /* Ajustar largura dos botões */
+  .btn-entrar,
+  .btn-cadastrar {
+      width: 150px;
+      font-size: 14px;
   }
 }

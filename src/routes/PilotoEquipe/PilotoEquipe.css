@@ -64,7 +64,7 @@
     width: 70%;
     height: auto;
     border-radius: 10px;
-    border-bottom:  2px solid #ddd;
+    border-bottom: 2px solid #ddd;
     margin-bottom: 15px;
 }
 
@@ -80,14 +80,14 @@
     text-align: left;
 }
 
-.piloto-nome, .piloto-sobrenome {
+.piloto-nome,
+.piloto-sobrenome {
     margin: 0;
 }
 
 .piloto-img-small {
     width: 70px;  
     height: auto;
-
 }
 
 .piloto-nome {
@@ -122,4 +122,74 @@
 .productPE:hover img {
     opacity: 0.9;
     transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) { /* Desktop */
+    .product-containerPE {
+        grid-template-columns: repeat(2, 1fr); /* Reduzindo colunas para 2 */
+    }
+
+    .product-tituloPE {
+        font-size: 1.5rem; /* Reduzindo tamanho da fonte */
+    }
+}
+
+@media (max-width: 992px) { /* Tablet */
+    .product-containerPE {
+        grid-template-columns: repeat(1, 1fr); /* Mudando para 1 coluna */
+        padding: 10px; /* Ajustando padding */
+    }
+
+    .product-tituloPE {
+        font-size: 1.2rem; /* Ajustando tamanho da fonte */
+        margin-left: 10px; /* Ajustando margem */
+    }
+
+    .containerProdutoPE {
+        margin-right: 5%; /* Ajustando margem à direita */
+        margin-left: 5%; /* Ajustando margem à esquerda */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .containerProdutoPE {
+        margin-top: 5vh; /* Ajustando margem superior */
+        padding: 10px; /* Ajustando padding */
+        max-width: 95%; /* Largura maior em dispositivos móveis */
+    }
+
+    .product-tituloPE {
+        font-size: 1.1rem; /* Ajustando tamanho da fonte */
+    }
+
+    .product-image-large img {
+        width: 90%; /* Aumentando largura da imagem em mobile */
+    }
+
+    .piloto-img-small {
+        width: 50px; /* Ajustando a largura da imagem do piloto em mobile */
+    }
+
+    .piloto-nome {
+        font-size: 16px; /* Reduzindo tamanho da fonte */
+    }
+
+    .piloto-sobrenome {
+        font-size: 1.5rem; /* Reduzindo tamanho da fonte */
+    }
+}
+
+@media (max-width: 576px) { /* Mobile Extra Pequeno */
+    .product-tituloPE {
+        font-size: 1rem; /* Ajustando para dispositivos muito pequenos */
+    }
+
+    .product-image-large img {
+        width: 100%; /* Largura total em dispositivos muito pequenos */
+    }
+
+    .product-image-small img {
+        height: 150px; /* Ajustando a altura da imagem do carro */
+    }
 }

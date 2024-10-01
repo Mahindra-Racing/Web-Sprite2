@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Profile.css';
 
 const Profile = () => {
-  const profileData = JSON.parse(localStorage.getItem('profileData')) || {};
+  const [profileData, setProfileData] = useState(JSON.parse(localStorage.getItem('profileData')) || {});
   const [level, setLevel] = useState(1);
   const [points, setPoints] = useState(profileData.points || 0);
   const [missions, setMissions] = useState([
@@ -18,6 +18,15 @@ const Profile = () => {
     setLevel(calculatedLevel);
   }, [points]);
 
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setProfileData(JSON.parse(localStorage.getItem('profileData')) || {});
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
+
   const username = profileData.name ? `@${profileData.name.toLowerCase().replace(/\s/g, '')}` : '';
 
   const completeMission = (missionId) => {
@@ -28,14 +37,20 @@ const Profile = () => {
 
     setMissions(updatedMissions);
     setPoints(points + missionPoints);
-    profileData.points = points + missionPoints;
-    localStorage.setItem('profileData', JSON.stringify(profileData));
+    const updatedProfileData = { ...profileData, points: points + missionPoints };
+    setProfileData(updatedProfileData);
+    localStorage.setItem('profileData', JSON.stringify(updatedProfileData));
   };
 
   return (
     <main className='mainProfileProf'>
       <div className="profile-containerProf">
         <div className="profile-bannerProf">
+          {profileData.bannerImage ? (
+            <img src={profileData.bannerImage} alt="Banner" className="banner-imageProf" />
+          ) : (
+            <div className="banner-placeholderProf">No Banner Image</div>
+          )}
           <div className="profile-image-containerProf">
             {profileData.profileImage ? (
               <img src={profileData.profileImage} alt="Profile" className="profile-imageProf" />

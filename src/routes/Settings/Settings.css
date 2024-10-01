@@ -14,6 +14,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
+    padding: 20px; /* Adicionado padding para melhor espaçamento */
 }
 
 .profile-banner {
@@ -38,7 +39,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: #1e88e5;
+    color: #5e63ff;
 }
 
 .profile-image-container {
@@ -104,7 +105,7 @@
 
 .settings-container h1 {
     font-size: 2rem;
-    color: #1e88e5;
+    color: #5e63ff;
     text-align: center;
     margin: 70px 0 30px;
 }
@@ -159,7 +160,7 @@ h2 {
     background: none;
     border: none;
     cursor: pointer;
-    color: #1e88e5;
+    color: #5e63ff;
     font-weight: bold;
     font-size: 14px;
 }
@@ -178,7 +179,7 @@ h2 {
     width: calc(100% - 60px);
     margin: 0 30px 30px;
     padding: 15px;
-    background-color: #1e88e5;
+    background-color: #5e63ffcb;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -188,5 +189,75 @@ h2 {
 }
 
 .save-settings-button:hover {
-    background-color: #1565c0;
+    background-color: #5e63ff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .settings-container {
+        margin-left: 50px;
+        padding: 10px; /* Menos padding em telas menores */
+    }
+
+    .profile-banner {
+        height: 150px; /* Altura reduzida para telas menores */
+    }
+
+    .profile-image-container {
+        top: 100px; /* Ajuste da posição da imagem de perfil */
+        left: 10px; /* Menor espaçamento */
+        width: 80px; /* Tamanho reduzido */
+        height: 80px; /* Tamanho reduzido */
+    }
+
+    .settings-container h1 {
+        font-size: 1.8rem; /* Fonte menor */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Fonte menor */
+    }
+
+    .input-group input,
+    .input-group select {
+        font-size: 12px; /* Fonte menor nos inputs */
+    }
+
+    .save-settings-button {
+        font-size: 1rem; /* Fonte menor no botão */
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-container {
+        padding: 5px; 
+    }
+
+    .profile-banner {
+        height: 120px; /* Altura ainda menor para mobile */
+    }
+
+    .profile-image-container {
+        top: 70px; /* Ajuste da posição da imagem de perfil */
+        left: 5px; /* Menor espaçamento */
+        width: 60px; /* Tamanho reduzido */
+        height: 60px; /* Tamanho reduzido */
+    }
+
+    .settings-container h1 {
+        font-size: 1.6rem; /* Fonte menor */
+    }
+
+    h2 {
+        font-size: 1rem; /* Fonte menor */
+    }
+
+    .input-group input,
+    .input-group select {
+        font-size: 11px; /* Fonte menor nos inputs */
+    }
+
+    .save-settings-button {
+        font-size: 0.9rem; /* Fonte menor no botão */
+    }
 }

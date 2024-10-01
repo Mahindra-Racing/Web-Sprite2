@@ -53,6 +53,14 @@ const FAQChatbot = () => {
         setMessages([...messages, { text: message, isUser: true }]);
         setInputMessage('');
 
+        // Check for specific greetings
+        if (message.toLowerCase() === "hi") {
+            setTimeout(() => {
+                setMessages(prevMessages => [...prevMessages, { text: "Welcome to the Formula E Chat! How can I assist you today?", isUser: false }]);
+            }, 1000);
+            return; // Exit the function early
+        }
+
         const matchedQuestion = chatbotQuestions.find(q => q.question.toLowerCase() === message.toLowerCase());
 
         if (matchedQuestion) {
@@ -113,8 +121,6 @@ const FAQChatbot = () => {
                         ))}
                     </div>
                 </div>
-                
-                
             </div>
         </main>
     );

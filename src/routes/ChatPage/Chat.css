@@ -109,3 +109,102 @@
     background-color: #4a54e1; /* Alterando a cor ao passar o mouse */
     transform: scale(1.05); /* Efeito de zoom no botão */
 }
+
+/* Responsividade */
+@media (max-width: 1200px) { /* Desktop */
+    .mainSTREAM {
+        padding-left: 10%;
+    }
+
+    .top-container {
+        width: 150px; /* Ajustando a largura dos containers */
+    }
+
+    .streaming-info-text h2 {
+        font-size: 1.5rem; /* Ajuste do tamanho da fonte */
+    }
+}
+
+@media (max-width: 992px) { /* Tablet */
+    .main-content {
+        flex-direction: column; /* Mudando para coluna em tablet */
+        align-items: center; /* Centralizando itens */
+    }
+
+    .streaming-box {
+        margin-right: 0; /* Removendo margem */
+        margin-bottom: 20px; /* Adicionando margem inferior */
+    }
+
+    .chat-box {
+        width: 90%; /* Largura total no tablet */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .mainSTREAM {
+        padding-left: 5%; /* Ajuste para mobile */
+        padding-top: 5vh; /* Reduzindo o padding superior */
+    }
+
+    .top-bar {
+        flex-direction: column; /* Mudando para coluna em mobile */
+        align-items: center; /* Centralizando itens */
+    }
+
+    .top-container {
+        width: 100%; /* Largura total */
+        margin-bottom: 10px; /* Espaçamento entre containers */
+    }
+
+    .streaming-image {
+        height: 250px; /* Ajustando a altura da imagem para mobile */
+    }
+
+    .info-image {
+        width: 80px; /* Ajustando a largura da imagem de info */
+        height: 80px; /* Ajustando a altura da imagem de info */
+    }
+
+    .streaming-info-text {
+        margin-left: 10px; /* Reduzindo margem em mobile */
+    }
+
+    .support-button {
+        font-size: 14px; /* Ajustando tamanho da fonte do botão */
+    }
+
+    .chat-box {
+        width: 100%; /* Largura total no mobile */
+    }
+}
+
+@media (max-width: 576px) { /* Mobile Extra Pequeno */
+    .top-container-info h3 {
+        font-size: 10px; /* Ajustando título para dispositivos pequenos */
+    }
+
+    .top-container-info p {
+        font-size: 0.6rem; /* Ajustando descrição para dispositivos pequenos */
+    }
+
+    .streaming-image {
+        height: 200px; /* Ajustando a altura da imagem */
+    }
+
+    .chat-box {
+        max-height: 300px; /* Reduzindo altura máxima do chat */
+    }
+
+    .chat-footer {
+        padding: 5px; /* Ajustando padding do footer do chat */
+    }
+
+    .chat-input {
+        font-size: 0.8em; /* Ajustando tamanho do input */
+    }
+
+    .chat-send-button {
+        font-size: 0.8em; /* Ajustando tamanho do botão de envio */
+    }
+}

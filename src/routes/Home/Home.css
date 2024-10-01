@@ -387,7 +387,8 @@ opacity: 0.3;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
   height: 500px;
   background-color: #dbdbdb;
   margin-bottom: 10px;
@@ -597,7 +598,17 @@ opacity: 0.3;
 
   .Video-play {
     width: 100%;
+    max-width: 800px; /* Tamanho máximo para vídeos grandes */
     height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .Video-titulo {
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0;
   }
 }
 
@@ -605,11 +616,15 @@ opacity: 0.3;
   /* Ajustes para Tablet */
   main {
     padding-left: 60px;
+
   }
 
-  .main-container, .containerProduto, .containerProduto2, .containerVideo {
-    margin-left: 0;
+  .main-container, .containerProduto, .containerProduto2, .containerVideo{
     margin-top: 5vh;
+  }
+
+  .containerVideo {
+    margin-left: 13%;
   }
 
   .carousel {
@@ -627,30 +642,44 @@ opacity: 0.3;
     gap: 10px;
   }
 
+  .hero-premium{
+    width: 500px;
+    height: auto;
+    padding: 10px;
+  }
+
   .product, .product2 {
     width: 90%;
     margin: auto;
   }
 
   .Video-titulo {
-    font-size: 2em;
+    font-size: 1.8em;
+    margin: 15px 0;
+    text-align: center;
   }
 
   .Video-play {
     width: 100%;
+    max-width: 450px; /* Tamanho máximo ajustado para tablet */
     height: auto;
+    object-fit: contain; /* Mantém proporção do vídeo */
   }
 
   .carousel-content {
     top: 55%;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     width: 100%;
     left: 55%;
   }
 
   .carousel-btn {
-    width: 50%;
-    font-size: 0.6rem
+    width: 60%;
+    font-size: 0.8rem;
+  }
+
+  .ver-mais1{
+    font-size: 0.6rem;
   }
 }
 
@@ -684,7 +713,9 @@ opacity: 0.3;
   }
 
   .hero-premium img {
-    width: 40%;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
   }
 
   .hero-btn {
@@ -699,7 +730,16 @@ opacity: 0.3;
 
   .Video-play {
     width: 100%;
+    max-width: 300px; /* Tamanho máximo ajustado para mobile */
     height: auto;
+    object-fit: contain;
+    margin: 10px 0;
+  }
+
+  .Video-titulo {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    text-align: center;
   }
 
   .stepMain {
@@ -711,3 +751,5 @@ opacity: 0.3;
     width: 100%;
   }
 }
+
+
