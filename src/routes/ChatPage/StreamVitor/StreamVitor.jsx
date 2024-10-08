@@ -38,7 +38,7 @@ const StreamingPage = () => {
         {   
             LinkTop: '/Stream/StreamMaserati',
             title: 'Maserati Racing',
-            image: 'https://scontent.fcgh11-1.fna.fbcdn.net/v/t39.30808-1/387872224_891699219084599_5297368716210760592_n.jpg?stp=dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=xYh_VZFopJsQ7kNvgF8F8sf&_nc_ht=scontent.fcgh11-1.fna&_nc_gid=A60kZCsy41VeUndhygb2VyF&oh=00_AYA2PavshhfZalDqg3HuCb4qYjE1qYCVz5sQ7PrW3SWqtA&oe=66FE47BC',
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV_wEacYwp7GJ9TRmdfv62yCrgyUn6JMCSZg&s',
             viewerCount: '4.567',
             viewerCountAbrev: ' 4,5 mil'
         },
