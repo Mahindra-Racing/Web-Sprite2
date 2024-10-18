@@ -1,5 +1,7 @@
 // Shop.jsx
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { DollarSign, ShoppingCart } from 'lucide-react';
 import './Shop.css';
 
 // Dados de exemplo dos produtos gerais
@@ -68,7 +70,7 @@ const products = [
 
 // Dados de exemplo dos produtos dos times
 const teamProducts = {
-    jaguar: [
+  jaguar: [
     { id: 1, name: 'Jaguar TCS Racing 2024 Team Cap', price: 410, image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwbbeb7567/images/large/701231100001_pp_01_jaguarformulae.jpg?sw=1600&sh=1600&sm=fit' },
     { id: 2, name: 'Jaguar TCS Racing 2024 Team T-shirt', price: 570, image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwee9970e7/images/large/701231099001_pp_01_jaguarformulae.jpg?sw=1600&sh=1600&sm=fit' },
     { id: 3, name: 'Jaguar TCS Racing 2024 Team Polo', price: 700, image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4038a518/images/large/701231098001_pp_01_jaguarformulae.jpg?sw=1600&sh=1600&sm=fit' },
@@ -189,23 +191,29 @@ const Shop = () => {
     setSelectedTeam(team);
   };
 
+  const navigate = useNavigate(); // Cria a instância do useNavigate
+
+  const handleMarketplaceClick = () => {
+    navigate('/marketplace'); // Redireciona para a rota do marketplace
+  };
+
   return (
     <main className="mainSHOP">
       <section>
         <div className="shop-containerSHOP">
-        <div className="headerSHOP">
+          <div className="headerSHOP">
             <h1 className="shop-titleSHOP">
-                the brand new formula e fanwear range 
+              the brand new formula e fanwear range
             </h1>
             <button className="buy-now-buttonSHOP">Shop Now</button>
-        </div>
-
+          </div>
+  
           <h2 className="shop-subtitleSHOP">
-          Explore our exclusive Formula E products. Show your support by shopping for the latest clothing and accessories!
+            Explore our exclusive Formula E products. Show your support by shopping for the latest clothing and accessories!
           </h2>
-
+  
           <h2 className="product-section-titleSHOP">Official Formula E Products</h2>
-
+  
           <div className="carousel-wrapperSHOP">
             <button className="carousel-buttonSHOP left" onClick={() => scrollLeft(generalProductsRef)}>
               ◀
@@ -216,7 +224,9 @@ const Shop = () => {
                   <div key={product.id} className="product-cardSHOP">
                     <img src={product.image} alt={product.name} className="product-imageSHOP" />
                     <h2 className="product-nameSHOP">{product.name}</h2>
-                    <p className="product-priceSHOP">${product.price}</p>
+                    <p className="product-priceSHOP">
+                      <DollarSign size={15} style={{ verticalAlign: 'middle' }} />{product.price}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -225,9 +235,11 @@ const Shop = () => {
               ▶
             </button>
           </div>
-
+  
           <h2 className="product-section-titleSHOP">Team Merchandise</h2>
-
+          <p className="promo-textSHOP">
+            Show your passion for Formula E with our exclusive fanwear collection!
+          </p>
           <div className="team-buttons-containerSHOP">
             {Object.entries(teamLogos).map(([team, logo]) => (
               <button
@@ -239,7 +251,7 @@ const Shop = () => {
               </button>
             ))}
           </div>
-
+  
           {selectedTeam && (
             <div className="carousel-wrapperSHOP">
               <button className="carousel-buttonSHOP left" onClick={() => scrollLeft(teamProductsRef)}>
@@ -251,7 +263,9 @@ const Shop = () => {
                     <div key={product.id} className="product-cardSHOP">
                       <img src={product.image} alt={product.name} className="product-imageSHOP" />
                       <h2 className="product-nameSHOP">{product.name}</h2>
-                      <p className="product-priceSHOP">${product.price}</p>
+                      <p className="product-priceSHOP">
+                        <DollarSign size={15} style={{ verticalAlign: 'middle' }} />{product.price}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -261,10 +275,25 @@ const Shop = () => {
               </button>
             </div>
           )}
+  
+          <div className="promo-sectionSHOP">
+            <div className="promo-contentSHOP">
+              <h1 className="product-section-titleSHOP-market">Marketplace</h1>
+              <p className="promo-textSHOP">
+                Show your passion for Formula E with our exclusive fanwear collection. Limited-time offers, so don't miss out!
+              </p>
+              <button className="go-to-marketplace" onClick={handleMarketplaceClick}>
+                <ShoppingCart size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} />Ir para o Marketplace
+              </button>
+            </div>
+            <div className="promo-imageSHOP">
+              <img src="https://media-d.global.abb/is/image/abbc/abb-porsche-gen3-4:9x16?wid=810&hei=1440" alt="Marketplace Image" /> 
+            </div>
+          </div>
         </div>
       </section>
     </main>
   );
-};
+};  
 
 export default Shop;

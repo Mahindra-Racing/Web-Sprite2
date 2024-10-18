@@ -1,0 +1,213 @@
+/* marketplace.css */
+:root {
+    --primary-color: #0062ff;
+    --secondary-color: #02183b;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --border-radius: 8px;
+}
+
+
+.mainMarketplace {
+    margin-top: 12vh;
+}
+
+.headerMarketplace {
+    background-color: #ffffff;
+    padding: 20px 15%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-contentMarketplace {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-imageMarketplace {
+    width: 80px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-right: 20px;
+}
+
+.header-textMarketplace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shop-titleMarketplace {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+
+.shop-descriptionMarketplace {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.header-buttons{
+    display: flex;
+    gap: 16px; 
+}
+
+.register-buttonMarketplace {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 2px solid var(--primary-color);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-buttonMarketplace:hover {
+    transform: translateY(-2px);
+}
+
+.shop-buttonMarketplace{
+    background-color: transparent;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    border: 2px solid var(--primary-color);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shop-buttonMarketplace:hover {
+    transform: translateY(-2px);
+}
+
+
+
+.bannerMarketplace {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.banner-imageMarketplace {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.products-sectionMarketplace {
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-section-titleMarketplace {
+    font-size: 28px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.products-containerMarketplace {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-cardMarketplace {
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-cardMarketplace:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-imageMarketplace {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-infoMarketplace {
+    padding: 15px;
+}
+
+.product-nameMarketplace {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin: 0 0 10px 0;
+}
+
+.product-priceMarketplace {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .headerMarketplace {
+        padding: 20px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-contentMarketplace {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left {
+        margin-bottom: 20px;
+    }
+
+    .header-imageMarketplace {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .register-buttonMarketplace {
+        width: 100%;
+    }
+
+    .products-containerMarketplace {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-titleMarketplace {
+        font-size: 24px;
+    }
+
+    .shop-descriptionMarketplace {
+        font-size: 14px;
+    }
+
+    .products-containerMarketplace {
+        grid-template-columns: 1fr;
+    }
+}

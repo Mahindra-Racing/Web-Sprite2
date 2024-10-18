@@ -14,7 +14,11 @@ import Classifica from './routes/Classificacao/Classificacao.jsx'
 import PilotoEquipe from './routes/PilotoEquipe/PilotoEquipe.jsx'
 import Corrida from './routes/Corrida/Corrida.jsx'
 import Bet from './routes/Bet/BetPage.jsx'
+
 import Shop from './routes/Shop/Shop.jsx'
+import Marketplace from './routes/Shop/Marketplace.jsx'
+import RegisterShop from './routes/Shop/RegisteShop.jsx'
+
 import Quiz from './routes/Quiz/Quiz.jsx'
 import Ajuda from './routes/FAQChatbot/FAQChatbot.jsx'
 
@@ -50,6 +54,8 @@ const router = createBrowserRouter([
       { path: "/Bet", element: <Bet/>},
 
       { path: "/Shop", element: <Shop/>},
+      { path: "/marketplace", element: <Marketplace/>},
+      {  path: "/register-shop", element: <RegisterShop/>},
 
       { path: "/Quiz", element: <Quiz/>},
 
