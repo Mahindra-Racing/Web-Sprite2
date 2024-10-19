@@ -25,7 +25,7 @@ const Home = () => {
                             <div className="carousel-item">
                                 <img src={img1} alt="Image1" title="Image1" />
                                 <div className="carousel-content">
-                                    <h1>Next Race: <span className="corrida">São Paulo E-Prix</span></h1>
+                                    <h1><span className="corrida">São Paulo E-Prix</span></h1>
                                     <h4>The excitement is just a click away!</h4>
                                     <button className="carousel-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0a1c4c">

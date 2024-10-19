@@ -10,9 +10,11 @@ import News3 from './routes/News/NewsComplete/New3/New3.jsx'
 import News4 from './routes/News/NewsComplete/New4/New4.jsx'
 import News5 from './routes/News/NewsComplete/New5/New5.jsx'
 
+import Dashboard from './routes/Dashboard/Dashboard.jsx'
 import Classifica from './routes/Classificacao/Classificacao.jsx'
 import PilotoEquipe from './routes/PilotoEquipe/PilotoEquipe.jsx'
 import Corrida from './routes/Corrida/Corrida.jsx'
+
 import Bet from './routes/Bet/BetPage.jsx'
 
 import Shop from './routes/Shop/Shop.jsx'
@@ -38,6 +40,7 @@ import ErrorPage from './routes/ErrorPage.jsx'
 import { GlobalStyle } from './GlobalStyle.jsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 
 
 
@@ -77,6 +80,7 @@ const router = createBrowserRouter([
       { path: "/News/0004", element: <News4/>  },
       { path: "/News/0005", element: <News5/>  },
 
+      { path: "/Dashboard", element: <Dashboard/>  },
       { path: "/Classifica", element: <Classifica/>  },
       { path: "/PilotoEquipe", element: <PilotoEquipe/> },
       { path: "/Corrida", element: <Corrida/>},

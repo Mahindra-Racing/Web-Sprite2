@@ -237,7 +237,7 @@ const Shop = () => {
           </div>
   
           <h2 className="product-section-titleSHOP">Team Merchandise</h2>
-          <p className="promo-textSHOP">
+          <p className="promo-textSHOP1">
             Show your passion for Formula E with our exclusive fanwear collection!
           </p>
           <div className="team-buttons-containerSHOP">
@@ -280,7 +280,7 @@ const Shop = () => {
             <div className="promo-contentSHOP">
               <h1 className="product-section-titleSHOP-market">Marketplace</h1>
               <p className="promo-textSHOP">
-                Show your passion for Formula E with our exclusive fanwear collection. Limited-time offers, so don't miss out!
+                  Cansado de ter produtos encalhados? No nosso marketplace, você encontra a plataforma ideal para divulgar e comercializar seus produtos de forma prática e eficiente.
               </p>
               <button className="go-to-marketplace" onClick={handleMarketplaceClick}>
                 <ShoppingCart size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} />Ir para o Marketplace

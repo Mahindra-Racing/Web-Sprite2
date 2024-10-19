@@ -20,7 +20,7 @@ const Navbar = () => {
             <ul className={`nav-list1 ${menuOpen ? "show" : ""}`}>
                 <li>
                     <Link to='/Ajuda' className="linkNavbar" onClick={closeMenu}>
-                        Ajuda
+                       
                     </Link>
                 </li>
             </ul>

@@ -219,6 +219,11 @@ object-fit: contain;
   
 }
 
+.promo-textSHOP1{
+  display: flex;
+  justify-content: center;
+}
+
 .product-section-titleSHOP-market{
   display: flex;
   justify-content: center;

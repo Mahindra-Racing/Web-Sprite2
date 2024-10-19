@@ -7,9 +7,14 @@ const RegisterShop = () => {
   const navigate = useNavigate();
   const [productName, setProductName] = useState('');
   const [productPrice, setProductPrice] = useState('');
-  const [productImage, setProductImage] = useState('');
+  const [productImageUrl, setProductImageUrl] = useState('');
+  const [productImageFile, setProductImageFile] = useState(null);
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
+
+  const handleImageFileChange = (e) => {
+    setProductImageFile(e.target.files[0]);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +22,7 @@ const RegisterShop = () => {
     const newProduct = {
       name: productName,
       price: parseFloat(productPrice),
-      image: productImage,
+      image: productImageFile ? URL.createObjectURL(productImageFile) : productImageUrl,
     };
 
     try {
@@ -34,7 +39,8 @@ const RegisterShop = () => {
         setMessageType('success');
         setProductName('');
         setProductPrice('');
-        setProductImage('');
+        setProductImageUrl('');
+        setProductImageFile(null);
       } else {
         setMessage('Falha ao registrar o produto.');
         setMessageType('error');
@@ -54,7 +60,7 @@ const RegisterShop = () => {
       <header className="register-shop-header">
         <h1 className="register-shop-title">Registrar Produto</h1>
         <button className="back-to-marketplace" onClick={goToMarketplace}>
-          <ArrowLeft size={18} />
+          <ArrowLeft size={18} className="back-icon" />
           Voltar para o Marketplace
         </button>
       </header>
@@ -90,17 +96,24 @@ const RegisterShop = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="productImage">
+            <label htmlFor="productImageUrl">
               <Image size={18} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
-              URL da Imagem:
+              URL da Imagem ou selecione uma imagem:
             </label>
             <input
               type="text"
-              id="productImage"
-              value={productImage}
-              onChange={(e) => setProductImage(e.target.value)}
-              required
+              id="productImageUrl"
+              value={productImageUrl}
+              onChange={(e) => setProductImageUrl(e.target.value)}
               placeholder="Digite a URL da imagem do produto"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="file"
+              id="productImageFile"
+              accept="image/*"
+              onChange={handleImageFileChange}
             />
           </div>
           <button type="submit" className="submit-button">Registrar Produto</button>
