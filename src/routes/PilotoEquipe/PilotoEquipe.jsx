@@ -276,7 +276,7 @@ const PilotoEquipe = () => {
                                 <img src='//static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/feb6762c-ae66-4c8e-a892-f958d6f7e774.png' alt="Imagem carro" />
                             </div>
                         </div>
-                        {/*  */}
+                        {/* Mitch Evans */}
                         <div className="productPE">
                             <div className="product-topPE">
                                 <div className="product-image-large">
@@ -316,7 +316,7 @@ const PilotoEquipe = () => {
                                 <img src='//static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/05dab754-2899-411b-9c4e-72311a36cc9c.png' alt="Imagem carro" />
                             </div>
                         </div>
-                        {/*  */}
+                        {/* Sam Bird */}
                         <div className="productPE">
                             <div className="product-topPE">
                                 <div className="product-image-large">

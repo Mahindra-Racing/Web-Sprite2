@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Chat from '../Chat';
-import './StreamPorsche.css';
-
-import streaming1 from '../../../assets/img/streaming1.png'
+import '../StreamVitor/StreamVitor.css';
 import { Link } from 'react-router-dom';
 
 const StreamingPage = () => {
@@ -147,35 +145,6 @@ const StreamingPage = () => {
                         </div>
 
                         <div className="chat-box">
-                            <button
-                                onClick={() => setShowProfileEdit((prev) => !prev)}
-                                className="profile-edit-button"
-                            >
-                                {showProfileEdit ? 'Save' : 'Edit Profile'}
-                            </button>
-
-                            {showProfileEdit && (
-                                <div className="profile-box">
-                                    <h2>Edit Profile</h2>
-                                    
-                                    <img src={userProfile.image} alt="User" className="profile-preview" />
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Digite seu nome"
-                                        value={userProfile.name}
-                                        onChange={handleProfileChange}
-                                        className="profile-input"
-                                    />
-                                    <input
-                                        type="file"
-                                        accept="image/*"
-                                        onChange={handleImageUpload}
-                                        className="profile-input"
-                                    />
-                                </div>
-                            )}
-
                             <Chat userProfile={userProfile} />
                         </div>
                     </div>

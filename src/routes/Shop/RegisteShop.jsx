@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Package, DollarSign, Image, CheckCircle, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Package, DollarSign, Image, CheckCircle, AlertCircle, FileText, Palette, Maximize } from 'lucide-react';
 import './RegisterShop.css';
 
 const RegisterShop = () => {
@@ -9,6 +9,9 @@ const RegisterShop = () => {
   const [productPrice, setProductPrice] = useState('');
   const [productImageUrl, setProductImageUrl] = useState('');
   const [productImageFile, setProductImageFile] = useState(null);
+  const [productDescription, setProductDescription] = useState('');
+  const [productColor, setProductColor] = useState('');
+  const [productSize, setProductSize] = useState('');
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
 
@@ -23,6 +26,9 @@ const RegisterShop = () => {
       name: productName,
       price: parseFloat(productPrice),
       image: productImageFile ? URL.createObjectURL(productImageFile) : productImageUrl,
+      description: productDescription,
+      color: productColor,
+      size: productSize,
     };
 
     try {
@@ -41,6 +47,9 @@ const RegisterShop = () => {
         setProductPrice('');
         setProductImageUrl('');
         setProductImageFile(null);
+        setProductDescription('');
+        setProductColor('');
+        setProductSize('');
       } else {
         setMessage('Falha ao registrar o produto.');
         setMessageType('error');
@@ -93,6 +102,56 @@ const RegisterShop = () => {
               required
               placeholder="Digite o preço do produto"
               step="0.01"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="productColor">
+              <Palette size={18} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+              Cor:
+            </label>
+            <select
+              id="productColor"
+              value={productColor}
+              onChange={(e) => setProductColor(e.target.value)}
+              required
+            >
+              <option value="">Selecione a cor</option>
+              <option value="Red">Vermelho</option>
+              <option value="Blue">Azul</option>
+              <option value="Green">Verde</option>
+              <option value="Black">Preto</option>
+              <option value="White">Branco</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="productSize">
+              <Maximize size={18} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+              Tamanho:
+            </label>
+            <select
+              id="productSize"
+              value={productSize}
+              onChange={(e) => setProductSize(e.target.value)}
+              required
+            >
+              <option value="">Selecione o tamanho</option>
+              <option value="S">Pequeno</option>
+              <option value="M">Médio</option>
+              <option value="L">Grande</option>
+              <option value="XL">Extra Grande</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="productDescription">
+              <FileText size={18} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+              Descrição:
+            </label>
+            <textarea
+              id="productDescription"
+              value={productDescription}
+              onChange={(e) => setProductDescription(e.target.value)}
+              placeholder="Digite a descrição do produto"
+              rows="4"
             />
           </div>
           <div className="form-group">

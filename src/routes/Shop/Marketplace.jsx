@@ -7,13 +7,32 @@ const Marketplace = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    // Novos estados para filtragem
+    const [searchTerm, setSearchTerm] = useState('');
+    const [colorFilter, setColorFilter] = useState('');
+    const [sizeFilter, setSizeFilter] = useState('');
+    const [minPrice, setMinPrice] = useState('');
+    const [maxPrice, setMaxPrice] = useState('');
 
     const goToRegisterPage = () => {
         navigate('/register-shop');
     };
 
     const goToShopPage = () => {
-        navigate('/shop'); // Supondo que a rota da loja seja "/shop"
+        navigate('/shop');
+    };
+
+    const openModal = (product) => {
+        setSelectedProduct(product);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedProduct(null);
     };
 
     useEffect(() => {
@@ -34,6 +53,17 @@ const Marketplace = () => {
 
         fetchProducts();
     }, []);
+
+    // Função para filtrar os produtos
+    const filteredProducts = products.filter(product => {
+        const matchesSearchTerm = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesColor = colorFilter ? product.color === colorFilter : true;
+        const matchesSize = sizeFilter ? product.size === sizeFilter : true;
+        const matchesMinPrice = minPrice ? product.price >= parseFloat(minPrice) : true;
+        const matchesMaxPrice = maxPrice ? product.price <= parseFloat(maxPrice) : true;
+
+        return matchesSearchTerm && matchesColor && matchesSize && matchesMinPrice && matchesMaxPrice;
+    });
 
     return (
         <div className="mainMarketplace">
@@ -65,10 +95,57 @@ const Marketplace = () => {
 
             <section className="bannerMarketplace">
                 <img
-                    src="https://www.pure-travel.co.za/wp-content/uploads/2020/05/NewYork-Eprix-banner.jpg"
+                    src="https://i0.wp.com/maquinadoesporte.com.br/wp-content/uploads/2024/03/Formula_E_iguatemi.png?fit=1024,512&ssl=1"
                     alt="Banner Marketplace"
                     className="banner-imageMarketplace"
                 />
+            </section>
+
+            <section className="filter-sectionMarketplace">
+                <input
+                    type="text"
+                    placeholder="Search by name..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="filter-inputMarketplace"
+                />
+                <select
+                    value={colorFilter}
+                    onChange={(e) => setColorFilter(e.target.value)}
+                    className="filter-selectMarketplace"
+                >
+                    <option value="">Filter by color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <select
+                    value={sizeFilter}
+                    onChange={(e) => setSizeFilter(e.target.value)}
+                    className="filter-selectMarketplace"
+                >
+                    <option value="">Filter by size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <div className="price-filtersMarketplace">
+                    <input
+                        type="number"
+                        placeholder="Min Price"
+                        value={minPrice}
+                        onChange={(e) => setMinPrice(e.target.value)}
+                        className="filter-inputMarketplace"
+                    />
+                    <span className="price-separatorMarketplace">-</span>
+                    <input
+                        type="number"
+                        placeholder="Max Price"
+                        value={maxPrice}
+                        onChange={(e) => setMaxPrice(e.target.value)}
+                        className="filter-inputMarketplace"
+                    />
+                </div>
             </section>
 
             <section className="products-sectionMarketplace">
@@ -80,9 +157,9 @@ const Marketplace = () => {
                     </div>
                 ) : (
                     <div className="products-containerMarketplace">
-                        {products.length > 0 ? (
-                            products.map((product) => (
-                                <div key={product.id} className="product-cardMarketplace">
+                        {filteredProducts.length > 0 ? (
+                            filteredProducts.map((product) => (
+                                <div key={product.id} className="product-cardMarketplace" onClick={() => openModal(product)}>
                                     <img src={product.image} alt={product.name} className="product-imageMarketplace" />
                                     <div className="product-infoMarketplace">
                                         <h3 className="product-nameMarketplace">{product.name}</h3>
@@ -99,6 +176,32 @@ const Marketplace = () => {
                     </div>
                 )}
             </section>
+
+            {isModalOpen && selectedProduct && (
+                <div className="modalSHOP">
+                    <div className="modal-contentSHOP">
+                        <button className="close-modalSHOP" onClick={closeModal}>
+                            &times;
+                        </button>
+                        <div className="modal-bodySHOP">
+                            <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-imageSHOP" />
+                            <div className="modal-detailsSHOP">
+                                <h2 className="modal-product-nameSHOP">{selectedProduct.name}</h2>
+                                <p className="modal-product-priceSHOP">
+                                    <DollarSign size={15} style={{ verticalAlign: 'middle' }} />
+                                    {selectedProduct.price}
+                                </p>
+                                <p className="modal-product-colorSHOP"><strong>Color:</strong> {selectedProduct.color}</p>
+                                <p className="modal-product-sizeSHOP"><strong>Size:</strong> {selectedProduct.size}</p>
+                                <p className="modal-product-descriptionSHOP"><strong>Description:</strong> {selectedProduct.description}</p>
+                                <button className="buy-now-buttonSHOP" onClick={() => addToCart(selectedProduct)}>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

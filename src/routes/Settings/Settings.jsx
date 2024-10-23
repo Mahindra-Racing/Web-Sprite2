@@ -5,25 +5,61 @@ const teams = ['Mahindra Racing', 'Nissan e.dams', 'Jaguar TCS Racing', 'DS Tech
 const drivers = ['Jean-Éric Vergne', 'Sébastien Buemi', 'Mitch Evans', 'Stoffel Vandoorne'];
 
 const Settings = () => {
-    const storedProfileData = JSON.parse(localStorage.getItem('profileData')) || {};
     const [accountData, setAccountData] = useState({
-        name: storedProfileData.name || '',
-        email: storedProfileData.email || '',
-        password: storedProfileData.password || '',
-        profileImage: storedProfileData.profileImage || '',
-        bannerImage: storedProfileData.bannerImage || '',
+        name: '',
+        email: '',
+        password: '',
+        profileImage: '',
+        bannerImage: '',
     });
-
-    const [notificationsEnabled, setNotificationsEnabled] = useState(storedProfileData.notifications || false);
+    const [notificationsEnabled, setNotificationsEnabled] = useState(false);
     const [themePreferences, setThemePreferences] = useState({
-        favoriteTeam: storedProfileData.favoriteTeam || '',
-        favoriteDriver: storedProfileData.favoriteDriver || '',
+        favoriteTeam: '',
+        favoriteDriver: '',
     });
-
     const [showPassword, setShowPassword] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const profileImageInputRef = useRef(null);
     const bannerImageInputRef = useRef(null);
+
+    useEffect(() => {
+        const fetchAccountData = async () => {
+            const storedProfileData = JSON.parse(localStorage.getItem('profileData')) || {};
+
+            try {
+                const response = await fetch('http://localhost:5001/accounts');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                const loggedInUser = data.find(account => account.name === storedProfileData.name);
+
+                if (loggedInUser) {
+                    setAccountData({
+                        name: loggedInUser.name,
+                        email: loggedInUser.email,
+                        password: loggedInUser.password,
+                        profileImage: loggedInUser.profileImage,
+                        bannerImage: loggedInUser.bannerImage,
+                    });
+                    setNotificationsEnabled(loggedInUser.notifications || false);
+                    setThemePreferences({
+                        favoriteTeam: loggedInUser.favoriteTeam || '',
+                        favoriteDriver: loggedInUser.favoriteDriver || '',
+                    });
+                } else {
+                    setErrorMessage('');
+                }
+            } catch (error) {
+                console.error('Error fetching account data:', error);
+                setErrorMessage('Error fetching account data. Please try again later.');
+            }
+        };
+
+        fetchAccountData();
+    }, []);
 
     useEffect(() => {
         localStorage.setItem('profileData', JSON.stringify({
@@ -105,6 +141,7 @@ const Settings = () => {
                 />
 
                 <h1>Profile Settings</h1>
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
 
                 <section className="account-settings">
                     <h2>Account Settings</h2>
@@ -118,8 +155,18 @@ const Settings = () => {
                     </div>
                     <div className="input-group password-field">
                         <label htmlFor="password">Password:</label>
-                        <input type={showPassword ? 'text' : 'password'} id="password" name="password" value={accountData.password} onChange={handleAccountChange} />
-                        <button type="button" className="toggle-password" onClick={() => setShowPassword(!showPassword)}>
+                        <input 
+                            type={showPassword ? 'text' : 'password'} 
+                            id="password" 
+                            name="password" 
+                            value={accountData.password} 
+                            onChange={handleAccountChange} 
+                        />
+                        <button 
+                            type="button" 
+                            className="toggle-password" 
+                            onClick={() => setShowPassword(!showPassword)}
+                        >
                             {showPassword ? 'Hide' : 'Show'}
                         </button>
                     </div>
@@ -127,7 +174,7 @@ const Settings = () => {
 
                 <section className="notification-settings">
                     <h2>Notification Settings</h2>
-                    <div className="checkbox-group">
+                    <div className="checkbox-group1">
                         <input type="checkbox" id="notifications" checked={notificationsEnabled} onChange={() => setNotificationsEnabled(!notificationsEnabled)} />
                         <label htmlFor="notifications">Enable Notifications</label>
                     </div>

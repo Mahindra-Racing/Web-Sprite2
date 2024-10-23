@@ -1,28 +1,5 @@
 {
   "products": [
-    {
-      "id": "4583",
-      "name": "a",
-      "price": 34,
-      "image": "blob:http://localhost:5173/0f2446e0-1e4d-42ce-81a5-7de2552da2ee"
-    },
-    {
-      "id": "62bf",
-      "name": "aaa",
-      "price": 3,
-      "image": "blob:http://localhost:5173/f2ae99a7-be70-4616-9fab-7f020f3d8f83"
-    },
-    {
-      "id": "9ca5",
-      "name": "jjh",
-      "price": 54,
-      "image": "blob:http://localhost:5173/6d07af02-9c0c-4f32-af9f-4be247ab08fe"
-    },
-    {
-      "id": "4bfd",
-      "name": "jjh",
-      "price": 45,
-      "image": "blob:http://localhost:5173/b440220a-82cf-42b9-9eae-e835cc89d891"
-    }
+    
   ]
 }

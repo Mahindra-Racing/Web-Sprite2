@@ -1,5 +1,5 @@
 // Shop.jsx
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { DollarSign, ShoppingCart } from 'lucide-react';
 import './Shop.css';
@@ -11,67 +11,100 @@ const products = [
     name: 'Formula E New Era Repreve 9FORTY Cap',
     price: 380,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd843c058/images/large/701229416001_pp_01_formulanewera.jpg?sw=818&q=80',
+    description: 'Official Formula E logo 9FORTY cap with striking patterned design produced by official Formula E partner, New Era.',
+    color: "Black | Dark Blue",
+    size: "One size"
   },
   {
     id: 2,
     name: 'Formula E New Era Repreve Trucker Cap',
     price: 410,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw63da690f/images/large/701229415001_pp_01_formulaenewera.jpg?sw=800&sh=800&sm=fit',
+    description: 'Official Formula E logo Trucker cap with rear mesh panels, produced by official Formula E partners, New Era.',
+    color: "Black | Dark Blue",
+    size: "One size"
   },
   {
     id: 3,
     name: 'Formula E New Era Hankook Podium 9FORTY Cap',
     price: 420,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw6bb33180/images/large/701230435001_pp_01_hankookformulae.jpg?sw=1600&sh=1600&sm=fit',
+    description: 'The official ABB FIA Formula E World Championship Podium Cap, as worn on the podium by drivers throughout the season. Designed and produced by Formula E headwear partners New Era.',
+    color: "White",
+    size: "One size"
   },
   {
     id: 4,
     name: 'Formula E New Era Repreve 9FIFTY Cap',
     price: 370,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw89083b0f/images/large/701229414001_pp_01_formulaenewera.jpg?sw=1600&sh=1600&sm=fit',
+    description: 'Official Formula E 9FIFTY Logo Cap, designed and produced by Formula E partners, New Era.',
+    color: "Light Blue",
+    size: "S/M | M/L"
   },
   {
     id: 5,
     name: 'Formula E Wordmark Trucker Cap',
     price: 280,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwa0928e98/images/large/701223605002_pp_01_FormulaES9.jpg?sw=800&sh=800&sm=fit',
+    description: 'The boldly designed Formula E trucker cap is the perfect accessory to show your support for the electric racing league. Featuring a unique contrasted colourway with a mesh trucker style at the back.',
+    color: "Black | Blue",
+    size: "One size"
   },
   {
     id: 6,
     name: 'Formula E Camo Cap',
     price: 280,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw9d8935fd/images/large/701223397001_pp_03_FormulaES9.jpg?sw=1600&sh=1600&sm=fit',
+    description: 'The stylish all-over camo print cap features a large "E" logo on the front and a "Formula E" print at the back. Made with 100% recycled polyester and adjustable clasp closure, for that perfect fit.',
+    color: " Blue combo",
+    size: "One size"
   },
   {
     id: 7,
     name: 'Formula E Change Accelerated Hoodie',
     price: 790,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw0c1c6a2a/images/large/701223395001_pp_01_FormulaES9.jpg?sw=1600&sh=1600&sm=fit',
+    description: 'For any fan of the electrifying world of Formula E racing, this Formula E hoody features a unique HD wordmark print on the chest and a "Change Accelerated" gradient print at the back. The contrasting jersey-lined hood keeps you warm on those colder days.',
+    color: "Blue",
+    size: "All size"
   },
   {
     id: 8,
     name: 'Formula E Packable Backpack',
     price: 380,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw08b14011/images/large/701223600001_pp_01_FormulaES9.jpg?sw=1600&sh=1600&sm=fit',
+    description: 'The ultimate accessory for a day around the circuit, the Formula E packable backpack is collapsible and folds into a small pouch to allow you to carry with ease, just for when you need it.',
+    color: "Navy Blue",
+    size: "One size"
   },
   {
     id: 9,
     name: 'Formula E Tonal Hoodie',
     price: 750,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwa81500a3/images/large/701223399001_pp_01_FormulaES9.jpg?sw=1600&sh=1600&sm=fit',
+    description: 'The Formula E Tonal Hoodie features ribbed cuffs, a hem and a jersey lined hood for that extra comfort, whilst the iconic "E" logo is positioned on the front alongside an additional HD "Formula E" print on the cuff.',
+    color: "Navy Blue",
+    size: "All size"
   },
   {
     id: 10,
     name: 'Formula E Gradient Water Bottle',
     price: 200,
     image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwcbe076c5/images/large/701223602001_pp_01_FormulaES9.jpg?sw=1600&sh=1600&sm=fit',
+    description: 'Keep yourself fueled on the go with the Formula E Water Bottle. Produced from Stainless Steel with a double-wall construction to keep your liquids cool.',
+    color: "Blue combo",
+    size: "500ml"
   },
 ];
+
+
+
 
 // Dados de exemplo dos produtos dos times
 const teamProducts = {
   jaguar: [
-    { id: 1, name: 'Jaguar TCS Racing 2024 Team Cap', price: 410, image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwbbeb7567/images/large/701231100001_pp_01_jaguarformulae.jpg?sw=1600&sh=1600&sm=fit' },
+    { id: 1, name: 'Jaguar TCS Racing 2024 Team Cap', price: 410, image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwbbeb7567/images/large/701231100001_pp_01_jaguarformulae.jpg?sw=1600&sh=1600&sm=fit', },
     { id: 2, name: 'Jaguar TCS Racing 2024 Team T-shirt', price: 570, image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dwee9970e7/images/large/701231099001_pp_01_jaguarformulae.jpg?sw=1600&sh=1600&sm=fit' },
     { id: 3, name: 'Jaguar TCS Racing 2024 Team Polo', price: 700, image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4038a518/images/large/701231098001_pp_01_jaguarformulae.jpg?sw=1600&sh=1600&sm=fit' },
     { id: 4, name: 'Jaguar TCS Racing Season 10 Championship T-shirt', price: 500, image: 'https://store.fiaformulae.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw57b3a990/images/large/701228967001_pp_01_FormulaE.jpg?sw=1600&sh=1600&sm=fit' },
@@ -167,6 +200,9 @@ const Shop = () => {
   const generalProductsRef = useRef(null);
   const teamProductsRef = useRef(null);
   const [selectedTeam, setSelectedTeam] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null); // Produto selecionado
+  const [isModalOpen, setIsModalOpen] = useState(false); // Controle do modal
+  const [showCartMessage, setShowCartMessage] = useState(false); // Controle da mensagem de "adicionado ao carrinho"
 
   const scrollLeft = (ref) => {
     if (ref.current) {
@@ -191,29 +227,59 @@ const Shop = () => {
     setSelectedTeam(team);
   };
 
+  const handleProductClick = (product) => {
+    setSelectedProduct(product); // Define o produto selecionado
+    setIsModalOpen(true); // Abre o modal
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Fecha o modal
+  };
+
   const navigate = useNavigate(); // Cria a instância do useNavigate
 
   const handleMarketplaceClick = () => {
     navigate('/marketplace'); // Redireciona para a rota do marketplace
   };
 
+  const addToCart = (product) => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    setIsModalOpen(false); // Fecha o modal após adicionar ao carrinho
+
+    // Exibe a mensagem de adicionado ao carrinho
+    setShowCartMessage(true);
+    setTimeout(() => {
+      setShowCartMessage(false); // Oculta a mensagem após 3 segundos
+    }, 3000);
+  };
+
+  
   return (
     <main className="mainSHOP">
       <section>
         <div className="shop-containerSHOP">
+          {/* Mensagem de item adicionado ao carrinho */}
+          {showCartMessage && (
+            <div className="cart-messageSHOP">
+              Item adicionado ao carrinho!
+            </div>
+          )}
+
           <div className="headerSHOP">
             <h1 className="shop-titleSHOP">
               the brand new formula e fanwear range
             </h1>
             <button className="buy-now-buttonSHOP">Shop Now</button>
           </div>
-  
+
           <h2 className="shop-subtitleSHOP">
             Explore our exclusive Formula E products. Show your support by shopping for the latest clothing and accessories!
           </h2>
-  
+
           <h2 className="product-section-titleSHOP">Official Formula E Products</h2>
-  
+
           <div className="carousel-wrapperSHOP">
             <button className="carousel-buttonSHOP left" onClick={() => scrollLeft(generalProductsRef)}>
               ◀
@@ -221,7 +287,7 @@ const Shop = () => {
             <div className="carousel-containerSHOP" ref={generalProductsRef}>
               <div className="products-containerSHOP">
                 {products.map((product) => (
-                  <div key={product.id} className="product-cardSHOP">
+                  <div key={product.id} className="product-cardSHOP" onClick={() => handleProductClick(product)}>
                     <img src={product.image} alt={product.name} className="product-imageSHOP" />
                     <h2 className="product-nameSHOP">{product.name}</h2>
                     <p className="product-priceSHOP">
@@ -235,7 +301,7 @@ const Shop = () => {
               ▶
             </button>
           </div>
-  
+
           <h2 className="product-section-titleSHOP">Team Merchandise</h2>
           <p className="promo-textSHOP1">
             Show your passion for Formula E with our exclusive fanwear collection!
@@ -251,7 +317,7 @@ const Shop = () => {
               </button>
             ))}
           </div>
-  
+
           {selectedTeam && (
             <div className="carousel-wrapperSHOP">
               <button className="carousel-buttonSHOP left" onClick={() => scrollLeft(teamProductsRef)}>
@@ -260,7 +326,7 @@ const Shop = () => {
               <div className="carousel-containerSHOP" ref={teamProductsRef}>
                 <div className="products-containerSHOP">
                   {teamProducts[selectedTeam].map((product) => (
-                    <div key={product.id} className="product-cardSHOP">
+                    <div key={product.id} className="product-cardSHOP" onClick={() => handleProductClick(product)}>
                       <img src={product.image} alt={product.name} className="product-imageSHOP" />
                       <h2 className="product-nameSHOP">{product.name}</h2>
                       <p className="product-priceSHOP">
@@ -275,25 +341,54 @@ const Shop = () => {
               </button>
             </div>
           )}
-  
+
           <div className="promo-sectionSHOP">
             <div className="promo-contentSHOP">
               <h1 className="product-section-titleSHOP-market">Marketplace</h1>
               <p className="promo-textSHOP">
-                  Cansado de ter produtos encalhados? No nosso marketplace, você encontra a plataforma ideal para divulgar e comercializar seus produtos de forma prática e eficiente.
+                Cansado de ter produtos encalhados? No nosso marketplace, você encontra a plataforma ideal para divulgar e comercializar seus produtos de forma prática e eficiente.
               </p>
               <button className="go-to-marketplace" onClick={handleMarketplaceClick}>
                 <ShoppingCart size={20} style={{ marginRight: '8px', verticalAlign: 'middle' }} />Ir para o Marketplace
               </button>
             </div>
             <div className="promo-imageSHOP">
-              <img src="https://media-d.global.abb/is/image/abbc/abb-porsche-gen3-4:9x16?wid=810&hei=1440" alt="Marketplace Image" /> 
+              <img src="https://media-d.global.abb/is/image/abbc/abb-porsche-gen3-4:9x16?wid=810&hei=1440" alt="Marketplace Image" />
             </div>
           </div>
         </div>
+
+        {/* Modal */}
+        {isModalOpen && selectedProduct && (
+          <div className="modalSHOP">
+            <div className="modal-contentSHOP">
+              <button className="close-modalSHOP" onClick={closeModal}>
+                &times; {/* Símbolo de fechar */}
+              </button>
+              <div className="modal-bodySHOP">
+                <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-imageSHOP" />
+                <div className="modal-detailsSHOP">
+                  <h2 className="modal-product-nameSHOP">{selectedProduct.name}</h2>
+                  <p className="modal-product-priceSHOP">
+                    <DollarSign size={15} style={{ verticalAlign: 'middle' }} />{selectedProduct.price}
+                  </p>
+
+                  {/* Exibindo a cor, tamanho e descrição do produto */}
+                  <p className="modal-product-colorSHOP"><strong>Color:</strong> {selectedProduct.color}</p>
+                  <p className="modal-product-sizeSHOP"><strong>Size:</strong> {selectedProduct.size}</p>
+                  <p className="modal-product-descriptionSHOP"><strong>Description:</strong> {selectedProduct.description}</p>
+
+                  <button className="buy-now-buttonSHOP" onClick={() => addToCart(selectedProduct)}>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
     </main>
   );
-};  
+};
 
 export default Shop;

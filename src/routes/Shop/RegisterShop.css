@@ -75,7 +75,7 @@
 }
 
 .form-group input {
-    width: 100%;
+    width: 98%;
     padding: 12px;
     border: 2px solid #e0e0e0;
     border-radius: var(--border-radius);
@@ -87,6 +87,36 @@
     border-color: var(--primary-color);
     outline: none;
 }
+
+.form-group textarea {
+    width: 98%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
 
 .submit-button {
     background-color: var(--primary-color);
@@ -129,6 +159,80 @@
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
+
+.modalSHOP {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-contentSHOP {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.close-modalSHOP {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-color);
+    cursor: pointer;
+    float: right;
+}
+
+.modal-bodySHOP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-imageSHOP {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.modal-product-nameSHOP {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin: 10px 0;
+}
+
+.modal-product-priceSHOP {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.modal-product-colorSHOP,
+.modal-product-sizeSHOP,
+.modal-product-descriptionSHOP {
+    margin: 5px 0;
+}
+
+.buy-now-buttonSHOP {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now-buttonSHOP:hover {
+    background-color: #0056e0;
+}
+
 
 @media (max-width: 768px) {
     .register-shop-container {

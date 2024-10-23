@@ -1,0 +1,313 @@
+/* Page layout */
+.page-containerSIL {
+    min-height: 100vh;
+    background: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+}
+
+.headerSIL {
+    background-color: #5e63ff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+}
+
+.main-titleSIL {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Main content container */
+.content-containerSIL {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+/* Game container */
+.game-containerSIL {
+    flex: 1;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-containerSIL:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.game-titleSIL {
+    font-size: 2rem;
+    color: #5e63ff;
+    margin-bottom: 20px;
+    /* Ajuste do espaçamento */
+    text-align: center;
+}
+
+/* Image container */
+.image-wrapperSIL {
+    width: 300px;
+    height: 300px;
+    border: 4px solid #5e63ff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    /* Ajuste do espaçamento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.image-wrapperSIL:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.image-containerSIL {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.silhouette-imageSIL {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0%);
+}
+
+.show-fullSIL {
+    filter: brightness(100%)
+}
+
+/* Input and autocomplete */
+.autocomplete-containerSIL {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.guess-inputSIL {
+    width: 90%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #5e63ff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.guess-inputSIL:focus {
+    border-color: #5e63ff;
+    box-shadow: 0 0 10px rgba(0, 77, 64, 0.2);
+}
+
+/* Autocomplete options */
+.autocomplete-optionsSIL {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #5e63ff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.autocomplete-optionSIL {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.autocomplete-optionSIL:hover {
+    background-color: #e0f2f1;
+}
+
+.option-thumbnailSIL {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Buttons */
+.guess-buttonSIL,
+.reset-buttonSIL {
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guess-buttonSIL {
+    background-color: #5e63ff;
+    margin-bottom: 20px;
+}
+
+.reset-buttonSIL {
+    background-color: #ff7043;
+}
+
+.guess-buttonSIL:hover,
+.reset-buttonSIL:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.guess-buttonSIL:hover {
+    background-color: #5e63ffd3;
+}
+
+.reset-buttonSIL:hover {
+    background-color: #ff5722;
+}
+
+/* Lists */
+.guessed-list-containerSIL,
+.attempted-list-containerSIL {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.guessed-listSIL,
+.attempted-listSIL {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guessed-itemSIL,
+.attempted-itemSIL {
+    margin: 10px;
+    /* Aumentar a margem */
+    width: 300px;
+    padding: 8px 10px;
+    /* Aumentar o padding */
+    font-size: 1.2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: 2px solid ;
+}
+
+.guessed-itemSIL {
+    background-color: #a5d6a7;
+    color: #1b5e20;
+}
+
+.attempted-itemSIL {
+    background-color: #ef9a9a;
+    color: #b71c1c;
+}
+
+.attempted-thumbnailSIL {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Messages */
+.correct-messageSIL {
+    font-size: 1.8rem;
+    color: #2e7d32;
+    margin-top: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Hint container */
+.hint-containerSIL {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.instructions-containerSIL {
+    position: sticky; /* Mantém a posição fixa na tela */
+    top: 22%; /* Ajusta a distância do topo da tela */
+    right: 150px; /* Ajusta a distância da borda direita */
+    width: 300px; /* Largura fixa, ajuste conforme necessário */
+    max-height: 280px;
+    background-color: rgba(255, 255, 255, 0.089); /* Fundo branco com opacidade */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    z-index: 1000; /* Coloca a caixa acima de outros elementos */
+    overflow-y: auto; /* Permite rolagem se o conteúdo exceder a altura */
+}
+
+/* Estilos para o título */
+.instructions-titleSIL {
+    font-size: 1.5rem;
+    color: #5e63ff;
+    margin-bottom: 15px;
+}
+
+/* Listas dentro das instruções */
+.liSIL {
+    margin: 10px 0; /* Margem entre itens da lista */
+    display: flex;
+    align-items: center; /* Alinha ícone e texto verticalmente */
+}
+
+/* Ícones dentro da lista */
+.liSIL svg {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estilo para o texto de dica */
+.instructions-containerSIL p {
+    font-size: 0.9rem; /* Tamanho de fonte menor */
+    color: #555; /* Cor do texto mais suave */
+    margin-top: 10px; /* Margem acima do texto de dica */
+}
+
+
+
+/* Add a responsive design for smaller screens */
+@media (max-width: 768px) {
+    .content-containerSIL {
+        flex-direction: column;
+        /* Stacking on small screens */
+    }
+
+    .game-containerSIL {
+        width: 100%;
+        /* Full width on small screens */
+        margin-bottom: 20px;
+        /* Spacing between sections */
+    }
+}

@@ -1,0 +1,216 @@
+/* Container geral */
+.app-STA {
+    text-align: center;
+    padding: 20px;
+    padding-top: 12vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título principal */
+.app-title-STA {
+    color: #5e63ff; /* Cor do título atualizada */
+    margin-bottom: 20px;
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* selector-bar */
+.pilot-selector-bar-STA {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 15px; /* Espaçamento uniforme entre os itens */
+    margin-bottom: 20px;
+    padding: 15px; /* Aumentado para dar mais espaço ao redor */
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pilot-option-STA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px; /* Largura mínima para cada item */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.pilot-option-STA:hover {
+    transform: scale(1.05); /* Aumenta a escala ao passar o mouse */
+}
+
+.pilot-image-option-STA {
+    width: 80px; /* Largura maior da imagem do piloto */
+    height: 80px; /* Altura maior para manter a proporção */
+    border-radius: 50%; /* Torna a imagem circular */
+    margin-bottom: 5px; /* Espaçamento abaixo da imagem */
+    border: 2px solid #5e63ff; /* Borda colorida ao redor da imagem atualizada */
+    transition: border-color 0.2s; /* Transição suave da borda ao passar o mouse */
+}
+
+.pilot-name-option-STA{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.pilot-name-STA {
+    font-weight: bold; /* Nome em negrito */
+    color: #333; /* Cor do texto */
+}
+
+.selected {
+    border: 2px solid #5e63ff; /* Borda para a opção selecionada atualizada */
+    padding: 5px;
+    background-color: #5e63ff21; /* Fundo claro para a opção selecionada */
+}
+
+/* Estilos do card de piloto */
+.pilot-card-container-STA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pilot-card-STA {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 97%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+}
+
+.pilot-card-STA:hover {
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+}
+
+.pilot-image-STA img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #5e63ff; /* Borda atualizada */
+}
+
+/* Informações do piloto */
+.pilot-info-STA {
+    text-align: left;
+    flex: 1;
+}
+
+.pilot-info-STA h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pilot-info-STA h3 {
+    font-size: 20px;
+    color: #5e63ff; 
+    margin-bottom: 10px;
+}
+
+.pilot-info-STA p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+/* Container de gráficos */
+.graphs-container-STA {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Seção de gráficos */
+.graph-section-STA {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.graph-section-STA h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #5e63ff; /* Cor atualizada */
+    font-size: 18px;
+}
+
+/* Estilo do contêiner de estatísticas */
+.pilot-stats-container-STA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+/* Estilos para cada caixa de estatística */
+.stats-box-STA {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+.stats-box-STA:last-child {
+    border-bottom: none; /* Remove a borda da última caixa */
+}
+
+.stats-box-STA svg {
+    margin-right: 10px; /* Espaçamento entre ícone e texto */
+}
+
+/* Estilo do gráfico - ajuste de cores */
+.graph-section-STA .recharts-tooltip {
+    background: #fff;
+    border: 1px solid #5e63ff; /* Borda atualizada */
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .pilot-card-STA {
+        flex-direction: column;
+    }
+
+    .graphs-container-STA {
+        grid-template-columns: 1fr;
+    }
+
+    .pilot-dropdown-STA {
+        width: 100%; /* Largura total em dispositivos pequenos */
+    }
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: red;
+    margin-top: 20px;
+}

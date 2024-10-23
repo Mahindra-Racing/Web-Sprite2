@@ -32,12 +32,6 @@ function Dashboard() {
               <p className="section-stats">11 equipes e 22 pilotos</p>
               <Link to="/PilotoEquipe" className="section-link">Saiba mais</Link>
             </div>
-            <div className='section-imagem-geral'>
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Pilotos" className="section-image" />
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Pilotos" className="section-image" />
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Pilotos" className="section-image" />
-            </div>
-            
           </div>
 
           <div className="section">
@@ -49,11 +43,6 @@ function Dashboard() {
               <p className="section-stats">11ª temporada</p>
               <Link to="/Classifica" className="section-link">Saiba mais</Link>
             </div>
-            <div className='section-imagem-geral'>
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Equipes" className="section-image" />
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Equipes" className="section-image" />
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Equipes" className="section-image" />
-            </div>
           </div>
 
           <div className="section">
@@ -62,13 +51,8 @@ function Dashboard() {
               <p>
                 Fique por dentro das próximas corridas e eventos.
               </p>
-              <p className="section-stats">Próxima corrida: 15 de novembro</p>
+              <p className="section-stats">Próxima corrida: 7 de Decembro</p>
               <Link to="/Corrida" className="section-link">Saiba mais</Link>
-            </div>
-            <div className='section-imagem-geral'>
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Corridas" className="section-image" />
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Corridas" className="section-image" />
-                <img src="https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2023/07/28/jakes-hughes-third-and-final-test-run-qxlk55y02lpg.JPG" alt="Corridas" className="section-image" />
             </div>
           </div>
         </div>

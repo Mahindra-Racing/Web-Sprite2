@@ -14,14 +14,17 @@ import Dashboard from './routes/Dashboard/Dashboard.jsx'
 import Classifica from './routes/Classificacao/Classificacao.jsx'
 import PilotoEquipe from './routes/PilotoEquipe/PilotoEquipe.jsx'
 import Corrida from './routes/Corrida/Corrida.jsx'
+import PilotCard from './routes/PilotCard/PilotCard.jsx'
 
 import Bet from './routes/Bet/BetPage.jsx'
 
 import Shop from './routes/Shop/Shop.jsx'
 import Marketplace from './routes/Shop/Marketplace.jsx'
 import RegisterShop from './routes/Shop/RegisteShop.jsx'
+import Carrinho from './routes/Shop/Carrinho.jsx'
 
 import Quiz from './routes/Quiz/Quiz.jsx'
+import Silhouette from './routes/SilhouetteGame/SilhouetteGame.jsx'
 import Ajuda from './routes/FAQChatbot/FAQChatbot.jsx'
 
 import Stream from './routes/ChatPage/StreamingSelection.jsx'
@@ -34,12 +37,15 @@ import StreamGabriel from './routes/ChatPage/StreamGabriel/StreamGabriel.jsx'
 import StreamNathan from './routes/ChatPage/StreamNathan/StreamNathan.jsx'
 
 import Register from './routes/Register/Register.jsx'
+import Login from './routes/Login/Login.jsx'
+
 import Profile from './routes/Profile/Profile.jsx'
 import Settings from './routes/Settings/Settings.jsx'
 import ErrorPage from './routes/ErrorPage.jsx'
 import { GlobalStyle } from './GlobalStyle.jsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 
 
 
@@ -59,8 +65,10 @@ const router = createBrowserRouter([
       { path: "/Shop", element: <Shop/>},
       { path: "/marketplace", element: <Marketplace/>},
       {  path: "/register-shop", element: <RegisterShop/>},
+      {  path: "/carrinho", element: <Carrinho/>},
 
       { path: "/Quiz", element: <Quiz/>},
+      { path: "/Silhouette", element: <Silhouette/>},
 
       { path: "/Ajuda", element: <Ajuda/>},
       
@@ -84,8 +92,10 @@ const router = createBrowserRouter([
       { path: "/Classifica", element: <Classifica/>  },
       { path: "/PilotoEquipe", element: <PilotoEquipe/> },
       { path: "/Corrida", element: <Corrida/>},
+      { path: "/PilotCard", element: <PilotCard/>},
 
       { path: "/Register", element: <Register/>},
+      { path: "/Login", element: <Login/>},
       { path: "/Profile", element: <Profile/>},
       { path: "/Settings", element: <Settings/>},
     ],

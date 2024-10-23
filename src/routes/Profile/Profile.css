@@ -18,15 +18,19 @@
 
 .profile-image-containerProf {
   position: absolute;
-  bottom: -40px; /* Ajustado para posicionar melhor a imagem */
-  left: 20px;
-  width: 150px;
-  height: 150px;
+  top: 29%; /* Aumentado para 20% da altura da tela */
+  left: 35%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza a imagem */
+  width: 15vw; /* 15% da largura da viewport */
+  height: 15vw; /* 15% da largura da viewport para manter a proporção */
+  max-width: 150px; /* Limita a largura máxima a 150px */
+  max-height: 150px; /* Limita a altura máxima a 150px */
   border-radius: 50%;
   border: 4px solid #ffffff;
   overflow: hidden;
   background-color: #ffffff;
 }
+
 
 .profile-imageProf {
   width: 100%;

@@ -1,54 +1,243 @@
-.register-containerRegister {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .register-titleRegister {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #5e63ff;
-  }
-  
-  .register-formRegister {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-  }
-  
-  .register-labelRegister {
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #5e63ff;
-  }
-  
-  .register-inputRegister, .register-fileInputRegister {
-    margin-bottom: 20px;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
-  
-  .register-buttonRegister {
-    padding: 12px;
-    background: linear-gradient(to right, #a5a8f5, #5e63ff);
-    color: #fff;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .register-buttonRegister:hover {
-    background-color: #1565c0;
-  }
-  
+/* Step 1 Styles */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+  background-color: #f5f6fa;
+}
+
+.register-step1-container {
+  display: flex;
+  width: 95%; /* Aumenta a largura geral do container */
+  max-width: 1200px; /* Aumenta o limite máximo da largura */
+  height: 80%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 7vh;
+}
+
+.register-left-step1 {
+  flex: 1;
+  padding: 4rem; /* Ajuste para aumentar o espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  color: #5e63ff;
+}
+
+.register-title-step1 {
+  font-size: 2.4rem; /* Título um pouco maior */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: #5e63ff;
+}
+
+.register-subtitle-step1 {
+  font-size: 1rem;
+  color: #b1b1b1;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.register-form-step1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.register-formInputs-step1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Para garantir que ocupe toda a largura disponível */
+}
+
+.register-label-step1 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #5e63ff;
+  margin-bottom: 0.3rem; /* Espaço abaixo do label */
+  display: flex; /* Usa flex para alinhar o ícone e o texto */
+  align-items: center; /* Centraliza verticalmente o ícone e o texto */
+}
+
+.iconREG {
+  margin-right: 0.5rem; /* Espaço à direita do ícone */
+}
+
+.register-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Para garantir que ocupe toda a largura disponível */
+}
+
+.register-input-step1 {
+  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+  width: 100%;
+  max-width: 550px;
+  border: 2px solid #5e63ff;
+  border-radius: 5px;
+  color: #5e63ff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  opacity: 0.5; 
+}
+
+
+.register-input-step1:focus {
+  opacity: 1; 
+  outline: none; /* Remove a borda padrão do foco */
+}
+
+.register-button-step1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #5e63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.register-button-step1:hover {
+  background-color: #3b41a8;
+}
+
+.password-container-step1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-toggleButton-step1 {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4c54d2;
+}
+
+.register-image-step1 {
+  flex: 1;
+  object-fit: cover;
+  background-position: center;
+  width: 550px;
+  height: 100%;
+}
+
+
+
+
+
+
+/* Step 2 Styles */
+.register-step2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 5vh;
+}
+
+.register-step2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-subtitle-step2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem; /* Aumenta o tamanho da fonte do subtítulo */
+  font-weight: bold; /* Deixa o subtítulo em negrito */
+  color: #5e63ff; /* Cor mais viva */
+}
+
+.register-titleH3-step2 {
+  margin: 1.5rem 0;
+  font-size: 1.6rem; /* Aumenta o tamanho da fonte do título */
+  color: #5e63ff; /* Cor consistente com o tema */
+}
+
+.image-options-step2,
+.banner-image-options-step2 {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.image-option-step2,
+.banner-image-option-step2 {
+  width: 100px; /* Largura fixa para as imagens de opção */
+  height: 100px; /* Altura fixa para as imagens de opção */
+  border: 2px solid transparent; /* Adiciona uma borda que muda ao selecionar */
+  border-radius: 5px;
+  overflow: hidden; /* Para esconder o excesso da imagem */
+  cursor: pointer;
+  transition: border 0.3s ease, transform 0.3s ease; /* Adiciona transformação */
+}
+
+.image-option-step2.selected,
+.banner-image-option-step2.selected {
+  border: 2px solid #5e63ff; /* Borda colorida ao selecionar */
+  transform: scale(1.05); /* Aumenta a imagem ao ser selecionada */
+}
+
+.register-fileInput-step2 {
+  margin: 1rem 0;
+  padding: 0.5rem; /* Aumenta o espaçamento do input */
+  border: 2px solid #5e63ff; /* Borda do input */
+  border-radius: 8px; /* Cantos arredondados */
+  transition: border-color 0.3s ease; /* Transição ao mudar a cor da borda */
+}
+
+.register-fileInput-step2:hover {
+  border-color: #3b41a8; /* Muda a cor da borda ao passar o mouse */
+}
+
+.upload-text {
+  margin: 0.5rem 0;
+  color: #666; /* Cor mais suave para o texto */
+  font-size: 1rem; /* Tamanho da fonte do texto de upload */
+}
+
+.register-button-step2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #5e63ff;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona transformação ao botão */
+}
+
+.register-button-step2:hover {
+  background-color: #4950ff;
+  transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
+}

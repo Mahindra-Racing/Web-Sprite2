@@ -37,7 +37,7 @@ const BetPage = () => {
         { nome: 'Envision Racing', odds: 5.0 },
       ];
 
-    const cores = ['black', 'white', 'blue'];
+    const cores = ['black','blue' ,'white'];
 
     const adicionarDinheiro = () => {
         const valor = parseFloat(valorAdicionar);
@@ -160,6 +160,7 @@ const BetPage = () => {
                         )}
 
                         {pagina === 'bet' && (
+                            
                             <div className="bet-containerBET">
                                 <div className="section-header">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40"><path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z" /></svg>
@@ -240,6 +241,7 @@ const BetPage = () => {
                                 <div className="cores-containerBET">
                                     {cores.map((cor, index) => (
                                         <button
+                                        
                                             key={index}
                                             className={`cor-btnBET ${cor} ${corSelecionada === cor ? 'select' : ''}`}
                                             onClick={() => setCorSelecionada(cor)}

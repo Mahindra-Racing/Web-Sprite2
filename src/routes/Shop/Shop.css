@@ -99,6 +99,7 @@ padding: 20px;
 .products-containerSHOP {
 display: flex;
 flex-wrap: nowrap;
+cursor: pointer;
 transition: transform 0.3s ease;
 }
 
@@ -267,6 +268,143 @@ text-transform: uppercase;
 .go-to-marketplace:hover {
 transform: scale(1.02);
 }
+
+
+
+/* Estilos para o Modal */
+.modalSHOP {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com mais opacidade */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Certifique-se de que o modal esteja acima de outros elementos */
+}
+
+.modal-contentSHOP {
+  background-color: #fff; /* Fundo branco para o conteúdo do modal */
+  border-radius: 10px; /* Bordas arredondadas para um visual mais suave */
+  width: 90%; /* Largura do modal */
+  max-width: 800px; /* Largura máxima do modal */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada para dar profundidade */
+  display: flex; /* Usando flexbox para organizar a imagem e o texto */
+  position: relative; /* Para o posicionamento do botão de fechar */
+}
+
+.modal-bodySHOP {
+  display: flex; /* Flexbox para organizar a imagem e os detalhes */
+}
+
+.modal-imageSHOP {
+  width: 40%; /* Largura da imagem */
+  border-radius: 10px; /* Bordas arredondadas para a imagem */
+  object-fit: cover; /* Faz a imagem cobrir a área sem distorção */
+}
+
+.modal-detailsSHOP {
+  margin-left: 20px; /* Espaçamento à esquerda dos detalhes */
+  flex: 1; /* Permite que a seção de detalhes preencha o espaço restante */
+  display: flex; /* Usando flexbox para alinhar itens dentro */
+  flex-direction: column; /* Itens em coluna */
+  align-items: left; 
+}
+
+.close-modalSHOP {
+  position: absolute;
+  top: 10px; /* Margem superior do botão de fechar */
+  right: 10px; /* Margem direita do botão de fechar */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333; /* Cor do botão de fechar */
+  font-size: 30px; /* Aumentar o tamanho da fonte do botão de fechar */
+  transition: color 0.2s; /* Transição suave na cor */
+}
+
+.close-modalSHOP:hover {
+  color: #e74c3c; /* Cor ao passar o mouse (vermelho) */
+}
+
+.modal-product-nameSHOP {
+  font-size: 28px; 
+  margin: 0 0 10px; /* Margem ajustada */
+  font-weight: bold; 
+}
+
+.modal-product-descriptionSHOP {
+  font-size: 16px; /* Tamanho da fonte da descrição */
+  margin: 10px 0; /* Margem acima da descrição */
+  color: #555;
+}
+
+.modal-product-priceSHOP {
+  font-size: 20px; /* Tamanho da fonte do preço */
+  font-weight: bold; /* Negrito para o preço */
+  color: var(--primary-color); /* Cor verde para o preço */
+}
+
+.buy-now-buttonSHOP {
+  padding: 10px 20px; /* Espaçamento do botão */
+  background-color: var(--secondary-color); /* Cor do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+.buy-now-buttonSHOP:hover {
+  opacity: 0.9;
+}
+
+/* Adicionando estilos para cor e tamanho no modal */
+.modal-product-colorSHOP {
+  margin: 10px 0; /* Margens ajustadas para ficar colado à esquerda */
+  font-size: 16px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+}
+
+.modal-product-sizeSHOP {
+  margin: 10px 0; /* Margens ajustadas para ficar colado à esquerda */
+  font-size: 16px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+}
+
+
+.cart-messageSHOP {
+  position: fixed;
+  top: 100px;
+  right: 20px; /* Adicionando um espaçamento da borda */
+  background-color: #28a745; /* Verde mais suave */
+  color: white;
+  padding: 15px; /* Aumentando o padding */
+  border-radius: 8px; /* Arredondando um pouco mais os cantos */
+  z-index: 1000;
+  font-size: 16px; /* Aumentando o tamanho da fonte */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adicionando sombra */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Suavizando transições */
+  opacity: 1; /* Inicia invisível para animação */
+  transform: translateX(0);
+}
+
+/* Classe para mostrar a mensagem */
+.cart-messageSHOW {
+  opacity: 0; /* Torna visível */
+  transform: translateX(300px); /* Retorna à posição original */
+}
+
+
+
+
+
+
+
+
+
 
 /* --- Responsividade para Tablets (Max Width 1024px) --- */
 @media (max-width: 1024px) {
