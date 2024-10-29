@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PlusCircle } from 'lucide-react';
 import './StreamSelection.css';
 
 import heroImage from '../../assets/img/streaming1.png';
@@ -16,6 +17,15 @@ const StreamSelection = () => {
 
     return (
         <div className="mainStreamSelect">
+            {/* Add Stream Request Button */}
+            <div className="request-button-container">
+                <Link to='/StreamRegister'>
+                    <button className="request-button">
+                        <PlusCircle size={50} />
+                    </button>
+                </Link>
+            </div>
+
             <div className="streaming-pageStreamSelect">
                 {/* Hero Image and Info on the Right */}
                 <div className="highlight-containerStreamSelect">
@@ -69,6 +79,5 @@ const StreamSelection = () => {
         </div>
     );
 };
-
 
 export default StreamSelection;

@@ -1,0 +1,258 @@
+/* Variáveis CSS */
+:root {
+    --success-color: #10b981;
+    --success-light: #d1fae5;
+    --success-dark: #059669;
+    --error-color: #ef4444;
+    --error-light: #fee2e2;
+    --error-dark: #dc2626;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --background-light: #ffffff;
+  }
+  
+  /* Container principal */
+  .notifications-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  .notifications-container.approved {
+    background: linear-gradient(-45deg, #ecfdf5, #f0fdfa, #e8fff9, #f0fdf4);
+  }
+  
+  .notifications-container.denied {
+    background: linear-gradient(-45deg, #fef2f2, #fff1f2, #ffe4e6, #fef2f2);
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Card de notificação */
+  .notification-card {
+    background: var(--background-light);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+  
+  .notification-card.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  /* Ícone de status */
+  .status-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  
+  .icon-success, .icon-error {
+    width: 80px;
+    height: 80px;
+    animation: scaleIn 0.5s ease-out;
+  }
+  
+  .icon-success {
+    fill: var(--success-color);
+  }
+  
+  .icon-error {
+    fill: var(--error-color);
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Título do status */
+  .status-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  
+  /* Mensagens */
+  .status-message {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .message-primary {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .message-secondary {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  
+  /* Detalhes do status */
+  .status-details {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 24px 0;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+  }
+  
+  .detail-item:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .detail-label {
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+  
+  .detail-value {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .detail-value.success {
+    color: var(--success-color);
+  }
+  
+  .detail-value.error {
+    color: var(--error-color);
+  }
+  
+  /* Botões */
+  .action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  
+  .primary-button, .secondary-button {
+    flex: 1;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .primary-button {
+    color: white;
+  }
+  
+  .primary-button.success {
+    background-color: var(--success-color);
+  }
+  
+  .primary-button.success:hover {
+    background-color: var(--success-dark);
+  }
+  
+  .primary-button.error {
+    background-color: var(--error-color);
+  }
+  
+  .primary-button.error:hover {
+    background-color: var(--error-dark);
+  }
+  
+  .secondary-button {
+    background-color: #f3f4f6;
+    color: var(--text-primary);
+  }
+  
+  .secondary-button:hover {
+    background-color: #e5e7eb;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 640px) {
+    .notification-card {
+      padding: 24px;
+    }
+  
+    .status-title {
+      font-size: 24px;
+    }
+  
+    .message-primary {
+      font-size: 16px;
+    }
+  
+    .message-secondary {
+      font-size: 14px;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  
+    .primary-button, .secondary-button {
+      width: 100%;
+    }
+  }
+  
+  /* Animações adicionais */
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .detail-item {
+    animation: slideIn 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .detail-item:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .detail-item:nth-child(2) {
+    animation-delay: 0.4s;
+  }

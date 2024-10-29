@@ -11,7 +11,10 @@ const StreamingPage = () => {
         image: 'https://via.placeholder.com/80',
     });
 
-    const [showProfileEdit, setShowProfileEdit] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
+    const handleModalOpen = () => setShowModal(true);
+    const handleModalClose = () => setShowModal(false);
     
     // Definição individual dos containers
     const containers = [
@@ -92,56 +95,43 @@ const StreamingPage = () => {
         <main className='mainSTREAM'>
             <section className='section2'>
                 <div className="streaming-page">
-              <div className="top-bar">
+                    <div className="top-bar">
                         {containers.map((container, index) => (
-                            <Link to={container.LinkTop} className='LinkStream'>
-                                <div key={index} className="top-container">
-                                    <img
-                                        src={container.image}
-                                        alt="Container"
-                                        className="top-container-image"
-                                    />
-                                
-                                    <div class="top-container-info">
+                            <Link to={container.LinkTop} className='LinkStream' key={index}>
+                                <div className="top-container">
+                                    <img src={container.image} alt="Container" className="top-container-image" />
+                                    <div className="top-container-info">
                                         <h3>{container.title}</h3>
-                                        <div class="info-description">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                                        <div className="info-description">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
                                             <p> {container.viewerCountAbrev}</p>
                                         </div>
                                     </div>
-                                </div></Link>
+                                </div>
+                            </Link>
                         ))}
                     </div>
 
                     <div className="main-content">
                         <div className="streaming-box">
-                            <img
-                                src={streaming1}
-                                alt="Live Streaming"
-                                className="streaming-image"
-                            />
+                            <img src={streaming1} alt="Live Streaming" className="streaming-image" />
                             <div className="streaming-info">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeeko32Id8MJoTf6H2E3ISSD_v96tVr8AOA&s" alt="Streaming Info" className="info-image" />
                                 <div className="streaming-info-text">
                                     <h2>Mahindra Racing</h2>
-                                    <p>São Paulo E-Prix </p>
-                                    <div className='streaming-into-btn'>
-                                        <button className='into-btn'>Sports</button>
-                                        <button className='into-btn'>English</button>
-                                        <button className='into-btn'>Brazil</button>
+                                    <p>São Paulo E-Prix</p>
+                                    <div className="streaming-into-btn">
+                                        <button className="into-btn">Sports</button>
+                                        <button className="into-btn">English</button>
+                                        <button className="into-btn">Brazil</button>
                                     </div>
                                 </div>
                                 <div className="streaming-actions">
-                                    
                                     <div className="viewer-count">
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-                                        <span style={{ marginRight: '8px' }} className='viewer-text'>{containers[1].viewerCount}</span>
-                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                                        <span style={{ marginRight: '8px' }} className="viewer-text">{containers[1].viewerCount}</span>
                                     </div>
-                                    <button className="support-button">
-                                        E-Chat
-                                    </button>
+                                    <button className="support-button" onClick={handleModalOpen}>Super-E</button>
                                 </div>
                             </div>
                         </div>
@@ -151,6 +141,30 @@ const StreamingPage = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Modal */}
+                {showModal && (
+                    <div className="modal-overlay" onClick={handleModalClose}>
+                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                            <button className="close-button" onClick={handleModalClose}>X</button>
+                            <div className="modal-header">
+                                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeeko32Id8MJoTf6H2E3ISSD_v96tVr8AOA&s' alt="User Profile" className="modal-profile-image" />
+                                <div>
+                                    <h3>Mahindra Racing</h3>
+                                    <p>Correndo rumo ao futuro sustentável!</p>
+                                </div>
+                            </div>
+                            <div className="modal-body">
+                                <p className='modal-descricao-STEAM'>Adquira o Super-E e assista às transmissões sem anúncios, aproveitando uma experiência ininterrupta. Com sua compra, você também ajuda diretamente sua equipe ou streamer favorito!</p>
+                                <p className='modal-title-STEAM'>Um presente de agradecimento:</p>
+                                <p className='modal-second-title-STEAM'><span className='modal-second-title-span-STEAM'>Distintivos de inscrito</span> para usar no chat e mostrar que você faz parte dessa comunidade</p>
+                                <img src="https://i.redd.it/osrbg0gex4i71.png" alt="Gift Image" className="gift-image" />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeeko32Id8MJoTf6H2E3ISSD_v96tVr8AOA&s" alt="Gift Image" className="gift-image" />
+                                <button className="modal-action-button">Super-E</button><button className='modal-action-button-span'>$ 9.90</button>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </section>
         </main>
     );

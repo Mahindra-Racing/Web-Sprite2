@@ -25,9 +25,9 @@ const BetPage = () => {
         { nome: 'Nyck de Vries', odds: 5.5 },
         { nome: 'Sebastien Buemi', odds: 6.0 },
         { nome: 'René Rast', odds: 7.2 },
-      ];
-    
-      const construtores = [
+    ];
+
+    const construtores = [
         { nome: 'Jaguar TCS Racing', odds: 1.8 },
         { nome: 'TAG Heuer Porsche', odds: 2.0 },
         { nome: 'Mahindra Racing', odds: 2.5 },
@@ -35,9 +35,9 @@ const BetPage = () => {
         { nome: 'DS Penske', odds: 3.2 },
         { nome: 'Nissan Formula E Team', odds: 4.5 },
         { nome: 'Envision Racing', odds: 5.0 },
-      ];
+    ];
 
-    const cores = ['black','blue' ,'white'];
+    const cores = ['black', 'blue', 'white'];
 
     const adicionarDinheiro = () => {
         const valor = parseFloat(valorAdicionar);
@@ -65,16 +65,21 @@ const BetPage = () => {
         if (valor > 0 && valor <= saldo) {
             const novaAposta = {
                 tipo,
-                nome: tipo === 'Piloto' ? selecaoPiloto.nome : selecaoConstrutor.nome,
-                odds: tipo === 'Piloto' ? selecaoPiloto.odds : selecaoConstrutor.odds,
+                nome: tipo === 'Piloto' ? selecaoPiloto?.nome : selecaoConstrutor?.nome,
+                odds: tipo === 'Piloto' ? selecaoPiloto?.odds : selecaoConstrutor?.odds,
                 valor
             };
-            setApostas([...apostas, novaAposta]);
-            setSaldo(saldo - valor);
-            setValorAposta('');
-            setSelecaoPiloto(null);
-            setSelecaoConstrutor(null);
-            setErro('');
+
+            if (novaAposta.nome) {
+                setApostas([...apostas, novaAposta]);
+                setSaldo(saldo - valor);
+                setValorAposta('');
+                setSelecaoPiloto(null);
+                setSelecaoConstrutor(null);
+                setErro('');
+            } else {
+                setErro('Please select a pilot or constructor to bet on.');
+            }
         } else {
             setErro('Bet amount cannot exceed the available balance.');
         }
@@ -82,25 +87,25 @@ const BetPage = () => {
 
     const jogarDouble = () => {
         const valor = parseFloat(valorAposta);
-        if (valor > 0 && valor <= saldo) {
+        if (valor > 0 && valor <= saldo && corSelecionada) {
             const resultado = cores[Math.floor(Math.random() * cores.length)];
             setResultadoDouble(resultado);
             setSaldo(saldo - valor);
             setValorAposta('');
-            setCorSelecionada(null);
             setErro('');
+            setCorSelecionada(null);
 
             if (resultado === corSelecionada) {
-                const ganho = saldo - valor + valor * 2 - saldo;
+                const ganho = valor * 2;
                 setSaldo(saldo + ganho);
-                setMensagemResultado(`You won $ ${ganho.toFixed(2)}!`);
+                setMensagemResultado(`You won $${ganho.toFixed(2)}!`);
                 setResultadoClass('won');
             } else {
-                setMensagemResultado(`you lost R$ ${valor.toFixed(2)}.`);
+                setMensagemResultado(`You lost $${valor.toFixed(2)}.`);
                 setResultadoClass('lost');
             }
         } else {
-            setErro('Bet amount cannot exceed the available balance.');
+            setErro('Please select a color and ensure the bet amount does not exceed your balance.');
         }
     };
 
@@ -133,7 +138,6 @@ const BetPage = () => {
                         {pagina === 'wallet' && (
                             <div className="wallet-containerBET">
                                 <div className="section-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40"><path d="M240-160q-66 0-113-47T80-320v-320q0-66 47-113t113-47h480q66 0 113 47t47 113v320q0 66-47 113t-113 47H240Zm0-480h480q22 0 42 5t38 16v-21q0-33-23.5-56.5T720-720H240q-33 0-56.5 23.5T160-640v21q18-11 38-16t42-5Zm-74 130 445 108q9 2 18 0t17-8l139-116q-11-15-28-24.5t-37-9.5H240q-26 0-45.5 13.5T166-510Z" /></svg>
                                     <h2 className="section-titleBET">Wallet</h2>
                                 </div>
                                 <div className="saldo-valorBET saldo-grandeBET">$ {saldo.toFixed(2)}</div>
@@ -145,7 +149,7 @@ const BetPage = () => {
                                         placeholder="Value to add"
                                         onChange={(e) => setValorAdicionar(e.target.value)}
                                     />
-                                    <button className="adicionar-dinheiro-btnBET" onClick={adicionarDinheiro}>Value to add</button>
+                                    <button className="adicionar-dinheiro-btnBET" onClick={adicionarDinheiro}>Add</button>
                                 </div>
                                 <div className="how-to-bet-containerBET">
                                     <h3 className="how-to-bet-titleBET">How to Place a Bet</h3>
@@ -154,25 +158,21 @@ const BetPage = () => {
                                         <li>Enter the amount you wish to bet.</li>
                                         <li>Click 'Bet' to confirm your bet.</li>
                                     </ol>
-                                    <p className="how-to-bet-noteBET">Lembre-se de jogar com responsabilidade!</p>
+                                    <p className="how-to-bet-noteBET">Remember to gamble responsibly!</p>
                                 </div>
                             </div>
+                            
                         )}
 
                         {pagina === 'bet' && (
-                            
                             <div className="bet-containerBET">
                                 <div className="section-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40"><path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z" /></svg>
                                     <h2 className="section-titleBET">FE Bets</h2>
                                 </div>
                                 <div className="saldo-valorBET saldo-pequenoBET">Balance: $ {saldo.toFixed(2)}</div>
 
                                 <div className="opcoes-containerBET">
-                                    <div className="section-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40"><path d="M360-720h80v-80h-80v80Zm160 0v-80h80v80h-80ZM360-400v-80h80v80h-80Zm320-160v-80h80v80h-80Zm0 160v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm160-320v-80h80v80h-80Zm-240 80v-80h80v80h-80ZM200-160v-640h80v80h80v80h-80v80h80v80h-80v320h-80Zm400-320v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm-80-80v-80h80v80h-80Zm160 0v-80h80v80h-80Zm80-80v-80h80v80h-80Z"/></svg>
-                                        <h3 className="category-titleBET">São Paulo E-prix - Winner</h3>
-                                    </div>
+                                    <h3 className="category-titleBET">São Paulo E-prix - Winner</h3>
                                     {pilotos.map((piloto, index) => (
                                         <button
                                             key={index}
@@ -186,10 +186,7 @@ const BetPage = () => {
                                 </div>
 
                                 <div className="opcoes-containerBET">
-                                    <div className="section-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40"><path d="M360-720h80v-80h-80v80Zm160 0v-80h80v80h-80ZM360-400v-80h80v80h-80Zm320-160v-80h80v80h-80Zm0 160v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm160-320v-80h80v80h-80Zm-240 80v-80h80v80h-80ZM200-160v-640h80v80h80v80h-80v80h80v80h-80v320h-80Zm400-320v-80h80v80h-80Zm-160 0v-80h80v80h-80Zm-80-80v-80h80v80h-80Zm160 0v-80h80v80h-80Zm80-80v-80h80v80h-80Z"/></svg>
-                                        <h3 className="category-titleBET">São Paulo E-prix - Winning Constructor</h3>
-                                    </div>
+                                    <h3 className="category-titleBET">Winning Constructor</h3>
                                     {construtores.map((construtor, index) => (
                                         <button
                                             key={index}
@@ -201,20 +198,18 @@ const BetPage = () => {
                                         </button>
                                     ))}
                                 </div>
-
-
-
+                                
                                 <div className="aposta-inputBET">
                                     <input
-                                        className="value-inputBET"
                                         type="number"
                                         value={valorAposta}
-                                        placeholder="Bet value"
+                                        placeholder="Bet amount"
                                         onChange={(e) => setValorAposta(e.target.value)}
+                                        className="value-inputBET"
                                     />
-                                    <button className="aposta-btnBET" onClick={() => fazerAposta(selecaoPiloto ? 'Pilot' : 'Constructor')}>Bet</button>
+                                    <button className="aposta-btnBET" onClick={() => fazerAposta(selecaoPiloto ? 'Piloto' : 'Construtor')}>Place Bet</button>
                                 </div>
-
+                                {erro && <p className="error-messageBET">{erro}</p>}
                                 <div className="resumo-containerBET">
                                     <h2 className="section-titleBET">Bet Summary</h2>
                                     {apostas.length === 0 ? (
@@ -272,8 +267,6 @@ const BetPage = () => {
                                 )}
                             </div>
                         )}
-
-                        {erro && <p className="erro-messageBET">{erro}</p>}
                     </div>
                 </div>
             </div>

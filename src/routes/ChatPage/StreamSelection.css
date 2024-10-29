@@ -1,5 +1,5 @@
 .mainStreamSelect {
-    padding-top: 10vh;
+    padding-top: 15vh;
     padding-left: 15%;
     padding-right: 5%;
     background-color: #f0f0f0;
@@ -136,6 +136,32 @@
 .linkStream {
     text-decoration: none;
 }
+
+.request-button-container {
+    position: fixed;
+    
+    top: 100px;
+    right: 80px;
+}
+
+.request-button {
+    background-color: #5e63ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.request-button:hover {
+    background-color: #5e63ffd5;
+}
+
 
 /* Responsividade - Tablets */
 @media (max-width: 1024px) {

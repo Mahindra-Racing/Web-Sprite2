@@ -26,8 +26,10 @@ import Carrinho from './routes/Shop/Carrinho.jsx'
 import Quiz from './routes/Quiz/Quiz.jsx'
 import Silhouette from './routes/SilhouetteGame/SilhouetteGame.jsx'
 import Ajuda from './routes/FAQChatbot/FAQChatbot.jsx'
+import NotificationsPage from './routes/NotificationsPage/NotificationsPage.jsx'
 
 import Stream from './routes/ChatPage/StreamingSelection.jsx'
+import StreamRegister from './routes/ChatPage/RegisterStreamerPage/RegisterStreamerPage.jsx'
 import StreamFormulaE from './routes/ChatPage/StreamF-E/StreamFormulaE.jsx'
 import StreamMahindra from './routes/ChatPage/StreamMahindra/StreamingPage.jsx'
 import StreamPorsche from './routes/ChatPage/StreamPorsche/StreamPorsche.jsx'
@@ -71,8 +73,11 @@ const router = createBrowserRouter([
       { path: "/Silhouette", element: <Silhouette/>},
 
       { path: "/Ajuda", element: <Ajuda/>},
+      { path: "/notifications", element: <NotificationsPage/>},
+
       
       { path: "/Stream", element: <Stream/>  },
+      { path: "/StreamRegister", element: <StreamRegister/>  },
       { path: "/Stream/StreamMahindra", element: <StreamMahindra/>  },
       { path: "/Stream/StreamFormulaE", element: <StreamFormulaE/>  },
       { path: "/Stream/StreamPorsche", element: <StreamPorsche/>  },

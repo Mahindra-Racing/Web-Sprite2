@@ -1,0 +1,206 @@
+/* Variáveis CSS para cores e valores reutilizáveis */
+:root {
+    --primary-color: #5e63ff; /* Nova cor primária */
+    --primary-hover: #4c51e6; /* Ajuste para o hover */
+    --error-color: #ef4444;
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+    --border-color: #e5e7eb;
+    --background-start: #f8faff;
+    --background-end: #eef2ff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.2s;
+}
+
+/* Página principal */
+.register-pageREGSTREAM{
+    min-height: 100vh;
+    
+    padding: 48px 24px;
+    background: linear-gradient(135deg, var(--background-start), var(--background-end));
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Container principal */
+.register-containerREGSTREAM {
+    width: 1000px; 
+    padding-top: 12vh;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+.register-headerREGSTREAM {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.register-headerREGSTREAM h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.register-headerREGSTREAM p {
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+/* Card do formulário */
+.form-cardREGSTREAM {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform var(--transition-speed);
+}
+
+.form-cardREGSTREAM:hover {
+    transform: translateY(-4px);
+}
+
+/* Grupos de formulário */
+.form-groupREGSTREAM {
+    margin-bottom: 24px;
+}
+
+/* Labels */
+.form-labelREGSTREAM {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    width: 900px;
+}
+
+/* Ícones */
+.icon-userREGSTREAM,
+.icon-mailREGSTREAM,
+.icon-messageREGSTREAM,
+.icon-alertREGSTREAM,
+.icon-arrow-rightREGSTREAM {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-userREGSTREAM {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z' /%3E%3C/svg%3E");
+}
+
+.icon-mailREGSTREAM {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' /%3E%3C/svg%3E");
+}
+
+.icon-messageREGSTREAM {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z' /%3E%3C/svg%3E");
+}
+
+/* Inputs e Textarea */
+.form-inputREGSTREAM {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: all var(--transition-speed);
+    outline: none;
+}
+
+.form-inputREGSTREAM:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(94, 99, 255, 0.1); /* Nova cor */
+}
+
+.form-inputREGSTREAM.input-errorREGSTREAM {
+    border-color: var(--error-color);
+}
+
+textarea.form-inputREGSTREAM {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Mensagens de erro */
+.error-messageREGSTREAM {
+    display: flex;
+    align-items: center;
+    color: var(--error-color);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.icon-alertREGSTREAM {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ef4444'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
+}
+
+/* Botão de envio */
+.submit-buttonREGSTREAM {
+    width: 100%;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.submit-buttonREGSTREAM:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.submit-buttonREGSTREAM:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.button-submittingREGSTREAM {
+    position: relative;
+    cursor: not-allowed;
+}
+
+.button-textREGSTREAM {
+    margin-right: 8px;
+}
+
+.icon-arrow-rightREGSTREAM {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7' /%3E%3C/svg%3E");
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+    .register-pageREGSTREAM {
+        padding: 24px 16px;
+    }
+
+    .form-cardREGSTREAM {
+        padding: 24px;
+    }
+
+    .register-headerREGSTREAM h2 {
+        font-size: 24px;
+    }
+}
+
+/* Animação de loading */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.button-submittingREGSTREAM .button-textREGSTREAM {
+    animation: pulse 1.5s infinite;
+}
