@@ -31,6 +31,7 @@
   padding: 15px;
   border-radius: 15px;
   margin-bottom: 30px;
+  width: 250px;
 }
 
 .nav-btnBET {
@@ -265,34 +266,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-
-
-
-.double-containerBET {
-  background-color: #f8f9fa;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.double-containerBET:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.double-containerBET .section-header {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.double-containerBET .section-titleBET {
-  font-size: 2rem;
-  color: #2c3e50;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
 .saldo-valorBET.saldo-pequenoBET {
   font-size: 1.5rem;
   font-weight: 700;
@@ -300,164 +273,6 @@
   margin-bottom: 2rem;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.cores-containerBET {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.cor-btnBET {
-  padding: 1rem 2rem;
-  border: 3px solid transparent;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-}
-
-.cor-btnBET::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background: transparent;
-  border-radius: 0.7rem;
-  z-index: -1;
-  transition: all 0.3s ease;
-}
-
-.cor-btnBET.select {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.cor-btnBET.black{
-  background-color: #2c3e50;
-  color: #ffffff;
-}
-
-.cor-btnBET.white {
-  background-color: #ffffff;
-  color: #2c3e50;
-  border: 2px solid #2c3e50;
-}
-
-.cor-btnBET.blue {
-  background-color: #5e63ff;
-  color: #ffffff;
-}
-
-.cor-btnBET.selecionado.preto {
-  border-color: #ecf0f1;  
-}
-
-.cor-btnBET.selecionado.branco {
-  border-color: #3498db;  
-}
-
-.cor-btnBET.selecionado.azul {
-  border-color: #f1c40f;  
-}
-
-.aposta-inputBET {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.value-inputBET {
-  width: 60%;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-  border: 2px solid #bdc3c7;
-  border-radius: 0.5rem 0 0 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.value-inputBET:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-}
-
-.aposta-btnBET {
-  padding: 1rem 1.5rem;
-  background-color: #2ecc71;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0 0.5rem 0.5rem 0;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.aposta-btnBET:hover {
-  background-color: #27ae60;
-  transform: translateY(-2px);
-}
-
-.resultado-doubleBET {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  background-color: #ecf0f1;
-  color: #2c3e50;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.mensagem-resultadoBET {
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.mensagem-resultadoBET.ganhou {
-  color: #ffffff;
-  background-color: #2ecc71;
-  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
-}
-
-.mensagem-resultadoBET.perdeu {
-  color: #ffffff;
-  background-color: #e74c3c;
-  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
 .erro-messageBET {

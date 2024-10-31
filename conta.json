@@ -17,6 +17,15 @@
       "confirmPassword": "1234",
       "profileImage": "https://wallpapers.com/images/hd/xbox-360-profile-pictures-e2bpy4ip6cmbx6cr.jpg",
       "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrFOqG6PjPhS0sFukUOQzE4GYBe8e7Rw56Q&s"
+    },
+    {
+      "id": "c06b",
+      "name": "akali",
+      "email": "akali@email.com",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "profileImage": "https://static.vecteezy.com/ti/vetor-gratis/p1/20500584-mclaren-marca-simbolo-logotipo-preto-projeto-britanico-carro-automovel-ilustracao-com-laranja-fundo-gratis-vetor.jpg",
+      "bannerImage": "https://img.freepik.com/vetores-gratis/vetor-de-fundo-de-estudio-gradiente-abstrato-preto-e-branco_1258-53723.jpg"
     }
   ]
 }

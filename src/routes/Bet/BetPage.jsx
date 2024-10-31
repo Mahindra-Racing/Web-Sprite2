@@ -37,8 +37,6 @@ const BetPage = () => {
         { nome: 'Envision Racing', odds: 5.0 },
     ];
 
-    const cores = ['black', 'blue', 'white'];
-
     const adicionarDinheiro = () => {
         const valor = parseFloat(valorAdicionar);
         if (valor > 0) {
@@ -85,30 +83,6 @@ const BetPage = () => {
         }
     };
 
-    const jogarDouble = () => {
-        const valor = parseFloat(valorAposta);
-        if (valor > 0 && valor <= saldo && corSelecionada) {
-            const resultado = cores[Math.floor(Math.random() * cores.length)];
-            setResultadoDouble(resultado);
-            setSaldo(saldo - valor);
-            setValorAposta('');
-            setErro('');
-            setCorSelecionada(null);
-
-            if (resultado === corSelecionada) {
-                const ganho = valor * 2;
-                setSaldo(saldo + ganho);
-                setMensagemResultado(`You won $${ganho.toFixed(2)}!`);
-                setResultadoClass('won');
-            } else {
-                setMensagemResultado(`You lost $${valor.toFixed(2)}.`);
-                setResultadoClass('lost');
-            }
-        } else {
-            setErro('Please select a color and ensure the bet amount does not exceed your balance.');
-        }
-    };
-
     return (
         <main className='mainBET'>
             <div className="main-containerBET">
@@ -126,12 +100,6 @@ const BetPage = () => {
                                 onClick={() => setPagina('bet')}
                             >
                                 FE Bets
-                            </button>
-                            <button
-                                className={`nav-btnBET ${pagina === 'double' ? 'ativo' : ''}`}
-                                onClick={() => setPagina('double')}
-                            >
-                                Double
                             </button>
                         </nav>
 
@@ -223,48 +191,6 @@ const BetPage = () => {
                                         ))
                                     )}
                                 </div>
-                            </div>
-                        )}
-
-                        {pagina === 'double' && (
-                            <div className="double-containerBET">
-                                <div className="section-header">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#343a40  "><path d="M600-160q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 134-93 227t-227 93Zm-320-10q-106-28-173-114T40-480q0-110 67-196t173-114v84q-72 25-116 87t-44 139q0 77 44 139t116 87v84Zm320-310Zm0 240q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Z" /></svg>
-                                    <h2 className="section-titleBET">Double</h2>
-                                </div>
-                                <div className="saldo-valorBET saldo-pequenoBET">Balance: $ {saldo.toFixed(2)}</div>
-                                <div className="cores-containerBET">
-                                    {cores.map((cor, index) => (
-                                        <button
-                                        
-                                            key={index}
-                                            className={`cor-btnBET ${cor} ${corSelecionada === cor ? 'select' : ''}`}
-                                            onClick={() => setCorSelecionada(cor)}
-                                        >
-                                            {cor}
-                                        </button>
-                                    ))}
-                                </div>
-                                <div className="aposta-inputBET">
-                                    <input
-                                        className="value-inputBET"
-                                        type="number"
-                                        value={valorAposta}
-                                        placeholder="Bet value"
-                                        onChange={(e) => setValorAposta(e.target.value)}
-                                    />
-                                    <button className="aposta-btnBET" onClick={jogarDouble}>Play Double</button>
-                                </div>
-                                {resultadoDouble && (
-                                    <div className={`resultado-doubleBET ${resultadoDouble}`}>
-                                        Result: {resultadoDouble}
-                                    </div>
-                                )}
-                                {mensagemResultado && (
-                                    <div className={`mensagem-resultadoBET ${resultadoClass}`}>
-                                        {mensagemResultado}
-                                    </div>
-                                )}
                             </div>
                         )}
                     </div>
