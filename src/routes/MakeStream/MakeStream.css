@@ -1,0 +1,242 @@
+.app-container.MKSTREAM {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 40px;
+    color: #333333;
+    padding-top: 12vh;
+}
+
+.header.MKSTREAM {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.input-container.MKSTREAM {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.title-input.MKSTREAM,
+.subtitle-input.MKSTREAM {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #333333;
+    transition: all 0.3s ease;
+}
+
+.title-input.MKSTREAM {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.title-input.MKSTREAM:focus,
+.subtitle-input.MKSTREAM:focus {
+    outline: none;
+    border-color: #4a9eff;
+    box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+}
+
+.title-input.MKSTREAM::placeholder,
+.subtitle-input.MKSTREAM::placeholder {
+    color: #999;
+}
+
+.main-title.MKSTREAM {
+    color: #4a9eff;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.main-subtitle.MKSTREAM {
+    color: #666666;
+    font-size: 18px;
+}
+
+.stream-container.MKSTREAM {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.stream-card.MKSTREAM {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.card-header.MKSTREAM {
+    background-color: #f8f8f8;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header.MKSTREAM h2 {
+    margin: 0;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.icon.MKSTREAM {
+    color: #4a9eff;
+}
+
+.card-content.MKSTREAM {
+    padding: 20px;
+}
+
+.video-container.MKSTREAM {
+    background-color: #f5f5f5;
+    width: 525px;
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    margin-bottom: 16px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+.video-element.MKSTREAM {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.video-placeholder.MKSTREAM {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    gap: 16px;
+}
+
+.video-placeholder.MKSTREAM p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.stream-button.MKSTREAM {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.stream-button.start.MKSTREAM {
+    background-color: #4a9eff;
+    color: white;
+}
+
+.stream-button.start.MKSTREAM:hover {
+    background-color: #3a7fd6;
+}
+
+.stream-button.start.disabled.MKSTREAM {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.stream-button.stop.MKSTREAM {
+    background-color: #ff4a4a;
+    color: white;
+}
+
+.stream-button.stop.MKSTREAM:hover {
+    background-color: #d63a3a;
+}
+
+.button-container.MKSTREAM {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.categories-card.MKSTREAM {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 32px auto;
+    border: 1px solid #e0e0e0;
+}
+
+.categories-card.MKSTREAM h2 {
+    color: #333333;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.categories-list.MKSTREAM {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.category-button.MKSTREAM {
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.category-button.MKSTREAM:hover {
+    background-color: #f0f7ff;
+    border-color: #4a9eff;
+    color: #4a9eff;
+}
+
+.category-button.selected.MKSTREAM {
+    background-color: #4a9eff;
+    border-color: #4a9eff;
+    color: #ffffff;
+}
+
+.error-message.MKSTREAM {
+    color: #ff4a4a;
+    background-color: #fff2f2;
+    border: 1px solid #ffcccc;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    max-width: 800px;
+    margin: 24px auto 0;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+}

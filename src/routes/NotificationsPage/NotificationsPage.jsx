@@ -80,15 +80,10 @@ const NotificationsPage = () => {
         <div className="action-buttons">
           <button 
             className={`primary-button ${approved ? 'success' : 'error'}`}
-            onClick={() => approved ? window.location.href = '/dashboard' : handleBackClick()}
+            onClick={() => approved ? window.location.href = '/StreamMake' : handleBackClick()}
           >
             {approved ? 'Ir para Dashboard' : 'Voltar ao Cadastro'}
           </button>
-          {approved && (
-            <button className="secondary-button" onClick={() => window.location.href = '/tutorial'}>
-              Ver Tutorial
-            </button>
-          )}
         </div>
       </div>
     </div>

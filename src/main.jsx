@@ -30,6 +30,7 @@ import NotificationsPage from './routes/NotificationsPage/NotificationsPage.jsx'
 
 import Stream from './routes/ChatPage/StreamingSelection.jsx'
 import StreamRegister from './routes/ChatPage/RegisterStreamerPage/RegisterStreamerPage.jsx'
+import MakeStream from './routes/MakeStream/MakeStream.jsx'
 import StreamFormulaE from './routes/ChatPage/StreamF-E/StreamFormulaE.jsx'
 import StreamMahindra from './routes/ChatPage/StreamMahindra/StreamingPage.jsx'
 import StreamPorsche from './routes/ChatPage/StreamPorsche/StreamPorsche.jsx'
@@ -47,6 +48,7 @@ import ErrorPage from './routes/ErrorPage.jsx'
 import { GlobalStyle } from './GlobalStyle.jsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 
 
 
@@ -78,6 +80,7 @@ const router = createBrowserRouter([
       
       { path: "/Stream", element: <Stream/>  },
       { path: "/StreamRegister", element: <StreamRegister/>  },
+      { path: "/StreamMake", element: <MakeStream/> },
       { path: "/Stream/StreamMahindra", element: <StreamMahindra/>  },
       { path: "/Stream/StreamFormulaE", element: <StreamFormulaE/>  },
       { path: "/Stream/StreamPorsche", element: <StreamPorsche/>  },
