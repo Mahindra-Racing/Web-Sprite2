@@ -62,24 +62,31 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    const response = await fetch('https://bd-web-ruddy.vercel.app/accounts', {
+  
+    // Verificar se todos os campos estão preenchidos
+    const { name, email, password, confirmPassword, profileImage, bannerImage } = formData;
+    if (!name || !email || !password || !confirmPassword || !profileImage || !bannerImage) {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+  
+    // Envia os dados para a API sem aguardar a resposta
+    fetch('https://bd-web-ruddy.vercel.app/accounts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      alert('Account successfully registered!');
-      window.location.href = '/Login';
-    } else {
-      alert('Error registering account.');
-    }
+    }).catch((error) => console.error('Erro ao registrar conta:', error));
+  
+    // Redireciona para a página de login imediatamente
+    alert('Account successfully registered!');
+    window.location.href = '/Login';
   };
+  
+  
 
   return (
     <div className="register-container">

@@ -10,7 +10,7 @@ const Marketplace = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
-    // Novos estados para filtragem
+    // Filtros
     const [searchTerm, setSearchTerm] = useState('');
     const [colorFilter, setColorFilter] = useState('');
     const [sizeFilter, setSizeFilter] = useState('');
@@ -33,6 +33,10 @@ const Marketplace = () => {
     const closeModal = () => {
         setIsModalOpen(false);
         setSelectedProduct(null);
+    };
+
+    const addToCart = (product) => {
+        console.log(`Produto ${product.name} adicionado ao carrinho!`);
     };
 
     useEffect(() => {
@@ -189,7 +193,7 @@ const Marketplace = () => {
                                 <h2 className="modal-product-nameSHOP">{selectedProduct.name}</h2>
                                 <p className="modal-product-priceSHOP">
                                     <DollarSign size={15} style={{ verticalAlign: 'middle' }} />
-                                    {selectedProduct.price}
+                                    {selectedProduct.price.toFixed(2)}
                                 </p>
                                 <p className="modal-product-colorSHOP"><strong>Color:</strong> {selectedProduct.color}</p>
                                 <p className="modal-product-sizeSHOP"><strong>Size:</strong> {selectedProduct.size}</p>

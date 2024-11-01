@@ -12,15 +12,19 @@ const RegisterShop = () => {
   const [productDescription, setProductDescription] = useState('');
   const [productColor, setProductColor] = useState('');
   const [productSize, setProductSize] = useState('');
-  const [message, setMessage] = useState('');
-  const [messageType, setMessageType] = useState('');
 
   const handleImageFileChange = (e) => {
     setProductImageFile(e.target.files[0]);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Verifique se todos os campos obrigatórios estão preenchidos
+    if (!productName || !productPrice || (!productImageUrl && !productImageFile) || !productColor || !productSize) {
+      alert('Por favor, preencha todos os campos obrigatórios.');
+      return;
+    }
 
     const newProduct = {
       name: productName,
@@ -31,36 +35,16 @@ const RegisterShop = () => {
       size: productSize,
     };
 
-    try {
-      const response = await fetch('https://bd-web-ruddy.vercel.app/products', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newProduct),
-      });
+    // Envie os dados para a API sem aguardar a resposta
+    fetch('https://bd-web-ruddy.vercel.app/products', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newProduct),
+    }).catch((error) => console.error('Erro ao registrar produto:', error));
 
-      if (response.ok) {
-        setMessage('Produto registrado com sucesso!');
-        setMessageType('success');
-        setProductName('');
-        setProductPrice('');
-        setProductImageUrl('');
-        setProductImageFile(null);
-        setProductDescription('');
-        setProductColor('');
-        setProductSize('');
-      } else {
-        setMessage('Falha ao registrar o produto.');
-        setMessageType('error');
-      }
-    } catch (error) {
-      setMessage('Erro na conexão com a API.');
-      setMessageType('error');
-    }
-  };
-
-  const goToMarketplace = () => {
+    // Redireciona imediatamente para a página do marketplace
     navigate('/marketplace');
   };
 
@@ -68,7 +52,7 @@ const RegisterShop = () => {
     <div className="register-shop-container">
       <header className="register-shop-header">
         <h1 className="register-shop-title">Registrar Produto</h1>
-        <button className="back-to-marketplace" onClick={goToMarketplace}>
+        <button className="back-to-marketplace" onClick={() => navigate('/marketplace')}>
           <ArrowLeft size={18} className="back-icon" />
           Voltar para o Marketplace
         </button>
@@ -178,16 +162,6 @@ const RegisterShop = () => {
           <button type="submit" className="submit-button">Registrar Produto</button>
         </form>
       </div>
-      {message && (
-        <div className={`message ${messageType}`}>
-          {messageType === 'success' ? (
-            <CheckCircle size={24} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
-          ) : (
-            <AlertCircle size={24} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
-          )}
-          {message}
-        </div>
-      )}
     </div>
   );
 };
