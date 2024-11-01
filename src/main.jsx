@@ -19,7 +19,7 @@ import PilotCard from './routes/PilotCard/PilotCard.jsx'
 import Bet from './routes/Bet/BetPage.jsx'
 
 import Shop from './routes/Shop/Shop.jsx'
-import Marketplace from './routes/Shop/Marketplace.jsx'
+import Marketplace from './routes/Shop/Marketplace/Marketplace.jsx'
 import RegisterShop from './routes/Shop/RegisteShop.jsx'
 import Carrinho from './routes/Shop/Carrinho.jsx'
 
