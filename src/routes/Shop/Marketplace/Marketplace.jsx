@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Package, DollarSign, Loader, ShoppingCart } from 'lucide-react';
-import './marketplace.css';
+import './Marketplace.css';
 
 const Marketplace = () => {
     const navigate = useNavigate();
