@@ -49,21 +49,21 @@ const StreamingPage = () => {
         {
             LinkTop: '/Stream/StreamVitor',
             title: 'Vitor Eskes',
-            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/429559233_441751231759071_3747053932304203203_n.jpg?ccb=11-4&oh=01_Q5AaIAO5-8U4yFNhddGhFp6XdzKdpvk89J5gjd8mBUdeqvrF&oe=670576F3&_nc_sid=5e03e0&_nc_cat=105',
+            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/429559233_441751231759071_3747053932304203203_n.jpg?ccb=11-4&oh=01_Q5AaINBtI7mKS2PRLMSD3XVXTfKCOgzzXn0RXaYOwJQSIUii&oe=6730F873&_nc_sid=5e03e0&_nc_cat=105',
             viewerCount: '3.456 ',
             viewerCountAbrev: ' 3,4 mil'
         },
         {   
             LinkTop: '/Stream/StreamGabriel',
             title: 'Gabriel Matias',
-            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/431692287_8088804247838985_6679869870596023845_n.jpg?ccb=11-4&oh=01_Q5AaIK596Up9g6oSlriU0iyeE_UjBaESfZ2ZCFsOcNfWhoMw&oe=67058135&_nc_sid=5e03e0&_nc_cat=108',
+            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/431692287_8088804247838985_6679869870596023845_n.jpg?ccb=11-4&oh=01_Q5AaIL0LIJ98YzZFzeZy0aDX4sykqWpPtb5lvjch_rSYwLMe&oe=672BF4F5&_nc_sid=5e03e0&_nc_cat=108',
             viewerCount: '2.345',
             viewerCountAbrev: ' 2,3 mil'
         },
         {
             LinkTop: '/Stream/StreamNathan',
             title: 'Nathan Craveiro',
-            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/419620001_1056766648838592_7540748293304127228_n.jpg?ccb=11-4&oh=01_Q5AaIBj9rmZ2c5ftw-L7jGCY2Rum-arplWPUeM3QaVohKSSJ&oe=6705713A&_nc_sid=5e03e0&_nc_cat=106',
+            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/419620001_1056766648838592_7540748293304127228_n.jpg?ccb=11-4&oh=01_Q5AaIPSp_w0-IW4O9zBzWorzP7onVUDTcillFXql6WXJhEmh&oe=672BE4FA&_nc_sid=5e03e0&_nc_cat=106',
             viewerCount: '1.234',
             viewerCountAbrev: ' 1,2 mil'
         },
@@ -151,13 +151,13 @@ const StreamingPage = () => {
                                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeeko32Id8MJoTf6H2E3ISSD_v96tVr8AOA&s' alt="User Profile" className="modal-profile-image" />
                                 <div>
                                     <h3>Mahindra Racing</h3>
-                                    <p>Correndo rumo ao futuro sustentável!</p>
+                                    <p>Running towards a sustainable future!</p>
                                 </div>
                             </div>
                             <div className="modal-body">
-                                <p className='modal-descricao-STEAM'>Adquira o Super-E e assista às transmissões sem anúncios, aproveitando uma experiência ininterrupta. Com sua compra, você também ajuda diretamente sua equipe ou streamer favorito!</p>
-                                <p className='modal-title-STEAM'>Um presente de agradecimento:</p>
-                                <p className='modal-second-title-STEAM'><span className='modal-second-title-span-STEAM'>Distintivos de inscrito</span> para usar no chat e mostrar que você faz parte dessa comunidade</p>
+                                <p className='modal-descricao-STEAM'>Get Super-E and watch ad-free broadcasts for an uninterrupted experience. With your purchase, you also directly support your favorite team or streamer!</p>
+                                <p className='modal-title-STEAM'>A Thank You Gift:</p>
+                                <p className='modal-second-title-STEAM'><span className='modal-second-title-span-STEAM'>Subscriber badges</span> para usar no chat e mostrar que você faz parte dessa comunidade</p>
                                 <img src="https://i.redd.it/osrbg0gex4i71.png" alt="Gift Image" className="gift-image" />
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbeeko32Id8MJoTf6H2E3ISSD_v96tVr8AOA&s" alt="Gift Image" className="gift-image" />
                                 <button className="modal-action-button">Super-E</button><button className='modal-action-button-span'>$ 9.90</button>

@@ -1,5 +1,13 @@
 {
   "products": [
-    
+    {
+      "id": "6f31",
+      "name": "penis",
+      "price": 100,
+      "image": "blob:http://localhost:5173/1398c853-8956-488f-88b2-9982dd78a973",
+      "description": "penis bom, grande, cabe legal, cor maneiro um pouco preto de mais, mas está bom ",
+      "color": "Black",
+      "size": "XL"
+    }
   ]
 }

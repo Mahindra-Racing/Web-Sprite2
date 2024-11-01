@@ -48,6 +48,7 @@ import ErrorPage from './routes/ErrorPage.jsx'
 import { GlobalStyle } from './GlobalStyle.jsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import InfoPage from './routes/InfoPage/InfoPage.jsx'
 
 
 
@@ -106,6 +107,8 @@ const router = createBrowserRouter([
       { path: "/Login", element: <Login/>},
       { path: "/Profile", element: <Profile/>},
       { path: "/Settings", element: <Settings/>},
+
+      { path: "/InfoPage", element: <InfoPage/>  },
     ],
   },
 ]);

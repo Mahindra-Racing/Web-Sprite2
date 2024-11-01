@@ -11,6 +11,11 @@ const StreamingPage = () => {
     });
 
     const [showProfileEdit, setShowProfileEdit] = useState(false);
+
+    const [showModal, setShowModal] = useState(false);
+
+    const handleModalOpen = () => setShowModal(true);
+    const handleModalClose = () => setShowModal(false);
     
     // Definição individual dos containers
     const containers = [
@@ -45,21 +50,21 @@ const StreamingPage = () => {
         {
             LinkTop: '/Stream/StreamVitor',
             title: 'Vitor Eskes',
-            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/429559233_441751231759071_3747053932304203203_n.jpg?ccb=11-4&oh=01_Q5AaIAO5-8U4yFNhddGhFp6XdzKdpvk89J5gjd8mBUdeqvrF&oe=670576F3&_nc_sid=5e03e0&_nc_cat=105',
+            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/429559233_441751231759071_3747053932304203203_n.jpg?ccb=11-4&oh=01_Q5AaINBtI7mKS2PRLMSD3XVXTfKCOgzzXn0RXaYOwJQSIUii&oe=6730F873&_nc_sid=5e03e0&_nc_cat=105',
             viewerCount: '3.456 ',
             viewerCountAbrev: ' 3,4 mil'
         },
         {   
             LinkTop: '/Stream/StreamGabriel',
             title: 'Gabriel Matias',
-            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/431692287_8088804247838985_6679869870596023845_n.jpg?ccb=11-4&oh=01_Q5AaIK596Up9g6oSlriU0iyeE_UjBaESfZ2ZCFsOcNfWhoMw&oe=67058135&_nc_sid=5e03e0&_nc_cat=108',
+            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/431692287_8088804247838985_6679869870596023845_n.jpg?ccb=11-4&oh=01_Q5AaIL0LIJ98YzZFzeZy0aDX4sykqWpPtb5lvjch_rSYwLMe&oe=672BF4F5&_nc_sid=5e03e0&_nc_cat=108',
             viewerCount: '2.345',
             viewerCountAbrev: ' 2,3 mil'
         },
         {
             LinkTop: '/Stream/StreamNathan',
             title: 'Nathan Craveiro',
-            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/419620001_1056766648838592_7540748293304127228_n.jpg?ccb=11-4&oh=01_Q5AaIBj9rmZ2c5ftw-L7jGCY2Rum-arplWPUeM3QaVohKSSJ&oe=6705713A&_nc_sid=5e03e0&_nc_cat=106',
+            image: 'https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/419620001_1056766648838592_7540748293304127228_n.jpg?ccb=11-4&oh=01_Q5AaIPSp_w0-IW4O9zBzWorzP7onVUDTcillFXql6WXJhEmh&oe=672BE4FA&_nc_sid=5e03e0&_nc_cat=106',
             viewerCount: '1.234',
             viewerCountAbrev: ' 1,2 mil'
         },
@@ -120,7 +125,7 @@ const StreamingPage = () => {
                                 className="streaming-image"
                             />
                             <div className="streaming-info">
-                                <img src="https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/431692287_8088804247838985_6679869870596023845_n.jpg?ccb=11-4&oh=01_Q5AaIK596Up9g6oSlriU0iyeE_UjBaESfZ2ZCFsOcNfWhoMw&oe=67058135&_nc_sid=5e03e0&_nc_cat=108" alt="Streaming Info" className="info-image" />
+                                <img src="https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/431692287_8088804247838985_6679869870596023845_n.jpg?ccb=11-4&oh=01_Q5AaIL0LIJ98YzZFzeZy0aDX4sykqWpPtb5lvjch_rSYwLMe&oe=672BF4F5&_nc_sid=5e03e0&_nc_cat=108" alt="Streaming Info" className="info-image" />
                                 <div className="streaming-info-text">
                                     <h2>Gabriel Matias</h2>
                                     <p>Sintonize para discussões aprofundadas sobre a temporada, pilotos e muito mais!</p>
@@ -132,16 +137,11 @@ const StreamingPage = () => {
                                     </div>
                                 </div>
                                 <div className="streaming-actions">
-                                    
                                     <div className="viewer-count">
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-                                        <span style={{ marginRight: '8px' }} className='viewer-text'>{containers[5].viewerCount}</span>
-                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgba(170, 0, 0, 0.603)"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                                        <span style={{ marginRight: '8px' }} className="viewer-text">{containers[1].viewerCount}</span>
                                     </div>
-                                    <button className="support-button">
-                                        E-Chat
-                                    </button>
+                                    <button className="support-button" onClick={handleModalOpen}>Super-E</button>
                                 </div>
                             </div>
                         </div>
@@ -151,6 +151,30 @@ const StreamingPage = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Modal */}
+                {showModal && (
+                    <div className="modal-overlay" onClick={handleModalClose}>
+                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                            <button className="close-button" onClick={handleModalClose}>X</button>
+                            <div className="modal-header">
+                                <img src='https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/431692287_8088804247838985_6679869870596023845_n.jpg?ccb=11-4&oh=01_Q5AaIL0LIJ98YzZFzeZy0aDX4sykqWpPtb5lvjch_rSYwLMe&oe=672BF4F5&_nc_sid=5e03e0&_nc_cat=108' alt="User Profile" className="modal-profile-image" />
+                                <div>
+                                    <h3>Gabriel Matias</h3>
+                                    <p>Running towards a sustainable future!</p>
+                                </div>
+                            </div>
+                            <div className="modal-body">
+                                <p className='modal-descricao-STEAM'>Get Super-E and watch ad-free broadcasts for an uninterrupted experience. With your purchase, you also directly support your favorite team or streamer!</p>
+                                <p className='modal-title-STEAM'>A Thank You Gift:</p>
+                                <p className='modal-second-title-STEAM'><span className='modal-second-title-span-STEAM'>Subscriber badges</span> para usar no chat e mostrar que você faz parte dessa comunidade</p>
+                                <img src="https://i.redd.it/osrbg0gex4i71.png" alt="Gift Image" className="gift-image" />
+                                <img src="https://www.brawlstarsdicas.com.br/wp-content/uploads/2023/09/spray-stu-university-brawl-stars.png" alt="Gift Image" className="gift-image" />
+                                <button className="modal-action-button">Super-E</button><button className='modal-action-button-span'>$ 9.90</button>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </section>
         </main>
     );

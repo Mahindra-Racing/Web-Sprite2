@@ -10,10 +10,6 @@ const BetPage = () => {
     const [valorAdicionar, setValorAdicionar] = useState('');
     const [erro, setErro] = useState('');
     const [pagina, setPagina] = useState('wallet');
-    const [corSelecionada, setCorSelecionada] = useState(null);
-    const [resultadoDouble, setResultadoDouble] = useState(null);
-    const [mensagemResultado, setMensagemResultado] = useState('');
-    const [resultadoClass, setResultadoClass] = useState('');
 
     const pilotos = [
         { nome: 'Pascal Wehrlein', odds: 2.1 },

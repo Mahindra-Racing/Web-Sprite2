@@ -9,45 +9,46 @@
     top: 0;
     align-self: start;
     transition: 300ms ease-in-out;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     margin-top: 8vh;
     z-index: 1000;
 }
 
-#sidebar.close{
+#sidebar.close {
     padding: 5px;
     width: 59px;
 }
 
-#sidebar ul{
+#sidebar ul {
     list-style: none;
 }
 
-#sidebar li{
+#sidebar li {
     margin-top: 2px;
 }
 
-#sidebar > ul > li:first-child{
+#sidebar > ul > li:first-child {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 16px;
-    .sidebarLogo{
-        font-weight: 600;
-        color: #5e63ff;
-    }
 }
 
-#sidebar ul li.active a{
+.sidebarLogo {
+    font-weight: 600;
+    color: #5e63ff;
+}
+
+#sidebar ul li.active a {
     color: var(--accent-clr);
     background-color: #5e63ff23;
-    svg{
-        fill: var(--accent-clr);
-    }
 }
 
-#sidebar a, #sidebar .dropdown-btn, #sidebar .sidebarLogo{
-    border-radius: .5em;
-    padding: .85em;
+#sidebar a,
+#sidebar .dropdown-btn,
+.sidebarLogo {
+    border-radius: 0.5em;
+    padding: 0.85em;
     text-decoration: none;
     color: var(--text-clr);
     display: flex;
@@ -55,25 +56,27 @@
     gap: 1em;
 }
 
-.dropdown-btn{
+.dropdown-btn {
     width: 100%;
     text-align: left;
     background: none;
     border: none;
     font: inherit;
-    cursor: pointer;   
+    cursor: pointer;
 }
 
-#sidebar svg{
+#sidebar svg {
     flex-shrink: 0;
     fill: var(--text-clr);
 }
 
-#sidebar a span, #sidebar .dropdown-btn span{
+#sidebar a span,
+#sidebar .dropdown-btn span {
     flex-grow: 1;
 }
 
-#sidebar a:hover, #sidebar .dropdown-btn:hover{
+#sidebar a:hover,
+#sidebar .dropdown-btn:hover {
     background-color: #ebebeb;
     color: #000000;
 }
@@ -85,7 +88,7 @@
 }
 
 #sidebar .sub-menu.show {
-    max-height: 250px; 
+    max-height: 250px;
 }
 
 #toggle-btn svg {
@@ -104,24 +107,24 @@
     transform: rotate(180deg);
 }
 
-#sidebar .sub-menu a{
+#sidebar .sub-menu a {
     padding-left: 2em;
 }
 
-#toggle-btn{
+#toggle-btn {
     margin-left: auto;
     padding: 1em;
     border: none;
-    border-radius: .5em;
+    border-radius: 0.5em;
     background: none;
     cursor: pointer;
 }
 
-#toggle-btn:hover{
+#toggle-btn:hover {
     background-color: var(--hover-clr);
 }
 
-.hr{
+.hr {
     margin: 10px;
 }
 
@@ -129,7 +132,7 @@
     position: fixed;
     bottom: 10px;
     display: flex;
-    gap: 10px; 
+    gap: 10px;
     transition: flex-direction 300ms ease-in-out;
 }
 
@@ -151,17 +154,19 @@
     }
 
     #sidebar.close {
-        width: 45px; /* Ajusta a largura da sidebar quando fechada */
+        width: 45px;
         padding: 5px;
     }
 
     #sidebar ul li {
-        margin-top: 5px; /* Ajusta o espaçamento entre os itens do menu */
+        margin-top: 5px;
     }
 
-    .dropdown-btn, #sidebar a, #sidebar .sidebarLogo {
-        padding: 10px 5px; /* Ajusta o padding para economizar espaço */
-        font-size: 0.85rem; /* Diminui o tamanho da fonte */
+    .dropdown-btn,
+    #sidebar a,
+    .sidebarLogo {
+        padding: 10px 5px;
+        font-size: 0.85rem;
     }
 
     #toggle-btn {
@@ -172,17 +177,16 @@
 /* Responsividade para dispositivos menores que 480px */
 @media screen and (max-width: 480px) {
     #sidebar {
-        width: 100%; /* Sidebar ocupa a largura total da tela */
-        height: auto; /* Ajusta a altura */
-        position: relative; /* Remove o posicionamento fixo */
-        box-shadow: none; /* Remove sombra para simplificar */
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
     }
 
-    
     #sidebar ul {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centraliza os itens */
+        align-items: center;
     }
 
     #sidebar ul li {
@@ -190,13 +194,13 @@
     }
 
     #sidebar.close {
-        display: none; /* Esconde a sidebar quando está fechada */
+        display: none;
     }
 
     .a {
         position: relative;
-        bottom: auto; /* Remove o posicionamento fixo */
-        flex-direction: row; /* Ajusta a orientação */
-        justify-content: center; /* Centraliza o conteúdo */
+        bottom: auto;
+        flex-direction: row;
+        justify-content: center;
     }
 }
