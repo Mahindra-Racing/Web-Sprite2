@@ -10,7 +10,7 @@ const Chat = () => {
   // Função para buscar os dados do usuário
   const fetchUserData = async () => {
     try {
-      const response = await fetch("http://localhost:5001/accounts");
+      const response = await fetch("https://bd-web-ruddy.vercel.app/accounts");
       if (!response.ok) {
         throw new Error("Failed to fetch user data");
       }

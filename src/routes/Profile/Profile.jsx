@@ -20,7 +20,7 @@ const Profile = () => {
         const fetchProfileData = async () => {
             const storedProfileData = JSON.parse(localStorage.getItem('profileData')) || {};
             try {
-                const response = await fetch('http://localhost:5001/accounts');
+                const response = await fetch('https://bd-web-ruddy.vercel.app/accounts');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

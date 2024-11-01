@@ -11,7 +11,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://localhost:5001/accounts'); // Altere para o endpoint correto
+        const response = await fetch('https://bd-web-ruddy.vercel.app/accounts'); // Altere para o endpoint correto
         if (!response.ok) {
           throw new Error('Failed to fetch user data');
         }

@@ -65,7 +65,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:5001/accounts', {
+    const response = await fetch('https://bd-web-ruddy.vercel.app/accounts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

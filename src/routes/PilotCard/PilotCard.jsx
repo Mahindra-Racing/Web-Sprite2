@@ -27,7 +27,7 @@ const PilotCard = () => {
 
   const fetchPilots = async () => {
     try {
-      const response = await fetch('http://localhost:5002/static');
+      const response = await fetch('https://bd-web-ruddy.vercel.app/static');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

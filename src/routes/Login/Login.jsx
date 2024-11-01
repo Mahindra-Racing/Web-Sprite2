@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5001/accounts');
+      const response = await fetch('https://bd-web-ruddy.vercel.app/accounts');
       const data = await response.json();
       const user = data.find(
         (account) => account.name === username && account.password === password
