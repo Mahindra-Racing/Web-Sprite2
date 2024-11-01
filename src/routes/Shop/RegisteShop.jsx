@@ -21,11 +21,11 @@ const RegisterShop = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const newProduct = {
       name: productName,
       price: parseFloat(productPrice),
-      image: productImageUrl, // Use the URL directly for now
+      image: productImageFile ? URL.createObjectURL(productImageFile) : productImageUrl,
       description: productDescription,
       color: productColor,
       size: productSize,
@@ -40,32 +40,24 @@ const RegisterShop = () => {
         body: JSON.stringify(newProduct),
       });
 
-      const data = await response.json(); // Capture the response data
-      console.log('Response data:', data); // Log the response for debugging
-
       if (response.ok) {
         setMessage('Produto registrado com sucesso!');
         setMessageType('success');
-        resetForm();
+        setProductName('');
+        setProductPrice('');
+        setProductImageUrl('');
+        setProductImageFile(null);
+        setProductDescription('');
+        setProductColor('');
+        setProductSize('');
       } else {
-        setMessage(`Falha ao registrar o produto: ${data.message || 'Erro desconhecido.'}`);
+        setMessage('Falha ao registrar o produto.');
         setMessageType('error');
       }
     } catch (error) {
-      console.error('Erro na conexão com a API:', error); // Log the error for debugging
       setMessage('Erro na conexão com a API.');
       setMessageType('error');
     }
-  };
-
-  const resetForm = () => {
-    setProductName('');
-    setProductPrice('');
-    setProductImageUrl('');
-    setProductImageFile(null);
-    setProductDescription('');
-    setProductColor('');
-    setProductSize('');
   };
 
   const goToMarketplace = () => {
@@ -165,7 +157,7 @@ const RegisterShop = () => {
           <div className="form-group">
             <label htmlFor="productImageUrl">
               <Image size={18} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
-              URL da Imagem:
+              URL da Imagem ou selecione uma imagem:
             </label>
             <input
               type="text"
