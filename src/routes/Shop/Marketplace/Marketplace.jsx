@@ -7,10 +7,10 @@ const Marketplace = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
-    // Filtros
     const [searchTerm, setSearchTerm] = useState('');
     const [colorFilter, setColorFilter] = useState('');
     const [sizeFilter, setSizeFilter] = useState('');
@@ -39,26 +39,27 @@ const Marketplace = () => {
         console.log(`Produto ${product.name} adicionado ao carrinho!`);
     };
 
-    useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                const response = await fetch('https://bd-web-ruddy.vercel.app/products');
-                if (!response.ok) {
-                    throw new Error('Erro ao buscar produtos');
-                }
-                const data = await response.json();
-                setProducts(data);
-            } catch (error) {
-                console.error(error);
-            } finally {
-                setLoading(false);
+    const fetchProducts = async () => {
+        try {
+            const response = await fetch('https://bd-web-ruddy.vercel.app/products');
+            console.log('Response status:', response.status);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
-        };
+            const data = await response.json();
+            console.log('Data received:', data);
+            setProducts(data);
+            setLoading(false);
+        } catch (error) {
+            console.error("Erro ao buscar produtos da API", error);
+            setError(true);
+        }
+    };
 
+    useEffect(() => {
         fetchProducts();
     }, []);
 
-    // Função para filtrar os produtos
     const filteredProducts = products.filter(product => {
         const matchesSearchTerm = product.name.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesColor = colorFilter ? product.color === colorFilter : true;
@@ -159,6 +160,10 @@ const Marketplace = () => {
                         <Loader size={40} className="animate-spin" />
                         <p>Loading products...</p>
                     </div>
+                ) : error ? (
+                    <div style={{ textAlign: 'center', padding: '50px' }}>
+                        <p>Erro ao carregar os produtos. Tente novamente mais tarde.</p>
+                    </div>
                 ) : (
                     <div className="products-containerMarketplace">
                         {filteredProducts.length > 0 ? (
@@ -182,27 +187,18 @@ const Marketplace = () => {
             </section>
 
             {isModalOpen && selectedProduct && (
-                <div className="modalSHOP">
-                    <div className="modal-contentSHOP">
-                        <button className="close-modalSHOP" onClick={closeModal}>
-                            &times;
+                <div className="modalMarketplace">
+                    <div className="modal-contentMarketplace">
+                        <span className="close-modalMarketplace" onClick={closeModal}>&times;</span>
+                        <h2 className="modal-titleMarketplace">{selectedProduct.name}</h2>
+                        <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-imageMarketplace" />
+                        <p className="modal-priceMarketplace">
+                            <DollarSign size={18} style={{ verticalAlign: 'middle' }} />
+                            {selectedProduct.price.toFixed(2)}
+                        </p>
+                        <button className="add-to-cart-buttonMarketplace" onClick={() => addToCart(selectedProduct)}>
+                            Add to Cart
                         </button>
-                        <div className="modal-bodySHOP">
-                            <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-imageSHOP" />
-                            <div className="modal-detailsSHOP">
-                                <h2 className="modal-product-nameSHOP">{selectedProduct.name}</h2>
-                                <p className="modal-product-priceSHOP">
-                                    <DollarSign size={15} style={{ verticalAlign: 'middle' }} />
-                                    {selectedProduct.price.toFixed(2)}
-                                </p>
-                                <p className="modal-product-colorSHOP"><strong>Color:</strong> {selectedProduct.color}</p>
-                                <p className="modal-product-sizeSHOP"><strong>Size:</strong> {selectedProduct.size}</p>
-                                <p className="modal-product-descriptionSHOP"><strong>Description:</strong> {selectedProduct.description}</p>
-                                <button className="buy-now-buttonSHOP" onClick={() => addToCart(selectedProduct)}>
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             )}
