@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${menuOpen ? "active" : ""}`}>
-      <a className="logo" href="#">Synthica</a>
+      <h1 className="logo">Synthica</h1>
       <ul className={`nav-list1 ${menuOpen ? "show" : ""}`}>
         <li>
           <Link to='/Ajuda' className="linkNavbar" onClick={closeMenu}></Link>

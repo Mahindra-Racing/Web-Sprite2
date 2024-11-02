@@ -186,19 +186,31 @@ const Marketplace = () => {
                 )}
             </section>
 
+            {/* Modal */}
             {isModalOpen && selectedProduct && (
-                <div className="modalMarketplace">
-                    <div className="modal-contentMarketplace">
-                        <span className="close-modalMarketplace" onClick={closeModal}>&times;</span>
-                        <h2 className="modal-titleMarketplace">{selectedProduct.name}</h2>
-                        <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-imageMarketplace" />
-                        <p className="modal-priceMarketplace">
-                            <DollarSign size={18} style={{ verticalAlign: 'middle' }} />
-                            {selectedProduct.price.toFixed(2)}
-                        </p>
-                        <button className="add-to-cart-buttonMarketplace" onClick={() => addToCart(selectedProduct)}>
-                            Add to Cart
+                <div className="modalSHOP">
+                    <div className="modal-contentSHOP">
+                        <button className="close-modalSHOP" onClick={closeModal}>
+                            &times; {/* Símbolo de fechar */}
                         </button>
+                        <div className="modal-bodySHOP">
+                            <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-imageSHOP" />
+                            <div className="modal-detailsSHOP">
+                                <h2 className="modal-product-nameSHOP">{selectedProduct.name}</h2>
+                                <p className="modal-product-priceSHOP">
+                                    <DollarSign size={15} style={{ verticalAlign: 'middle' }} />{selectedProduct.price}
+                                </p>
+
+                                {/* Exibindo a cor, tamanho e descrição do produto */}
+                                <p className="modal-product-colorSHOP"><strong>Color:</strong> {selectedProduct.color}</p>
+                                <p className="modal-product-sizeSHOP"><strong>Size:</strong> {selectedProduct.size}</p>
+                                <p className="modal-product-descriptionSHOP"><strong>Description:</strong> {selectedProduct.description}</p>
+
+                                <button className="buy-now-buttonSHOP" onClick={() => addToCart(selectedProduct)}>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
